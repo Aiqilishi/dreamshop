@@ -1,0 +1,31 @@
+25-06-29.16:07:15.119 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 12708 (D:\test\dream-shop\dream-shop-app\target\classes started by 280477 in D:\test\dream-shop)
+25-06-29.16:07:15.122 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-06-29.16:07:16.756 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-06-29.16:07:16.771 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-06-29.16:07:16.771 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-06-29.16:07:16.771 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-06-29.16:07:16.958 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-06-29.16:07:16.959 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1760 ms
+25-06-29.16:07:17.864 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-06-29.16:07:17.890 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-06-29.16:07:17.902 [main            ] INFO  Application            - Started Application in 3.555 seconds (JVM running for 4.405)
+25-06-29.16:08:19.231 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 33600 (D:\test\dream-shop\dream-shop-app\target\classes started by 280477 in D:\test\dream-shop)
+25-06-29.16:08:19.234 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-06-29.16:08:20.578 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-06-29.16:08:20.591 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-06-29.16:08:20.591 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-06-29.16:08:20.591 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-06-29.16:08:20.756 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-06-29.16:08:20.756 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1451 ms
+25-06-29.16:08:21.556 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-06-29.16:08:21.586 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-06-29.16:08:21.595 [main            ] INFO  Application            - Started Application in 3.112 seconds (JVM running for 3.777)
+25-06-29.16:09:52.735 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-06-29.16:09:52.735 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-06-29.16:09:52.736 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-06-29.16:09:52.835 [http-nio-8091-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-29.16:09:53.446 [http-nio-8091-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-29.16:10:27.968 [http-nio-8091-exec-4] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+25-06-29.16:10:54.446 [http-nio-8091-exec-10] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'userName' for method parameter type String is not present]
+25-06-29.16:11:47.896 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-29.16:11:47.923 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

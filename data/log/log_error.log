@@ -1,0 +1,2 @@
+25-06-29.16:10:27.968 [http-nio-8091-exec-4] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+25-06-29.16:10:54.446 [http-nio-8091-exec-10] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'userName' for method parameter type String is not present]
