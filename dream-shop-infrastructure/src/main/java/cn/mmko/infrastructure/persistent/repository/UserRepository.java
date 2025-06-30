@@ -4,7 +4,8 @@ import cn.mmko.domain.user.model.entity.UserActionEntity;
 import cn.mmko.domain.user.repository.IUserRepository;
 import cn.mmko.infrastructure.persistent.dao.IUserDao;
 import cn.mmko.infrastructure.persistent.po.User;
-import cn.mmko.infrastructure.utils.PassWordUtils;
+import cn.mmko.infrastructure.persistent.redis.IRedisService;
+import cn.mmko.infrastructure.utils.JwtUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
@@ -14,28 +15,19 @@ import javax.annotation.Resource;
 public class UserRepository implements IUserRepository {
     @Resource
     private IUserDao userDao;
+    @Resource
+    private IRedisService redisService;
     @Override
-    public String insertUser(UserActionEntity userActionEntity) {
-        UserActionEntity userActionSearch = queryUserByUserName(userActionEntity);
-        if(userActionSearch!=null){
-            return "exit";
-        }
-        else {
-            String salt = PassWordUtils.generateSalt();
-           String passwordHash = PassWordUtils.hashPassword(userActionEntity.getPasswordHash(), salt);
+    public void insertUser(UserActionEntity userActionEntity) {
            userDao.insertUser(User.builder()
                    .userName(userActionEntity.getUserName())
-                   .passwordHash(passwordHash)
-                   .passwordSalt(salt)
+                   .passwordHash(userActionEntity.getPasswordHash())
+                   .passwordSalt(userActionEntity.getPasswordSalt())
                    .build());
-           return "finish";
-        }
-
     }
-
     @Override
-    public UserActionEntity queryUserByUserName(UserActionEntity userActionEntity) {
-        User user = userDao.queryUserByUserName(userActionEntity.getUserName());
+    public UserActionEntity queryUserByUserName(String userName) {
+        User user = userDao.queryUserByUserName(userName);
         if(user==null) return null;
         return UserActionEntity.builder()
                 .userName(user.getUserName())
@@ -45,10 +37,10 @@ public class UserRepository implements IUserRepository {
     }
 
     @Override
-    public boolean checkLoginUser(UserActionEntity userActionEntity) {
-        User user = userDao.queryUserByUserName(userActionEntity.getUserName());
-        if(user==null) return false;
-        return PassWordUtils.verifyPassword(userActionEntity.getPasswordHash(),user.getPasswordSalt(),user.getPasswordHash());
+    public String createUserToken(String userName) {
+        String token = JwtUtils.generateJwt(userName);
+        redisService.setValue("user_token:"+userName, token,60*60*24*7);
+        return token;
     }
 
 

@@ -106,20 +106,4 @@ BEGIN;
 INSERT INTO `employee_salary_adjust` VALUES (1, '10000001', '109089990198888811', 1000.00, 800.00, 200.00, '2023-07-14 16:55:53', '2023-07-14 16:55:53');
 INSERT INTO `employee_salary_adjust` VALUES (2, '10000001', '100908977676001', 100.00, 20.00, 80.00, '2023-07-14 21:57:39', '2023-07-14 21:57:39');
 COMMIT;
-CREATE TABLE IF NOT EXISTS `t_user` (
-    `user_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
-    `username` varchar(50) NOT NULL COMMENT '用户名',
-    `password_hash` varchar(100) NOT NULL COMMENT '加密后的密码',
-    `password_salt` varchar(50) NOT NULL COMMENT '密码盐值',
-    `email` varchar(100) DEFAULT NULL COMMENT '邮箱',
-    `phone` varchar(20) DEFAULT NULL COMMENT '手机号',
-    `avatar_url` varchar(255) DEFAULT NULL COMMENT '头像URL',
-    `user_status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '用户状态(1:正常,0:禁用,-1:删除)',
-    `register_time` datetime NOT NULL COMMENT '注册时间',
-    `last_login_time` datetime DEFAULT NULL COMMENT '最后登录时间',
-    `login_ip` varchar(50) DEFAULT NULL COMMENT '最后登录IP',
-    PRIMARY KEY (`user_id`),
-    UNIQUE KEY `idx_username` (`username`),
-    UNIQUE KEY `idx_email` (`email`),
-    UNIQUE KEY `idx_phone` (`phone`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户表';
+
