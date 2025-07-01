@@ -1,0 +1,5 @@
+spring:
+  config:
+    name: dream-shop-app
+  profiles:
+    active: dev
