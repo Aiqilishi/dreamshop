@@ -1,4 +1,4 @@
-package cn.mmko.entity;
+package cn.mmko.po;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 @NoArgsConstructor
 @Slf4j
 @Builder
-public class User {
+public class UserPo {
     private String userId;
     private String userName;
     private String passwordHash;

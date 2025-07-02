@@ -15,7 +15,7 @@ public enum ResponseCode {
     USER_NOT_EXIST("0003", "用户不存在"),
     USER_EXIST("0005", "用户已存在"),
     PASSWORD_ERROR("0004", "账号密码错误"),
-    UNAUTHORIZED("0006", "用户未授权")
+    UNAUTHORIZED("401", "用户未授权")
     ;
 
     private String code;

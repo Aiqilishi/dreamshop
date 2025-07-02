@@ -37,7 +37,7 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$EnhancerBySpringCGLIB$$17f63eb6.insertUser(<generated>)
-	at cn.mmko.domain.user.service.UserService.insertUser(UserService.java:21)
+	at cn.mmko.domain.userPo.service.UserService.insertUser(UserService.java:21)
 	at cn.mmko.trigger.http.UserInsertController.insertUser(UserInsertController.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -412,7 +412,7 @@ java.sql.SQLNonTransientConnectionException: Could not create connection to data
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$EnhancerBySpringCGLIB$$e6d14cac.insertUser(<generated>)
-	at cn.mmko.domain.user.service.UserService.insertUser(UserService.java:21)
+	at cn.mmko.domain.userPo.service.UserService.insertUser(UserService.java:21)
 	at cn.mmko.trigger.http.UserInsertController.insertUser(UserInsertController.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -558,7 +558,7 @@ com.mysql.cj.exceptions.CJException: Unknown database 'dream'
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$EnhancerBySpringCGLIB$$e6d14cac.insertUser(<generated>)
-	at cn.mmko.domain.user.service.UserService.insertUser(UserService.java:21)
+	at cn.mmko.domain.userPo.service.UserService.insertUser(UserService.java:21)
 	at cn.mmko.trigger.http.UserInsertController.insertUser(UserInsertController.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -610,8 +610,8 @@ com.mysql.cj.exceptions.CJException: Unknown database 'dream'
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:840)
-25-06-28.21:18:33.446 [http-nio-8091-exec-3] ERROR [dispatcherServlet]    - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent.po.User.getUserName()" because "user" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent.po.User.getUserName()" because "user" is null
+25-06-28.21:18:33.446 [http-nio-8091-exec-3] ERROR [dispatcherServlet]    - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent.po.User.getUserName()" because "userPo" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent.po.User.getUserName()" because "userPo" is null
 	at cn.mmko.infrastructure.persistent.repository.UserRepository.queryUserByUserName(UserRepository.java:39)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository.insertUser(UserRepository.java:19)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$FastClassBySpringCGLIB$$bc2313c6.invoke(<generated>)
@@ -624,7 +624,7 @@ java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$EnhancerBySpringCGLIB$$9213460.insertUser(<generated>)
-	at cn.mmko.domain.user.service.UserService.insertUser(UserService.java:21)
+	at cn.mmko.domain.userPo.service.UserService.insertUser(UserService.java:21)
 	at cn.mmko.trigger.http.UserInsertController.insertUser(UserInsertController.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -676,8 +676,8 @@ java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:840)
-25-06-28.21:21:46.794 [http-nio-8091-exec-1] ERROR [dispatcherServlet]    - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent.po.User.getUserName()" because "user" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent.po.User.getUserName()" because "user" is null
+25-06-28.21:21:46.794 [http-nio-8091-exec-1] ERROR [dispatcherServlet]    - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent.po.User.getUserName()" because "userPo" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent.po.User.getUserName()" because "userPo" is null
 	at cn.mmko.infrastructure.persistent.repository.UserRepository.queryUserByUserName(UserRepository.java:38)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository.insertUser(UserRepository.java:19)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$FastClassBySpringCGLIB$$bc2313c6.invoke(<generated>)
@@ -690,7 +690,7 @@ java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$EnhancerBySpringCGLIB$$abbc58c9.insertUser(<generated>)
-	at cn.mmko.domain.user.service.UserService.insertUser(UserService.java:21)
+	at cn.mmko.domain.userPo.service.UserService.insertUser(UserService.java:21)
 	at cn.mmko.trigger.http.UserInsertController.insertUser(UserInsertController.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -780,7 +780,7 @@ org.apache.ibatis.reflection.ReflectionException: There is no getter for propert
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$EnhancerBySpringCGLIB$$eeab956d.insertUser(<generated>)
-	at cn.mmko.domain.user.service.UserService.insertUser(UserService.java:21)
+	at cn.mmko.domain.userPo.service.UserService.insertUser(UserService.java:21)
 	at cn.mmko.trigger.http.UserInsertController.insertUser(UserInsertController.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -877,7 +877,7 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$EnhancerBySpringCGLIB$$9213460.insertUser(<generated>)
-	at cn.mmko.domain.user.service.UserService.insertUser(UserService.java:21)
+	at cn.mmko.domain.userPo.service.UserService.insertUser(UserService.java:21)
 	at cn.mmko.trigger.http.UserInsertController.insertUser(UserInsertController.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -974,7 +974,7 @@ java.sql.SQLException: Field 'register_time' doesn't have a default value
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$EnhancerBySpringCGLIB$$3e605d7e.insertUser(<generated>)
-	at cn.mmko.domain.user.service.UserService.insertUser(UserService.java:21)
+	at cn.mmko.domain.userPo.service.UserService.insertUser(UserService.java:21)
 	at cn.mmko.trigger.http.UserInsertController.insertUser(UserInsertController.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)

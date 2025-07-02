@@ -1,4 +1,4 @@
-package cn.mmko.domain.user.model.entity;
+package cn.mmko.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,11 +6,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
-public class UserActionEntity {
+public class UserMessageDTO {
+
     private String userName;
-    private String passwordHash;
-    private String passwordSalt;
+    private String email;
+    private String phone;
+    private String avatarUrl;
+
+
 }

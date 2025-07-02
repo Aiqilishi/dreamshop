@@ -20,7 +20,7 @@ java.lang.ClassNotFoundException: javax.xml.bind.DatatypeConverter
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$EnhancerBySpringCGLIB$$1309752a.checkLoginUser(<generated>)
-	at cn.mmko.domain.user.service.UserService.checkLoginUser(UserService.java:31)
+	at cn.mmko.domain.userPo.service.UserService.checkLoginUser(UserService.java:31)
 	at cn.mmko.trigger.http.UserInsertController.checkLoginUser(UserInsertController.java:46)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)

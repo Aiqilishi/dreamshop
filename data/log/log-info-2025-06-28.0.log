@@ -96,7 +96,7 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$EnhancerBySpringCGLIB$$17f63eb6.insertUser(<generated>)
-	at cn.mmko.domain.user.service.UserService.insertUser(UserService.java:21)
+	at cn.mmko.domain.userPo.service.UserService.insertUser(UserService.java:21)
 	at cn.mmko.trigger.http.UserInsertController.insertUser(UserInsertController.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -510,7 +510,7 @@ java.sql.SQLNonTransientConnectionException: Could not create connection to data
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$EnhancerBySpringCGLIB$$e6d14cac.insertUser(<generated>)
-	at cn.mmko.domain.user.service.UserService.insertUser(UserService.java:21)
+	at cn.mmko.domain.userPo.service.UserService.insertUser(UserService.java:21)
 	at cn.mmko.trigger.http.UserInsertController.insertUser(UserInsertController.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -656,7 +656,7 @@ com.mysql.cj.exceptions.CJException: Unknown database 'dream'
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$EnhancerBySpringCGLIB$$e6d14cac.insertUser(<generated>)
-	at cn.mmko.domain.user.service.UserService.insertUser(UserService.java:21)
+	at cn.mmko.domain.userPo.service.UserService.insertUser(UserService.java:21)
 	at cn.mmko.trigger.http.UserInsertController.insertUser(UserInsertController.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -724,8 +724,8 @@ com.mysql.cj.exceptions.CJException: Unknown database 'dream'
 25-06-28.21:18:32.958 [http-nio-8091-exec-3] INFO  DispatcherServlet      - Completed initialization in 1 ms
 25-06-28.21:18:33.023 [http-nio-8091-exec-3] INFO  HikariDataSource       - HikariPool-1 - Starting...
 25-06-28.21:18:33.389 [http-nio-8091-exec-3] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-06-28.21:18:33.446 [http-nio-8091-exec-3] ERROR [dispatcherServlet]    - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent.po.User.getUserName()" because "user" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent.po.User.getUserName()" because "user" is null
+25-06-28.21:18:33.446 [http-nio-8091-exec-3] ERROR [dispatcherServlet]    - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent.po.User.getUserName()" because "userPo" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent.po.User.getUserName()" because "userPo" is null
 	at cn.mmko.infrastructure.persistent.repository.UserRepository.queryUserByUserName(UserRepository.java:39)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository.insertUser(UserRepository.java:19)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$FastClassBySpringCGLIB$$bc2313c6.invoke(<generated>)
@@ -738,7 +738,7 @@ java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$EnhancerBySpringCGLIB$$9213460.insertUser(<generated>)
-	at cn.mmko.domain.user.service.UserService.insertUser(UserService.java:21)
+	at cn.mmko.domain.userPo.service.UserService.insertUser(UserService.java:21)
 	at cn.mmko.trigger.http.UserInsertController.insertUser(UserInsertController.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -808,8 +808,8 @@ java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent
 25-06-28.21:21:46.301 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
 25-06-28.21:21:46.363 [http-nio-8091-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
 25-06-28.21:21:46.751 [http-nio-8091-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-06-28.21:21:46.794 [http-nio-8091-exec-1] ERROR [dispatcherServlet]    - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent.po.User.getUserName()" because "user" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent.po.User.getUserName()" because "user" is null
+25-06-28.21:21:46.794 [http-nio-8091-exec-1] ERROR [dispatcherServlet]    - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent.po.User.getUserName()" because "userPo" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent.po.User.getUserName()" because "userPo" is null
 	at cn.mmko.infrastructure.persistent.repository.UserRepository.queryUserByUserName(UserRepository.java:38)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository.insertUser(UserRepository.java:19)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$FastClassBySpringCGLIB$$bc2313c6.invoke(<generated>)
@@ -822,7 +822,7 @@ java.lang.NullPointerException: Cannot invoke "cn.mmko.infrastructure.persistent
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$EnhancerBySpringCGLIB$$abbc58c9.insertUser(<generated>)
-	at cn.mmko.domain.user.service.UserService.insertUser(UserService.java:21)
+	at cn.mmko.domain.userPo.service.UserService.insertUser(UserService.java:21)
 	at cn.mmko.trigger.http.UserInsertController.insertUser(UserInsertController.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -930,7 +930,7 @@ org.apache.ibatis.reflection.ReflectionException: There is no getter for propert
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$EnhancerBySpringCGLIB$$eeab956d.insertUser(<generated>)
-	at cn.mmko.domain.user.service.UserService.insertUser(UserService.java:21)
+	at cn.mmko.domain.userPo.service.UserService.insertUser(UserService.java:21)
 	at cn.mmko.trigger.http.UserInsertController.insertUser(UserInsertController.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -1045,7 +1045,7 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$EnhancerBySpringCGLIB$$9213460.insertUser(<generated>)
-	at cn.mmko.domain.user.service.UserService.insertUser(UserService.java:21)
+	at cn.mmko.domain.userPo.service.UserService.insertUser(UserService.java:21)
 	at cn.mmko.trigger.http.UserInsertController.insertUser(UserInsertController.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -1160,7 +1160,7 @@ java.sql.SQLException: Field 'register_time' doesn't have a default value
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.mmko.infrastructure.persistent.repository.UserRepository$$EnhancerBySpringCGLIB$$3e605d7e.insertUser(<generated>)
-	at cn.mmko.domain.user.service.UserService.insertUser(UserService.java:21)
+	at cn.mmko.domain.userPo.service.UserService.insertUser(UserService.java:21)
 	at cn.mmko.trigger.http.UserInsertController.insertUser(UserInsertController.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -1230,7 +1230,7 @@ java.sql.SQLException: Field 'register_time' doesn't have a default value
 25-06-28.21:30:52.476 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Completed initialization in 2 ms
 25-06-28.21:30:52.538 [http-nio-8091-exec-2] INFO  HikariDataSource       - HikariPool-1 - Starting...
 25-06-28.21:30:52.807 [http-nio-8091-exec-2] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-06-28.21:30:53.104 [http-nio-8091-exec-2] INFO  UserInsertController   - insert user
+25-06-28.21:30:53.104 [http-nio-8091-exec-2] INFO  UserInsertController   - insert userPo
 25-06-28.21:44:39.809 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 25-06-28.21:44:39.832 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
 25-06-28.21:44:46.329 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 12568 (D:\test\dream-shop\dream-shop-app\target\classes started by 280477 in D:\test\dream-shop)
@@ -1249,7 +1249,7 @@ java.sql.SQLException: Field 'register_time' doesn't have a default value
 25-06-28.21:44:53.275 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Completed initialization in 1 ms
 25-06-28.21:44:53.339 [http-nio-8091-exec-2] INFO  HikariDataSource       - HikariPool-1 - Starting...
 25-06-28.21:44:53.710 [http-nio-8091-exec-2] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-06-28.21:44:54.015 [http-nio-8091-exec-2] INFO  UserInsertController   - insert user
+25-06-28.21:44:54.015 [http-nio-8091-exec-2] INFO  UserInsertController   - insert userPo
 25-06-28.21:45:19.788 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 25-06-28.21:45:19.799 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
 25-06-28.21:45:24.422 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 30516 (D:\test\dream-shop\dream-shop-app\target\classes started by 280477 in D:\test\dream-shop)
@@ -1268,7 +1268,7 @@ java.sql.SQLException: Field 'register_time' doesn't have a default value
 25-06-28.21:45:28.481 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
 25-06-28.21:45:28.544 [http-nio-8091-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
 25-06-28.21:45:28.819 [http-nio-8091-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-06-28.21:45:29.134 [http-nio-8091-exec-1] INFO  UserInsertController   - insert user
+25-06-28.21:45:29.134 [http-nio-8091-exec-1] INFO  UserInsertController   - insert userPo
 25-06-28.21:48:48.517 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 25-06-28.21:48:48.535 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
 25-06-28.21:48:53.700 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 31544 (D:\test\dream-shop\dream-shop-app\target\classes started by 280477 in D:\test\dream-shop)
@@ -1287,6 +1287,6 @@ java.sql.SQLException: Field 'register_time' doesn't have a default value
 25-06-28.21:50:05.820 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
 25-06-28.21:50:05.885 [http-nio-8091-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
 25-06-28.21:50:06.247 [http-nio-8091-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-06-28.21:50:06.524 [http-nio-8091-exec-1] INFO  UserInsertController   - insert user
+25-06-28.21:50:06.524 [http-nio-8091-exec-1] INFO  UserInsertController   - insert userPo
 25-06-28.21:50:23.343 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 25-06-28.21:50:23.358 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
