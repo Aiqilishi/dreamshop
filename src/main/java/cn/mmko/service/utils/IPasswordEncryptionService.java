@@ -1,4 +1,4 @@
-package cn.mmko.service;
+package cn.mmko.service.utils;
 
 public interface IPasswordEncryptionService {
     String generateSalt();

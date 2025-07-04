@@ -1,5 +1,6 @@
 package cn.mmko.enums;
 
+import com.mysql.cj.protocol.Warning;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,14 +11,16 @@ import lombok.NoArgsConstructor;
 public enum ResponseCode {
 
     SUCCESS("200", "成功"),
+    UNAUTHORIZED("401", "用户未授权"),
     UN_ERROR("0001", "未知失败"),
-    ILLEGAL_PARAMETER("0002", "非法参数"),
-    USER_NOT_EXIST("0003", "用户不存在"),
+    ILLEGAL_PARAMETER("401", "非法参数"),
+    USER_NOT_EXIST("404", "用户不存在"),
     USER_EXIST("0005", "用户已存在"),
-    PASSWORD_ERROR("0004", "账号密码错误"),
-    UNAUTHORIZED("401", "用户未授权")
+    PASSWORD_ERROR("400", "账号密码错误"),
+    PRODUCT_NOT_EXIST("404", "商品不存在"),
+    SELLER_NAME_EXIST("0006", "商家名称已存在"),
+    SELLER_PHONE_EXIST("0007", "商家手机号已存在")
     ;
-
     private String code;
     private String info;
 

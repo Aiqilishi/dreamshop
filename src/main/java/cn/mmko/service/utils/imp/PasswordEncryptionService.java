@@ -1,5 +1,6 @@
-package cn.mmko.service;
+package cn.mmko.service.utils.imp;
 
+import cn.mmko.service.utils.IPasswordEncryptionService;
 import org.springframework.stereotype.Service;
 
 import javax.crypto.SecretKeyFactory;
@@ -10,7 +11,7 @@ import java.security.spec.InvalidKeySpecException;
 import java.util.Base64;
 
 @Service
-public class PasswordEncryptionService implements IPasswordEncryptionService{
+public class PasswordEncryptionService implements IPasswordEncryptionService {
     // 盐值的长度
     private static final int SALT_LENGTH = 16;
     // 加密算法

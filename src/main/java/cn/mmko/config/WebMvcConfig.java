@@ -20,6 +20,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
                 .addPathPatterns("/**")
                 // 排除登录、注册等不需要校验的接口，根据你的实际路径改
                 .excludePathPatterns("/user/insert",
-                                     "/user/check");
+                                     "/user/check",
+                        "/product/query",
+                        "/product/query/*",
+                        "/seller/insert");
     }
 }

@@ -2,9 +2,8 @@ package cn.mmko.controller;
 
 import cn.mmko.dto.LoginRequestDTO;
 import cn.mmko.dto.UserMessageDTO;
-import cn.mmko.service.IUserService;
+import cn.mmko.service.user.IUserService;
 import cn.mmko.enums.ResponseCode;
-import cn.mmko.exception.AppException;
 import cn.mmko.response.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

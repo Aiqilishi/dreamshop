@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.mmko.dao.IProductDao">
+
+    <resultMap id="DataMap" type="cn.mmko.po.ProductPo">
+          <id column="product_id" property="productId"/>
+          <result column="product_name" property="productName"/>
+          <result column="category_id" property="categoryId"/>
+          <result column="product_price" property="productPrice"/>
+          <result column="product_stock" property="productStock"/>
+          <result column="product_sales" property="productSales"/>
+          <result column="product_status" property="productStatus"/>
+          <result column="product_desc" property="productDesc"/>
+          <result column="product_image" property="productImage"/>
+          <result column="is_recommend" property="isRecommend"/>
+          <result column="is_hot" property="isHot"/>
+          <result column="view_count" property="viewCount"/>
+          <result column="create_time" property="createTime"/>
+          <result column="update_time" property="updateTime"/>
+    </resultMap>
+      <select id="queryProduct" resultMap="DataMap">
+          select product_id, category_id,product_name,product_price,product_stock,product_sales,product_status,product_desc,product_image,product_images,is_recommend,is_hot,view_count
+          from t_product
+      </select>
+    <select id="queryProductById"  resultMap="DataMap" parameterType="long">
+        select  product_name,category_id,product_price,product_stock,product_sales,product_status,product_desc,product_image
+        from t_product
+        where product_id=#{productId}
+    </select>
+
+
+</mapper>

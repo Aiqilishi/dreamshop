@@ -23,4 +23,6 @@ public class UserPo {
     private String registerTime;
     private String lastLoginTime;
     private String loginIp;
+    private Integer userType;      // 用户类型(0:普通用户,1:商家,2:管理员)
+    private Integer isDeleted;     // 是否删除(0:否,1:是)
 }

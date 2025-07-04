@@ -1,4 +1,4 @@
-package cn.mmko.service;
+package cn.mmko.service.user;
 
 import cn.mmko.dto.UserMessageDTO;
 import cn.mmko.po.UserPo;

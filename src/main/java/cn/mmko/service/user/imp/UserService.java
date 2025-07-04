@@ -1,4 +1,4 @@
-package cn.mmko.service;
+package cn.mmko.service.user.imp;
 
 import cn.mmko.dto.UserMessageDTO;
 import cn.mmko.po.UserPo;
@@ -6,6 +6,8 @@ import cn.mmko.dao.IUserDao;
 import cn.mmko.enums.ResponseCode;
 import cn.mmko.exception.AppException;
 import cn.mmko.redis.IRedisService;
+import cn.mmko.service.user.IUserService;
+import cn.mmko.service.utils.imp.PasswordEncryptionService;
 import cn.mmko.utils.JwtUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -14,7 +16,7 @@ import javax.annotation.Resource;
 
 @Service
 @Slf4j
-public class UserService implements IUserService{
+public class UserService implements IUserService {
     @Resource
     private IRedisService redisService;
     @Resource
