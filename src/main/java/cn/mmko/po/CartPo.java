@@ -21,6 +21,6 @@ public class CartPo {
     private Long userId;      // 用户ID
     private Long productId;   // 商品ID
     private Integer quantity; // 数量
-    private Date createTime;  // 创建时间
-    private Date updateTime;   // 更新时间
+    private java.util.Date createTime;  // 创建时间
+    private java.util.Date updateTime;  // 更新时间
 }

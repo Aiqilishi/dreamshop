@@ -6,6 +6,7 @@
           <id column="product_id" property="productId"/>
           <result column="product_name" property="productName"/>
           <result column="category_id" property="categoryId"/>
+          <result column="user_id" property="userId"/>
           <result column="product_price" property="productPrice"/>
           <result column="product_stock" property="productStock"/>
           <result column="product_sales" property="productSales"/>
@@ -18,7 +19,9 @@
           <result column="create_time" property="createTime"/>
           <result column="update_time" property="updateTime"/>
     </resultMap>
-      <select id="queryProduct" resultMap="DataMap">
+
+
+    <select id="queryProduct" resultMap="DataMap">
           select product_id, category_id,product_name,product_price,product_stock,product_sales,product_status,product_desc,product_image,product_images,is_recommend,is_hot,view_count
           from t_product
       </select>
@@ -27,6 +30,20 @@
         from t_product
         where product_id=#{productId}
     </select>
+    <select id="queryExitProduct" resultMap="DataMap" parameterType="cn.mmko.dto.product.ProductCreateDTO">
+        select product_name,category_id,user_id,product_price,product_stock,product_sales,product_status,product_desc,product_image
+        from t_product
+        where product_name=#{productName} and category_id=#{categoryId} and user_id=#{userId}
 
-
+    </select>
+    <insert id="insertProduct" parameterType="cn.mmko.dto.product.ProductCreateDTO">
+        insert into  t_product(product_name,category_id,user_id,product_price,product_stock,product_desc,product_image)
+        values(#{productName},#{categoryId},#{userId},#{productPrice},#{productStock},#{productDesc},#{productImage})
+    </insert>
+    <update id="updateProductviewCount" parameterType="long">
+       update t_product set view_count=view_count+1 where product_id=#{productId}
+    </update>
+    <update id="updateProductStock" parameterType="long">
+        update  t_product set product_stock=product_stock-1 where product_id=#{productId}
+    </update>
 </mapper>

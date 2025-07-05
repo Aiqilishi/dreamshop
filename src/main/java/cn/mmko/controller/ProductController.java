@@ -1,7 +1,8 @@
 package cn.mmko.controller;
 
-import cn.mmko.dto.ProductDetailDTO;
-import cn.mmko.dto.ProductListDTO;
+import cn.mmko.dto.product.ProductCreateDTO;
+import cn.mmko.dto.product.ProductDetailDTO;
+import cn.mmko.dto.product.ProductListDTO;
 import cn.mmko.enums.ResponseCode;
 import cn.mmko.response.Response;
 import cn.mmko.service.product.IProductService;
@@ -37,8 +38,33 @@ public class ProductController {
                 .build();
     }
     @RequestMapping(value = "/insert",method = RequestMethod.POST)
-    public Response<String> insertProduct(){
-        return null;
+    public Response<String> insertProduct(@RequestBody ProductCreateDTO productCreateDTO){
+        productService.insertProduct(productCreateDTO);
+        return Response.<String>builder()
+                .code(ResponseCode.SUCCESS.getCode())
+                .info(ResponseCode.SUCCESS.getInfo())
+                .build();
+
+    }
+    @RequestMapping(value = "/updateView/{productId}",method = RequestMethod.POST)
+    public Response<String> updateProductViewCount(@PathVariable Long productId){
+        productService.updateProductviewCount(productId);
+        return Response.<String>builder()
+                .code(ResponseCode.SUCCESS.getCode())
+                .info(ResponseCode.SUCCESS.getInfo())
+                .build();
+    }
+    @RequestMapping(value = "/updateStock/{productId}",method = RequestMethod.POST)
+    public Response<String> updateProductStock(@PathVariable Long productId){
+        productService.updateProductStock(productId);
+        return Response.<String>builder()
+                .code(ResponseCode.SUCCESS.getCode())
+                .info(ResponseCode.SUCCESS.getInfo())
+                .build();
+    }
+    @RequestMapping(value = "/update",method = RequestMethod.POST)
+    public Response<String> updateProduct(@RequestBody ProductDetailDTO productDetailDTO){
+        productService.updateProduct(productDetailDTO);
     }
 
 

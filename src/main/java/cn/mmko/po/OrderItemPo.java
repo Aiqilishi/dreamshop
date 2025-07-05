@@ -21,6 +21,6 @@ public class OrderItemPo {
     private Long orderId;        // 订单ID
     private Long productId;      // 商品ID
     private String productName;  // 商品名称
-    private BigDecimal productPrice; // 商品单价
+    private java.math.BigDecimal productPrice; // 商品单价
     private Integer quantity;    // 购买数量
 } 
