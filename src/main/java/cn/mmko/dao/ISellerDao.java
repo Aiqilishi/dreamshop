@@ -1,6 +1,5 @@
 package cn.mmko.dao;
 
-import cn.mmko.dto.SellerCreateDTO;
 import cn.mmko.po.SellerPo;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -10,5 +9,5 @@ public interface ISellerDao {
 
     SellerPo querySellerByName(String sellerName);
 
-    SellerPo querySellerBycontactPhone(String contactPhone);
+    SellerPo querySellerContactPhone (String contactPhone);
 }

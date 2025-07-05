@@ -8,23 +8,19 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.Date;
 
-/**
- * 管理员表
- */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Slf4j
 @Builder
-public class AdminPo {
-    private Long adminId;         // 主键
+public class CustomerPo {
+    private Long customerId;      // 主键
     private Long userId;          // 关联用户ID
-    private String jobNumber;     // 工号
-    private String department;    // 部门
-    private String position;      // 职位
-    private String phone;         // 联系电话
-    private String email;         // 邮箱
-    private Integer status;       // 状态(1:正常,0:禁用)
+    private String nickname;      // 昵称
+    private Integer gender;       // 性别(0:未知,1:男,2:女)
+    private Date birthday;        // 生日
+    private String address;       // 默认收货地址
+    private String avatarUrl;     // 头像URL
     private Date createTime;      // 创建时间
     private Date updateTime;      // 更新时间
     private String remark;        // 备注

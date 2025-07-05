@@ -5,12 +5,13 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 public class JwtUtils {
     private static final String signatureKey="mmko";
     private static final long expireTime=1000*60*60*24;
-    public static String generateJwt(String userName) {
+    public static String generateJwt(String userName, List<String> role) {
         JwtBuilder jwtBuilder = Jwts.builder();
         String jwtToken = jwtBuilder
                 //header部分
@@ -18,6 +19,7 @@ public class JwtUtils {
                 .setHeaderParam("alg", "HS256")
                 //payload部分
                 .claim("username", userName)
+                .claim("role",role)
                 .setExpiration(new Date(System.currentTimeMillis() + expireTime))
                 .setId(UUID.randomUUID().toString())
                 //signature部分

@@ -2,9 +2,10 @@ package cn.mmko.service.product.imp;
 
 import cn.mmko.dao.IProductDao;
 import cn.mmko.dao.IProductImageDao;
-import cn.mmko.dto.ProductDetailDTO;
-import cn.mmko.dto.ProductImagesDTO;
-import cn.mmko.dto.ProductListDTO;
+import cn.mmko.dto.product.ProductCreateDTO;
+import cn.mmko.dto.product.ProductDetailDTO;
+import cn.mmko.dto.product.ProductImagesDTO;
+import cn.mmko.dto.product.ProductListDTO;
 import cn.mmko.enums.ResponseCode;
 import cn.mmko.exception.AppException;
 import cn.mmko.po.ProductImagePo;
@@ -64,9 +65,53 @@ public class ProductService implements IProductService {
                 .productStock(productPo.getProductStock())
                 .productSales(productPo.getProductSales())
                 .productStatus(productPo.getProductStatus())
+                .productImage(productPo.getProductImage())
                 .productImages(productImagesDTO)
                 .productDesc(productPo.getProductDesc())
                 .build();
+    }
+
+    @Override
+    public void insertProduct(ProductCreateDTO productCreateDTO) {
+        ProductPo productPo = productDao.queryExitProduct(productCreateDTO);
+        if(null!=productPo) throw new AppException(ResponseCode.PRODUCT_EXIST.getCode(), ResponseCode.PRODUCT_EXIST.getInfo());
+        productDao.insertProduct(ProductPo.builder()
+                .productName(productCreateDTO.getProductName())
+                .categoryId(productCreateDTO.getCategoryId())
+                .userId(productCreateDTO.getUserId())
+                .productPrice(productCreateDTO.getProductPrice())
+                .productStock(productCreateDTO.getProductStock())
+                .productDesc(productCreateDTO.getProductDesc())
+                .productImage(productCreateDTO.getProductImage())
+                .build()
+        );
+    }
+
+    @Override
+    public void updateProductviewCount(Long productId) {
+        ProductPo productPo = productDao.queryProductById(productId);
+        if(null==productPo) throw new AppException(ResponseCode.PRODUCT_NOT_EXIST.getCode(), ResponseCode.PRODUCT_NOT_EXIST.getInfo());
+        productDao.updateProductviewCount(productId);
+    }
+
+    @Override
+    public void updateProductStock(Long productId) {
+        ProductPo productPo = productDao.queryProductById(productId);
+        if(null==productPo) throw new AppException(ResponseCode.PRODUCT_NOT_EXIST.getCode(), ResponseCode.PRODUCT_NOT_EXIST.getInfo());
+        productDao.updateProductStock(productId);
+    }
+
+    @Override
+    public void updateProduct(ProductDetailDTO productDetailDTO) {
+        productDao.updateProduct(ProductPo.builder()
+                .productName(productDetailDTO.getProductName())
+                .productPrice(productDetailDTO.getProductPrice())
+                .productStock(productDetailDTO.getProductStock())
+                .productStatus(productDetailDTO.getProductStatus())
+                .productDesc(productDetailDTO.getProductDesc())
+                .productImage(productDetailDTO.getProductImage())
+                .build()
+        );
     }
 
 

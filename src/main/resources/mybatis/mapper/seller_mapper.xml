@@ -16,7 +16,7 @@
         from t_seller
         where seller_name=#{sellerName}
     </select>
-    <select id="querySellerBycontactPhone" resultMap="DataMap" parameterType="string">
+    <select id="querySellerContactPhone" resultMap="DataMap" parameterType="string">
         select user_id ,seller_name, contact_phone
         from t_seller
         where contact_phone=#{contactPhone}
