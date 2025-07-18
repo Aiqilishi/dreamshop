@@ -1,4 +1,4 @@
-package cn.mmko.dto;
+package cn.mmko.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,12 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserMessageDTO {
-
-    private String userName;
-    private String email;
-    private String phone;
-    private String avatarUrl;
-
-
+public class CategoryVO {
+    private Long categoryId;
+    private String categoryName;
+    private Integer categorySort;
 }

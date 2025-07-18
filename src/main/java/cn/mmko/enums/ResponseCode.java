@@ -21,7 +21,9 @@ public enum ResponseCode {
     SELLER_NAME_EXIST("0006", "商家名称已存在"),
     SELLER_PHONE_EXIST("0007", "商家手机号已存在"),
     CATEGORY_EXIST( "0008", "分类已存在"),
-    PRODUCT_EXIST("0009", "商品已存在")    ;
+    PRODUCT_EXIST("0009", "商品已存在"),
+    IMAGES_NOT_EXIST("404", "没有图片");
+
 
     private String code;
     private String info;

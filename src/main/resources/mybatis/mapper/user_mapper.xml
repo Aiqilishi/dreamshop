@@ -12,15 +12,15 @@
         <result column="register_time" property="registerTime"/>
         <result column="last_login_time" property="lastLoginTime"/>
         <result column="login_ip" property="loginIp"/>
+        <result column="address" property="address"/>
+        <result column="url" property="userUrl"/>
     </resultMap>
     <insert id="insertUser" parameterType="cn.mmko.po.UserPo" useGeneratedKeys="true" keyProperty="userId">
-        insert into t_user(username,password_hash,password_salt)
-        values(#{userName},#{passwordHash},#{passwordSalt})
-
-
+        insert into t_user(username,phone,password_hash,password_salt)
+        values(#{userName},#{phone},#{passwordHash},#{passwordSalt})
     </insert>
     <select id="queryUserByUserName" resultType="cn.mmko.po.UserPo" resultMap="DataMap">
-        select user_id,username,password_hash,password_salt,phone from t_user where username=#{username}
+        select user_id,username,password_hash,password_salt,phone,address,user_status,url from t_user where username=#{username}
     </select>
 
 

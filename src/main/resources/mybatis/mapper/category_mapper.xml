@@ -11,20 +11,48 @@
         <result column="create_time" property="createTime"/>
     </resultMap>
 
-    <select id="queryCategory" resultMap="DataMap" parameterType="cn.mmko.dto.CategoryDTO">
-        select user_id, category_name,parent_id
+    <select id="queryCategory" resultType="cn.mmko.vo.CategoryVO" parameterType="cn.mmko.dto.CategoryDTO">
+        select category_id,category_name,category_sort
         from t_category
-        where user_id = #{userId} and category_name = #{categoryName} and parent_id = #{parentId}
+        <where>
+            <if test="userId == null">
+                 user_id=0
+            </if>
+            <if test="userId != null">
+                and user_id = #{userId}
+            </if>
+            <if test="categoryId != null">
+                and category_id = #{categoryId}
+            </if>
+        </where>
     </select>
 
     <insert id="insertCategory" parameterType="cn.mmko.po.CategoryPo">
-        insert into  t_category(user_id, category_name, category_sort,parent_id)
-        values(#{userId}, #{categoryName}, #{categorySort} ,#{parentId})
+        insert into  t_category(user_id, category_name, category_sort)
+        values(#{userId}, #{categoryName}, #{categorySort})
     </insert>
     <select id="getMaxCategorySort" resultType="java.lang.Integer" parameterType="cn.mmko.dto.CategoryDTO">
         select max(category_sort)
             from t_category
-        where user_id = #{userId} and parent_id = #{parentId}
+        where user_id = #{userId}
 
+    </select>
+    <select id="queryPuSellerCategory" resultType="cn.mmko.vo.CategoryVO" parameterType="long">
+        select category_id,category_name,category_sort,parent_id
+        from t_category
+        where user_id = #{userId} or user_id=0
+        order by user_id ,category_sort asc
+    </select>
+    <select id="queryPuCategory" resultType="cn.mmko.vo.CategoryVO">
+        select category_id,category_name,category_sort
+        from t_category
+        where user_id=0
+        order by category_sort asc
+    </select>
+    <select id="queryCategorySeCategory" resultType="cn.mmko.vo.CategoryVO" parameterType="long">
+         select category_id,category_name,category_sort
+         from t_category
+         where user_id = #{userId}
+         order by category_sort asc
     </select>
 </mapper>

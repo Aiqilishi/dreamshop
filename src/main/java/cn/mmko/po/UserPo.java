@@ -18,9 +18,9 @@ public class UserPo {
     private String passwordSalt;   // 密码盐值
     private String phone;          // 手机号
     private Integer userStatus;    // 用户状态(1:正常,0:禁用,-1:删除)
-    private Integer userType;      // 用户类型(0:普通用户,1:商家,2:管理员)
-    private Integer isDeleted;     // 是否删除(0:否,1:是)
     private java.util.Date registerTime;    // 注册时间
     private java.util.Date lastLoginTime;   // 最后登录时间
     private String loginIp;        // 最后登录IP
+    private String address;
+    private String userUrl;
 }

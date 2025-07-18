@@ -21,6 +21,7 @@ public class OrderPo {
     private Long orderId;        // 订单ID
     private Long userId;         // 下单用户ID
     private Long sellerId;       // 商家ID
+    private Long productId;      // 商品ID
     private Integer orderStatus; // 订单状态(0:待支付,1:已支付,2:已发货,3:已完成,4:已取消)
     private java.math.BigDecimal totalAmount; // 订单总金额
     private java.util.Date createTime;     // 下单时间

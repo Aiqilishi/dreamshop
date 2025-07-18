@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -13,6 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class ProductDetailDTO {
+    private Long productId;
     private String productName;    // 商品名称
     private BigDecimal productPrice; // 商品价格
     private Integer productStock;  // 库存数量
@@ -22,4 +24,6 @@ public class ProductDetailDTO {
     private String productImage;
     private List<ProductImagesDTO> productImages;  // 商品图片(多个图片用逗号分隔)
     private Long viewCount;        // 浏览次数
+    private Date createTime;
+    private Date updateTime;
 }

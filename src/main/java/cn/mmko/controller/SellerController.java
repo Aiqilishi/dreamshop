@@ -23,8 +23,9 @@ public class SellerController {
                   .info(ResponseCode.SUCCESS.getInfo())
                   .build();
     }
-//    @RequestMapping(value = "/login",method = RequestMethod.POST)
-//    public Response<String> checkSellerLogin(@RequestParam String userName,@RequestParam ){
+//    @RequestMapping(value = "/query",method = RequestMethod.GET)
+//    public Response<SellerLoginDTO> querySeller(@RequestBody SellerLoginDTO sellerLoginDTO){
 //
 //    }
+
 }

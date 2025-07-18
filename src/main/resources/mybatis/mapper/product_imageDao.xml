@@ -9,11 +9,21 @@
         <result column="sort_order" property="sortOrder"/>
         <result column="create_time" property="createTime"/>
     </resultMap>
+    <update id="updateProductImage" parameterType="cn.mmko.po.ProductImagePo">
+        update t_product_image set image_url=#{imageUrl} where image_id=#{imageId} and product_id=#{productId}
+    </update>
+
+
     <select id="queryProductImage" resultMap="DataMap" parameterType="long">
-        select image_url,sort_order
+        select image_id ,image_url,sort_order
         from t_product_image
         where product_id=#{productId}
     </select>
-
-
+    <insert id="insertProductImage" parameterType="cn.mmko.po.ProductImagePo">
+        insert into t_product_image(product_id,image_url,sort_order)
+        values(#{productId},#{imageUrl},#{sortOrder})
+    </insert>
+    <delete id="deleteProductImage" parameterType="long" >
+        delete from t_product_image where product_id=#{productId} and image_id=#{productImageId}
+    </delete>
 </mapper>

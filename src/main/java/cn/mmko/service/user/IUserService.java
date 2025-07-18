@@ -1,14 +1,14 @@
 package cn.mmko.service.user;
 
-import cn.mmko.dto.UserMessageDTO;
-import cn.mmko.po.UserPo;
+import cn.mmko.dto.CustomerUpdateDTO;
+import cn.mmko.dto.UserCreateDTO;
+import cn.mmko.vo.CustomerInfoVO;
+import cn.mmko.vo.UserLoginResponseVO;
 
 public interface IUserService {
-    void insertUser(String userName, String password);
+    void insertUser(UserCreateDTO userCreateDTO);
 
-    String checkLoginUser(String userName, String password);
-
-    UserMessageDTO queryUserByUserName(String userName);
+    UserLoginResponseVO checkLoginUser(String userName, String password);
 
 
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.mmko.dao.ICustomerDao">
+    <insert id="insertCustomer" parameterType="long">
+        insert into t_customer(user_id) values(#{userId})
+    </insert>
+    <update id="updateCustomer" >
+        update  t_customer
+        set nickname = #{nickname},gender = #{gender},birthday = #{birthday},address = #{address},avatar_url = #{avatarUrl}
+        where user_id = #{userId}
+    </update>
+
+
+    <select id="queryUserByUserId" resultType="cn.mmko.po.CustomerPo" parameterType="long">
+        select nickname,gender,birthday,address,avatar_url
+        from t_customer
+        where user_id = #{userId}
+    </select>
+</mapper>

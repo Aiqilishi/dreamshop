@@ -19,31 +19,150 @@
           <result column="create_time" property="createTime"/>
           <result column="update_time" property="updateTime"/>
     </resultMap>
-
-
-    <select id="queryProduct" resultMap="DataMap">
-          select product_id, category_id,product_name,product_price,product_stock,product_sales,product_status,product_desc,product_image,product_images,is_recommend,is_hot,view_count
-          from t_product
-      </select>
-    <select id="queryProductById"  resultMap="DataMap" parameterType="long">
-        select  product_name,category_id,product_price,product_stock,product_sales,product_status,product_desc,product_image
-        from t_product
+    <resultMap id="ListMap" type="cn.mmko.vo.ProductListVO">
+        <id column="product_id" property="productId"/>
+        <result column="product_name" property="productName"/>
+        <result column="category_name" property="category"/>
+        <result column="seller_name" property="sellerName"/>
+        <result column="product_price" property="productPrice"/>
+        <result column="product_stock" property="productStock"/>
+        <result column="product_sales" property="productSales"/>
+        <result column="product_status" property="productStatus"/>
+        <result column="product_image" property="productImage"/>
+        <result column="product_desc" property="productDesc"/>
+        <result column="is_recommend" property="isRecommend"/>
+        <result column="is_hot" property="isHot"/>
+        <result column="view_count" property="viewCount"/>
+    </resultMap>
+<!--    // 删除商品-->
+    <delete id="deleteProduct" parameterType="long">
+        delete from t_product where product_id=#{productId}
+    </delete>
+<!--    // 查询商品-->
+    <select id="queryProduct" resultMap="ListMap">
+        SELECT
+        p.product_id,
+        c.category_name,
+        s.seller_name,
+        p.product_name,
+        p.product_price,
+        p.product_stock,
+        p.product_sales,
+        p.product_status,
+        p.product_desc,
+        p.product_image,
+        p.is_recommend,
+        p.is_hot,
+        p.view_count
+        FROM
+        t_product p
+        LEFT JOIN t_category c ON p.category_id = c.category_id
+        LEFT JOIN t_seller s ON p.user_id = s.seller_id
+        <!-- 可加WHERE条件 -->
+    </select>
+    <!--    // 根据id查询商品-->
+    <select id="queryProductById"  resultType="cn.mmko.vo.ProductInfoVO" parameterType="long">
+        SELECT
+            p.product_id,
+            c.category_name,
+            s.seller_name,
+            s.seller_id,
+            p.product_name,
+            p.product_price,
+            p.product_stock,
+            p.product_sales,
+            p.product_status,
+            p.product_desc,
+            p.product_image,
+            p.is_recommend,
+            p.product_desc,
+            p.is_hot,
+            p.view_count
+        FROM
+            t_product p
+                LEFT JOIN t_category c ON p.category_id = c.category_id
+                LEFT JOIN t_seller s ON p.user_id = s.seller_id
         where product_id=#{productId}
     </select>
+    <!--    // 查询商品是否存在-->
     <select id="queryExitProduct" resultMap="DataMap" parameterType="cn.mmko.dto.product.ProductCreateDTO">
         select product_name,category_id,user_id,product_price,product_stock,product_sales,product_status,product_desc,product_image
         from t_product
         where product_name=#{productName} and category_id=#{categoryId} and user_id=#{userId}
-
     </select>
+    <!--    // 插入商品-->
     <insert id="insertProduct" parameterType="cn.mmko.dto.product.ProductCreateDTO">
         insert into  t_product(product_name,category_id,user_id,product_price,product_stock,product_desc,product_image)
         values(#{productName},#{categoryId},#{userId},#{productPrice},#{productStock},#{productDesc},#{productImage})
     </insert>
+    <!--    // 更新商品浏览量-->
     <update id="updateProductviewCount" parameterType="long">
        update t_product set view_count=view_count+1 where product_id=#{productId}
     </update>
+    <!--    // 减库存-->
     <update id="updateProductStock" parameterType="long">
         update  t_product set product_stock=product_stock-1 where product_id=#{productId}
     </update>
+    <!--    // 更新商品信息-->
+    <update id="updateProduct" parameterType="cn.mmko.dto.product.ProductUpdateDTO">
+        update t_product set product_name=#{productName},product_price=#{productPrice},product_stock=#{productStock},product_status=#{productStatus},product_desc=#{productDesc},product_image=#{productImage},is_recommend=#{isRecommend} where product_id=#{productId}
+    </update>
+      <!-- 查询商品数量-->
+    <select id="queryProductNumbySellerId" resultType="java.lang.Long" parameterType="long">
+        select count(*) from t_product where user_id=#{userId}
+    </select>
+    <select id="queryProductBySellerId" resultMap="DataMap" parameterType="long">
+        select product_id,category_id,product_name,product_price,product_stock,product_sales,product_status,product_desc,product_image,view_count,create_time,update_time
+        from t_product
+        where user_id= #{userId}
+    </select>
+    <select id="queryProductBySearch" resultMap="ListMap" parameterType="string">
+        SELECT
+            p.product_id,
+            c.category_name,
+            s.seller_name,
+            p.product_name,
+            p.product_price,
+            p.product_stock,
+            p.product_sales,
+            p.product_status,
+            p.product_desc,
+            p.product_image,
+            p.is_recommend,
+            p.is_hot,
+            p.view_count
+        FROM
+            t_product p
+                LEFT JOIN t_category c ON p.category_id = c.category_id
+                LEFT JOIN t_seller s ON p.user_id = s.seller_id
+        where product_name like concat('%',#{keyword},'%') or c.category_name like concat('%',#{keyword},'%') or s.seller_name like concat('%',#{keyword},'%')
+    </select>
+    <select id="queryProductByCategoryId" resultMap="ListMap">
+        SELECT
+            p.product_id,
+            c.category_name,
+            s.seller_name,
+            p.product_name,
+            p.product_price,
+            p.product_stock,
+            p.product_sales,
+            p.product_status,
+            p.product_desc,
+            p.product_image,
+            p.is_recommend,
+            p.product_desc,
+            p.is_hot,
+            p.view_count
+        FROM
+            t_product p
+                LEFT JOIN t_category c ON p.category_id = c.category_id
+                LEFT JOIN t_seller s ON p.user_id = s.seller_id
+        where p.category_id = #{categoryId}
+    </select>
+    <select id="queryProductBase" resultType="cn.mmko.vo.ProductBaseVO" parameterType="long">
+        select product_id,product_name,product_price,product_image from t_product where product_id in
+        <foreach item="productId" collection="productIds" separator="," open="(" close=")">
+            #{productId}
+        </foreach>
+    </select>
 </mapper>

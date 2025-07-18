@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class ProductImagesDTO {
+    private Long productImageId;
     private String productImage;
     private Integer sortOrder;
 }

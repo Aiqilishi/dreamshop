@@ -16,16 +16,18 @@ public class WebMvcConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         // 配置拦截器，指定拦截路径和排除路径
         registry.addInterceptor(jwtInterceptor)
-                // 拦截所有路径，实际根据需求调整，比如拦截 /user/** 下的接口
                 .addPathPatterns("/**")
-                // 排除登录、注册等不需要校验的接口，根据你的实际路径改
-                .excludePathPatterns("/user/insert",
-                                     "/user/check",
+                .excludePathPatterns(
+                        "/user/insert",
+                        "/user/check",
                         "/product/query",
                         "/product/query/*",
                         "/seller/insert",
-                        "/category/insert",
-                        "/product/insert"
+                        "/product/queryBySearch",
+                        "/category/query/*",
+                        "/images/**",
+                        "/product/queryByCategoryId",// 关键：放行静态资源
+                        "/order/alipay_notify_url"
                 );
     }
 }

@@ -20,3 +20,4 @@ public class ProductCreateDTO {
     private String productDesc;    // 商品描述
     private String productImage;   // 商品主图
 }
+
