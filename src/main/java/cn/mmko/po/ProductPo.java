@@ -24,6 +24,7 @@ public class ProductPo {
     private Long userId;         // 商家ID
     private BigDecimal productPrice; // 商品价格
     private Integer productStock;  // 库存数量
+    private Integer frozenStock;  // 冻结库存数量
     private Integer productSales;  // 销量
     private Integer productStatus; // 商品状态(1:上架,0:下架)
     private String productDesc;    // 商品描述

@@ -1,837 +1,347 @@
-25-07-18.13:37:09.724 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 23036 (D:\test\dream-shop\target\classes started by 280477 in D:\test\dream-shop)
-25-07-18.13:37:09.727 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-07-18.13:37:10.857 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-07-18.13:37:10.861 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-07-18.13:37:10.921 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 0 Redis repository interfaces.
-25-07-18.13:37:12.135 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-07-18.13:37:12.151 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-07-18.13:37:12.151 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-07-18.13:37:12.151 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-07-18.13:37:12.388 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-07-18.13:37:12.388 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2606 ms
-25-07-18.13:37:13.089 [main            ] INFO  Version                - Redisson 3.26.0
-25-07-18.13:37:13.467 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
-25-07-18.13:37:13.486 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
-25-07-18.13:37:13.535 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.alipay.api.AlipayClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAINER, type=java.lang.Object.class, mappedName="")}
-25-07-18.13:37:13.553 [main            ] INFO  StandardService        - Stopping service [Tomcat]
-25-07-18.13:37:13.563 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-25-07-18.13:37:13.579 [main            ] ERROR LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-A component required a bean of type 'com.alipay.api.AlipayClient' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.alipay.api.AlipayClient' in your configuration.
-
-25-07-18.13:39:08.161 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 25424 (D:\test\dream-shop\target\classes started by 280477 in D:\test\dream-shop)
-25-07-18.13:39:08.163 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-07-18.13:39:08.918 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-07-18.13:39:08.920 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-07-18.13:39:08.962 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 0 Redis repository interfaces.
-25-07-18.13:39:09.576 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-07-18.13:39:09.583 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-07-18.13:39:09.583 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-07-18.13:39:09.584 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-07-18.13:39:09.723 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-07-18.13:39:09.723 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1520 ms
-25-07-18.13:39:10.209 [main            ] INFO  Version                - Redisson 3.26.0
-25-07-18.13:39:10.500 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
-25-07-18.13:39:10.519 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
-25-07-18.13:39:11.197 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-07-18.13:39:11.225 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-07-18.13:39:11.237 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-07-18.13:39:11.247 [main            ] INFO  Application            - Started Application in 3.509 seconds (JVM running for 4.109)
-25-07-18.13:39:11.320 [RMI TCP Connection(2)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-07-18.13:39:11.324 [RMI TCP Connection(3)-192.168.1.3] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-07-18.13:39:11.324 [RMI TCP Connection(3)-192.168.1.3] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-07-18.13:39:11.325 [RMI TCP Connection(3)-192.168.1.3] INFO  DispatcherServlet      - Completed initialization in 1 ms
-25-07-18.13:39:11.690 [RMI TCP Connection(2)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-07-18.13:41:45.924 [http-nio-8091-exec-1] ERROR GlobalExceptionHandler - 系统异常: 
-io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-07-16T19:41:55Z. Current time: 2025-07-18T13:41:45Z, a difference of 151190919 milliseconds.  Allowed clock skew: 0 milliseconds.
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
-	at cn.mmko.utils.JwtUtils.validateToken(JwtUtils.java:34)
-	at cn.mmko.interceptor.JwtInterceptor.preHandle(JwtInterceptor.java:29)
-	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:148)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-25-07-18.13:42:56.140 [http-nio-8091-exec-4] INFO  UserService            - 用户19
-25-07-18.13:42:56.160 [http-nio-8091-exec-4] INFO  UserService            - 角色[1]
-25-07-18.13:42:56.246 [http-nio-8091-exec-4] INFO  UserController         - 用户eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Im1ta28iLCJyb2xlIjpbIlVTRVIiXSwicGVybWlzc2lvbiI6WyJVU0VSX0xPR0lOX0NIRUNLIiwiVVNFUl9NQU5BR0UiLCJVU0VSX01FU1NBR0UiXSwidXNlcklkIjoxOSwiZXhwIjoxNzUyOTAzNzc2LCJqdGkiOiIyODU0N2VmZi1iNzEzLTQ3MzMtOTFlZS1mMTU2OGE2NTcxZDUifQ.hDSxkaVrOsyLmUqg3ULYEkRxYK3eNmrXUJo0wcodlL0登录成功
-25-07-18.13:43:24.965 [http-nio-8091-exec-6] INFO  JwtUtils               - userId:19
-25-07-18.13:43:25.014 [http-nio-8091-exec-6] INFO  OrderService           - 用户已经存在未完成订单
-25-07-18.13:50:44.187 [http-nio-8091-exec-7] ERROR GlobalExceptionHandler - 系统异常: 
-io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-07-16T19:41:55Z. Current time: 2025-07-18T13:50:44Z, a difference of 151729186 milliseconds.  Allowed clock skew: 0 milliseconds.
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
-	at cn.mmko.utils.JwtUtils.validateToken(JwtUtils.java:34)
-	at cn.mmko.interceptor.JwtInterceptor.preHandle(JwtInterceptor.java:29)
-	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:148)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-25-07-18.13:51:28.703 [http-nio-8091-exec-3] ERROR GlobalExceptionHandler - 系统异常: 
-io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-07-16T19:41:55Z. Current time: 2025-07-18T13:51:28Z, a difference of 151773702 milliseconds.  Allowed clock skew: 0 milliseconds.
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
-	at cn.mmko.utils.JwtUtils.validateToken(JwtUtils.java:34)
-	at cn.mmko.interceptor.JwtInterceptor.preHandle(JwtInterceptor.java:29)
-	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:148)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-25-07-18.13:51:53.056 [http-nio-8091-exec-2] ERROR GlobalExceptionHandler - 系统异常: 
-io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-07-16T19:41:55Z. Current time: 2025-07-18T13:51:53Z, a difference of 151798056 milliseconds.  Allowed clock skew: 0 milliseconds.
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
-	at cn.mmko.utils.JwtUtils.validateToken(JwtUtils.java:34)
-	at cn.mmko.interceptor.JwtInterceptor.preHandle(JwtInterceptor.java:29)
-	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:148)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-25-07-18.13:51:55.699 [http-nio-8091-exec-1] ERROR GlobalExceptionHandler - 系统异常: 
-io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-07-16T19:41:55Z. Current time: 2025-07-18T13:51:55Z, a difference of 151800699 milliseconds.  Allowed clock skew: 0 milliseconds.
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
-	at cn.mmko.utils.JwtUtils.validateToken(JwtUtils.java:34)
-	at cn.mmko.interceptor.JwtInterceptor.preHandle(JwtInterceptor.java:29)
-	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:148)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-25-07-18.13:51:58.429 [http-nio-8091-exec-5] ERROR GlobalExceptionHandler - 系统异常: 
-io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-07-16T19:41:55Z. Current time: 2025-07-18T13:51:58Z, a difference of 151803428 milliseconds.  Allowed clock skew: 0 milliseconds.
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
-	at cn.mmko.utils.JwtUtils.validateToken(JwtUtils.java:34)
-	at cn.mmko.interceptor.JwtInterceptor.preHandle(JwtInterceptor.java:29)
-	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:148)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-25-07-18.13:57:24.496 [http-nio-8091-exec-7] ERROR GlobalExceptionHandler - 系统异常: 
-io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-07-16T19:41:55Z. Current time: 2025-07-18T13:57:24Z, a difference of 152129496 milliseconds.  Allowed clock skew: 0 milliseconds.
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
-	at cn.mmko.utils.JwtUtils.validateToken(JwtUtils.java:34)
-	at cn.mmko.interceptor.JwtInterceptor.preHandle(JwtInterceptor.java:29)
-	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:148)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-25-07-18.14:01:07.349 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-07-18.14:01:07.378 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-07-18.14:01:12.231 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 10616 (D:\test\dream-shop\target\classes started by 280477 in D:\test\dream-shop)
-25-07-18.14:01:12.233 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-07-18.14:01:13.000 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-07-18.14:01:13.002 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-07-18.14:01:13.044 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
-25-07-18.14:01:13.701 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-07-18.14:01:13.708 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-07-18.14:01:13.709 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-07-18.14:01:13.709 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-07-18.14:01:13.855 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-07-18.14:01:13.856 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1588 ms
-25-07-18.14:01:14.388 [main            ] INFO  Version                - Redisson 3.26.0
-25-07-18.14:01:14.696 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
-25-07-18.14:01:14.717 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
-25-07-18.14:01:15.330 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-07-18.14:01:15.354 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-07-18.14:01:15.365 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-07-18.14:01:15.376 [main            ] INFO  Application            - Started Application in 3.561 seconds (JVM running for 4.178)
-25-07-18.14:01:15.807 [RMI TCP Connection(2)-192.168.1.3] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-07-18.14:01:15.808 [RMI TCP Connection(2)-192.168.1.3] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-07-18.14:01:15.809 [RMI TCP Connection(2)-192.168.1.3] INFO  DispatcherServlet      - Completed initialization in 1 ms
-25-07-18.14:01:15.810 [RMI TCP Connection(3)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-07-18.14:01:16.130 [RMI TCP Connection(3)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-07-18.14:02:14.989 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:02:21.126 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:03:27.996 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:03:36.240 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:05:53.009 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:10:14.670 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:10:43.640 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:11:41.631 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:11:43.849 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:12:23.099 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:12:24.187 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:12:36.013 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:12:38.160 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:12:44.512 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:13:05.413 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:13:06.638 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:15:41.970 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:15:44.807 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:15:47.806 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:16:51.738 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:16:54.980 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:16:55.231 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:17:43.367 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:19:07.861 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-07-18.14:19:59.783 [http-nio-8091-exec-6] INFO  UserService            - 用户19
-25-07-18.14:19:59.790 [http-nio-8091-exec-6] INFO  UserService            - 角色[1]
-25-07-18.14:19:59.884 [http-nio-8091-exec-6] INFO  UserController         - 用户eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Im1ta28iLCJyb2xlIjpbIlVTRVIiXSwicGVybWlzc2lvbiI6WyJVU0VSX0xPR0lOX0NIRUNLIiwiVVNFUl9NQU5BR0UiLCJVU0VSX01FU1NBR0UiXSwidXNlcklkIjoxOSwiZXhwIjoxNzUyOTA1OTk5LCJqdGkiOiI1ZTJhMWU3OS0zMWRmLTQxNGUtYTliMS0wMjBlOWI2MjA5NTQifQ.e6LRFqDPSJ3TT7-EO92qTpXCPKsnizPQwJHXaijAa04登录成功
-25-07-18.14:20:06.208 [http-nio-8091-exec-9] INFO  JwtUtils               - userId:19
-25-07-18.14:20:59.133 [http-nio-8091-exec-10] INFO  JwtUtils               - userId:19
-25-07-18.14:21:03.101 [http-nio-8091-exec-3] INFO  JwtUtils               - userId:19
-25-07-18.14:23:36.294 [http-nio-8091-exec-7] INFO  JwtUtils               - userId:19
-25-07-18.14:23:55.295 [http-nio-8091-exec-8] INFO  JwtUtils               - userId:19
-25-07-18.14:23:57.498 [http-nio-8091-exec-9] INFO  JwtUtils               - userId:19
-25-07-18.14:24:02.419 [http-nio-8091-exec-1] INFO  JwtUtils               - userId:19
-25-07-18.14:24:04.945 [http-nio-8091-exec-5] INFO  JwtUtils               - userId:19
-25-07-18.14:24:14.123 [http-nio-8091-exec-8] INFO  JwtUtils               - userId:19
-25-07-18.14:24:15.492 [http-nio-8091-exec-2] INFO  JwtUtils               - userId:19
-25-07-18.14:25:04.486 [http-nio-8091-exec-4] INFO  JwtUtils               - userId:19
-25-07-18.14:25:06.375 [http-nio-8091-exec-6] INFO  JwtUtils               - userId:19
-25-07-18.14:25:08.609 [http-nio-8091-exec-9] INFO  JwtUtils               - userId:19
-25-07-18.14:25:12.947 [http-nio-8091-exec-1] INFO  JwtUtils               - userId:19
-25-07-18.14:25:18.135 [http-nio-8091-exec-3] INFO  JwtInterceptor         - 缺少有效 Tokennull
-25-07-18.14:25:18.136 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-07-18.14:25:29.355 [http-nio-8091-exec-4] INFO  JwtUtils               - userId:19
-25-07-18.14:25:31.555 [http-nio-8091-exec-5] INFO  JwtUtils               - userId:19
-25-07-18.14:26:37.655 [http-nio-8091-exec-8] INFO  JwtUtils               - userId:19
-25-07-18.14:26:38.799 [http-nio-8091-exec-10] INFO  JwtUtils               - userId:19
-25-07-18.14:26:39.800 [http-nio-8091-exec-2] INFO  JwtUtils               - userId:19
-25-07-18.14:26:40.054 [http-nio-8091-exec-1] INFO  JwtUtils               - userId:19
-25-07-18.14:26:40.228 [http-nio-8091-exec-3] INFO  JwtUtils               - userId:19
-25-07-18.14:26:40.693 [http-nio-8091-exec-4] INFO  JwtUtils               - userId:19
-25-07-18.14:26:58.722 [http-nio-8091-exec-7] INFO  JwtUtils               - userId:19
-25-07-18.14:27:00.072 [http-nio-8091-exec-10] INFO  JwtUtils               - userId:19
-25-07-18.14:27:18.914 [http-nio-8091-exec-1] INFO  JwtUtils               - userId:19
-25-07-18.14:27:22.322 [http-nio-8091-exec-3] INFO  JwtUtils               - userId:19
-25-07-18.14:27:39.539 [http-nio-8091-exec-4] INFO  JwtInterceptor         - 缺少有效 Tokennull
-25-07-18.14:27:39.539 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-07-18.14:28:18.843 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-07-18.14:28:18.859 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-07-18.14:28:23.383 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 20964 (D:\test\dream-shop\target\classes started by 280477 in D:\test\dream-shop)
-25-07-18.14:28:23.387 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-07-18.14:28:24.210 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-07-18.14:28:24.213 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-07-18.14:28:24.273 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 0 Redis repository interfaces.
-25-07-18.14:28:25.002 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-07-18.14:28:25.012 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-07-18.14:28:25.012 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-07-18.14:28:25.012 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-07-18.14:28:25.157 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-07-18.14:28:25.157 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1726 ms
-25-07-18.14:28:25.768 [main            ] INFO  Version                - Redisson 3.26.0
-25-07-18.14:28:26.089 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
-25-07-18.14:28:26.111 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
-25-07-18.14:28:26.740 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-07-18.14:28:26.763 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-07-18.14:28:26.782 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-07-18.14:28:26.798 [main            ] INFO  Application            - Started Application in 3.855 seconds (JVM running for 4.455)
-25-07-18.14:28:27.011 [RMI TCP Connection(5)-192.168.1.3] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-07-18.14:28:27.011 [RMI TCP Connection(5)-192.168.1.3] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-07-18.14:28:27.012 [RMI TCP Connection(5)-192.168.1.3] INFO  DispatcherServlet      - Completed initialization in 1 ms
-25-07-18.14:28:27.013 [RMI TCP Connection(4)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-07-18.14:28:27.330 [RMI TCP Connection(4)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-07-18.14:29:33.412 [http-nio-8091-exec-1] INFO  JwtUtils               - userId:19
-25-07-18.14:29:54.529 [http-nio-8091-exec-2] INFO  JwtUtils               - userId:19
-25-07-18.14:29:58.681 [http-nio-8091-exec-3] INFO  JwtUtils               - userId:19
-25-07-18.14:32:13.762 [http-nio-8091-exec-4] INFO  JwtUtils               - userId:19
-25-07-18.14:32:20.375 [http-nio-8091-exec-7] INFO  JwtUtils               - userId:19
-25-07-18.14:34:18.238 [http-nio-8091-exec-9] INFO  JwtUtils               - userId:19
-25-07-18.14:34:21.064 [http-nio-8091-exec-3] INFO  JwtUtils               - userId:19
-25-07-18.14:34:22.443 [http-nio-8091-exec-5] INFO  JwtUtils               - userId:19
-25-07-18.14:34:22.619 [http-nio-8091-exec-5] ERROR GlobalExceptionHandler - 系统异常: 
-org.springframework.dao.DataIntegrityViolationException: 
-### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'seller_id' cannot be null
-### The error may exist in file [D:\test\dream-shop\target\classes\mybatis\mapper\order_mapper.xml]
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: insert into t_order(order_id,user_id,seller_id,product_id,order_status,total_amount,create_time)         values(?,?,?,?,?,?,now())
-### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'seller_id' cannot be null
-; Column 'seller_id' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'seller_id' cannot be null
-	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:87)
-	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
-	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
-	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
-	at jdk.proxy2/jdk.proxy2.$Proxy88.insert(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at jdk.proxy2/jdk.proxy2.$Proxy96.insertOrder(Unknown Source)
-	at cn.mmko.service.order.imp.OrderService.createOrder(OrderService.java:40)
-	at cn.mmko.controller.OrderController.createOrder(OrderController.java:32)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'seller_id' cannot be null
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
-	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
-	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
-	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
-	at jdk.proxy2/jdk.proxy2.$Proxy135.update(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
-	... 62 common frames omitted
-25-07-18.14:37:05.132 [http-nio-8091-exec-6] INFO  JwtUtils               - userId:19
-25-07-18.14:37:09.454 [http-nio-8091-exec-8] INFO  JwtUtils               - userId:19
-25-07-18.14:37:09.463 [http-nio-8091-exec-8] ERROR GlobalExceptionHandler - 系统异常: 
-org.springframework.dao.DataIntegrityViolationException: 
-### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'seller_id' cannot be null
-### The error may exist in file [D:\test\dream-shop\target\classes\mybatis\mapper\order_mapper.xml]
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: insert into t_order(order_id,user_id,seller_id,product_id,order_status,total_amount,create_time)         values(?,?,?,?,?,?,now())
-### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'seller_id' cannot be null
-; Column 'seller_id' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'seller_id' cannot be null
-	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:87)
-	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
-	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
-	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
-	at jdk.proxy2/jdk.proxy2.$Proxy88.insert(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at jdk.proxy2/jdk.proxy2.$Proxy96.insertOrder(Unknown Source)
-	at cn.mmko.service.order.imp.OrderService.createOrder(OrderService.java:40)
-	at cn.mmko.controller.OrderController.createOrder(OrderController.java:32)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'seller_id' cannot be null
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
-	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
-	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
-	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
-	at jdk.proxy2/jdk.proxy2.$Proxy135.update(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
-	... 62 common frames omitted
-25-07-18.14:38:09.269 [http-nio-8091-exec-1] INFO  JwtUtils               - userId:19
-25-07-18.14:43:14.977 [http-nio-8091-exec-5] INFO  JwtUtils               - userId:19
-25-07-18.14:43:20.479 [http-nio-8091-exec-10] INFO  JwtUtils               - userId:19
-25-07-18.14:43:21.666 [http-nio-8091-exec-9] INFO  JwtUtils               - userId:19
-25-07-18.14:44:11.295 [http-nio-8091-exec-3] INFO  JwtUtils               - userId:19
-25-07-18.14:46:43.691 [http-nio-8091-exec-5] INFO  UserService            - 用户19
-25-07-18.14:46:43.695 [http-nio-8091-exec-5] INFO  UserService            - 角色[1]
-25-07-18.14:46:43.723 [http-nio-8091-exec-5] INFO  UserController         - 用户eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Im1ta28iLCJyb2xlIjpbIlVTRVIiXSwicGVybWlzc2lvbiI6WyJVU0VSX0xPR0lOX0NIRUNLIiwiVVNFUl9NQU5BR0UiLCJVU0VSX01FU1NBR0UiXSwidXNlcklkIjoxOSwiZXhwIjoxNzUyOTA3NjAzLCJqdGkiOiJjN2M4Mzg5YS1lYjI3LTQzMDMtODRjNy04Yzc4NDA3MzFhMDAifQ.Qcm5aXx2cBwDr_WOw7Pys7rxbTtbhd4hIbRu7CLxP2g登录成功
-25-07-18.14:46:55.428 [http-nio-8091-exec-8] INFO  JwtUtils               - userId:19
-25-07-18.14:46:56.564 [http-nio-8091-exec-9] INFO  JwtUtils               - userId:19
-25-07-18.14:48:12.719 [http-nio-8091-exec-1] INFO  JwtInterceptor         - 缺少有效 Tokennull
-25-07-18.14:48:12.720 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-07-18.14:56:04.600 [http-nio-8091-exec-3] WARN  PageNotFound           - No mapping for GET /
-25-07-18.14:56:04.606 [http-nio-8091-exec-3] INFO  JwtInterceptor         - 缺少有效 Tokennull
-25-07-18.14:56:04.607 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-07-18.14:56:18.581 [http-nio-8091-exec-6] INFO  JwtUtils               - userId:19
-25-07-18.14:56:23.267 [http-nio-8091-exec-8] INFO  JwtUtils               - userId:19
-25-07-18.14:56:23.271 [http-nio-8091-exec-8] INFO  OrderService           - 用户已经存在未完成订单
-25-07-18.14:56:39.106 [http-nio-8091-exec-10] INFO  JwtUtils               - userId:19
-25-07-18.14:57:14.055 [http-nio-8091-exec-9] INFO  JwtUtils               - userId:19
-25-07-18.14:57:52.318 [http-nio-8091-exec-1] INFO  JwtInterceptor         - 缺少有效 Tokennull
-25-07-18.14:57:52.318 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-07-18.14:59:53.004 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-07-18.14:59:53.019 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-07-18.14:59:57.345 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 31776 (D:\test\dream-shop\target\classes started by 280477 in D:\test\dream-shop)
-25-07-18.14:59:57.347 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-07-18.14:59:58.146 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-07-18.14:59:58.148 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-07-18.14:59:58.197 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38 ms. Found 0 Redis repository interfaces.
-25-07-18.14:59:58.883 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-07-18.14:59:58.892 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-07-18.14:59:58.892 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-07-18.14:59:58.892 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-07-18.14:59:59.033 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-07-18.14:59:59.033 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1646 ms
-25-07-18.14:59:59.594 [main            ] INFO  Version                - Redisson 3.26.0
-25-07-18.14:59:59.925 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
-25-07-18.14:59:59.944 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
-25-07-18.15:00:00.622 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-07-18.15:00:00.646 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-07-18.15:00:00.657 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-07-18.15:00:00.669 [main            ] INFO  Application            - Started Application in 3.741 seconds (JVM running for 4.367)
-25-07-18.15:00:01.175 [RMI TCP Connection(2)-192.168.1.3] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-07-18.15:00:01.176 [RMI TCP Connection(2)-192.168.1.3] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-07-18.15:00:01.177 [RMI TCP Connection(2)-192.168.1.3] INFO  DispatcherServlet      - Completed initialization in 1 ms
-25-07-18.15:00:01.179 [RMI TCP Connection(3)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-07-18.15:00:01.525 [RMI TCP Connection(3)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-07-18.15:00:12.915 [http-nio-8091-exec-4] INFO  JwtUtils               - userId:19
-25-07-18.15:00:13.814 [http-nio-8091-exec-5] INFO  JwtUtils               - userId:19
-25-07-18.15:00:41.096 [http-nio-8091-exec-3] INFO  JwtInterceptor         - 缺少有效 Tokennull
-25-07-18.15:00:41.099 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-07-18.15:01:49.062 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-07-18.15:01:49.074 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-07-18.15:01:53.083 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 4160 (D:\test\dream-shop\target\classes started by 280477 in D:\test\dream-shop)
-25-07-18.15:01:53.085 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-07-18.15:01:53.816 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-07-18.15:01:53.818 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-07-18.15:01:53.859 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
-25-07-18.15:01:54.473 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-07-18.15:01:54.480 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-07-18.15:01:54.481 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-07-18.15:01:54.481 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-07-18.15:01:54.613 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-07-18.15:01:54.613 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1488 ms
-25-07-18.15:01:55.084 [main            ] INFO  Version                - Redisson 3.26.0
-25-07-18.15:01:55.382 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
-25-07-18.15:01:55.401 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
-25-07-18.15:01:56.008 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-07-18.15:01:56.031 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-07-18.15:01:56.040 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-07-18.15:01:56.051 [main            ] INFO  Application            - Started Application in 3.372 seconds (JVM running for 3.934)
-25-07-18.15:01:56.241 [RMI TCP Connection(1)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-07-18.15:01:56.251 [RMI TCP Connection(3)-192.168.1.3] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-07-18.15:01:56.252 [RMI TCP Connection(3)-192.168.1.3] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-07-18.15:01:56.253 [RMI TCP Connection(3)-192.168.1.3] INFO  DispatcherServlet      - Completed initialization in 1 ms
-25-07-18.15:01:56.476 [RMI TCP Connection(1)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-07-18.15:02:17.925 [http-nio-8091-exec-4] INFO  JwtUtils               - userId:19
-25-07-18.15:02:18.937 [http-nio-8091-exec-9] INFO  JwtUtils               - userId:19
-25-07-18.15:02:44.847 [http-nio-8091-exec-10] INFO  OrderController        - 支付回调，消息接收 TRADE_SUCCESS
-25-07-18.15:02:44.848 [http-nio-8091-exec-10] INFO  OrderController        - 支付回调，交易名称: iPhone 15 Pro
-25-07-18.15:02:44.848 [http-nio-8091-exec-10] INFO  OrderController        - 支付回调，交易状态: TRADE_SUCCESS
-25-07-18.15:02:44.848 [http-nio-8091-exec-10] INFO  OrderController        - 支付回调，支付宝交易凭证号: 2025071822001432920508779378
-25-07-18.15:02:44.848 [http-nio-8091-exec-10] INFO  OrderController        - 支付回调，商户订单号: 1946103219319083008
-25-07-18.15:02:44.849 [http-nio-8091-exec-10] INFO  OrderController        - 支付回调，交易金额: 2.00
-25-07-18.15:02:44.849 [http-nio-8091-exec-10] INFO  OrderController        - 支付回调，买家在支付宝唯一id: 2088722062932922
-25-07-18.15:02:44.849 [http-nio-8091-exec-10] INFO  OrderController        - 支付回调，买家付款时间: 2025-07-18 15:02:45
-25-07-18.15:02:44.849 [http-nio-8091-exec-10] INFO  OrderController        - 支付回调，买家付款金额: 2.00
-25-07-18.15:02:44.849 [http-nio-8091-exec-10] INFO  OrderController        - 支付回调，支付回调，更新订单 1946103219319083008
+25-07-24.18:16:43.012 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 71188 (D:\test\dream-shop\target\classes started by 280477 in D:\test\dream-shop)
+25-07-24.18:16:43.014 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-24.18:16:44.039 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-24.18:16:44.042 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-24.18:16:44.099 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 0 Redis repository interfaces.
+25-07-24.18:16:45.016 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-07-24.18:16:45.025 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-07-24.18:16:45.025 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-24.18:16:45.026 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-24.18:16:45.201 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-24.18:16:45.201 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2135 ms
+25-07-24.18:16:45.954 [main            ] INFO  Version                - Redisson 3.26.0
+25-07-24.18:16:46.405 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-24.18:16:46.438 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-24.18:16:47.760 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-24.18:16:47.795 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-07-24.18:16:47.812 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-07-24.18:16:47.830 [main            ] INFO  Application            - Started Application in 5.364 seconds (JVM running for 6.094)
+25-07-24.18:16:48.209 [RMI TCP Connection(4)-192.168.1.3] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-24.18:16:48.209 [RMI TCP Connection(4)-192.168.1.3] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-24.18:16:48.211 [RMI TCP Connection(4)-192.168.1.3] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-07-24.18:16:48.231 [RMI TCP Connection(5)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-24.18:16:48.818 [RMI TCP Connection(5)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-24.18:17:26.295 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
+25-07-24.18:17:36.571 [http-nio-8091-exec-4] INFO  UserService            - 用户19
+25-07-24.18:17:36.595 [http-nio-8091-exec-4] INFO  UserService            - 角色[1]
+25-07-24.18:17:36.732 [http-nio-8091-exec-4] INFO  UserController         - 用户eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Im1ta28iLCJyb2xlIjpbIlVTRVIiXSwicGVybWlzc2lvbiI6WyJVU0VSX0xPR0lOX0NIRUNLIiwiVVNFUl9NQU5BR0UiLCJVU0VSX01FU1NBR0UiXSwidXNlcklkIjoxOSwiZXhwIjoxNzUzNDM4NjU2LCJqdGkiOiJhNzkyZDY5NC1jZTg5LTQ3NTAtYmM0Ny0zZGRhMmQzYjUxOGYifQ.x6SrLCQZOT6fnvd7jSMACf_817omINzyMBikXKmD12s登录成功
+25-07-24.18:17:38.580 [http-nio-8091-exec-8] INFO  JwtUtils               - userId:19
+25-07-24.18:17:40.561 [http-nio-8091-exec-10] INFO  JwtUtils               - userId:19
+25-07-24.18:17:41.249 [http-nio-8091-exec-2] INFO  JwtUtils               - userId:19
+25-07-24.18:17:43.655 [http-nio-8091-exec-5] INFO  JwtUtils               - userId:19
+25-07-24.18:17:44.329 [http-nio-8091-exec-8] INFO  JwtUtils               - userId:19
+25-07-24.18:17:46.080 [http-nio-8091-exec-10] INFO  JwtUtils               - userId:19
+25-07-24.18:17:47.810 [http-nio-8091-exec-1] INFO  JwtUtils               - userId:19
+25-07-24.18:17:48.187 [http-nio-8091-exec-2] INFO  JwtUtils               - userId:19
+25-07-24.18:21:41.831 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-24.18:21:41.855 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-24.18:21:49.083 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 80996 (D:\test\dream-shop\target\classes started by 280477 in D:\test\dream-shop)
+25-07-24.18:21:49.087 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-24.18:21:50.128 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-24.18:21:50.130 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-24.18:21:50.192 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 0 Redis repository interfaces.
+25-07-24.18:21:51.065 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-07-24.18:21:51.073 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-07-24.18:21:51.074 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-24.18:21:51.074 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-24.18:21:51.262 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-24.18:21:51.262 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2131 ms
+25-07-24.18:21:51.957 [main            ] INFO  Version                - Redisson 3.26.0
+25-07-24.18:21:52.370 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-24.18:21:52.394 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-24.18:21:53.120 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-24.18:21:53.148 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-07-24.18:21:53.159 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-07-24.18:21:53.172 [main            ] INFO  Application            - Started Application in 4.606 seconds (JVM running for 5.271)
+25-07-24.18:21:53.646 [RMI TCP Connection(5)-192.168.1.3] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-24.18:21:53.646 [RMI TCP Connection(5)-192.168.1.3] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-24.18:21:53.648 [RMI TCP Connection(5)-192.168.1.3] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-07-24.18:21:53.649 [RMI TCP Connection(4)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-24.18:21:54.044 [RMI TCP Connection(4)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-24.18:23:11.929 [http-nio-8091-exec-3] INFO  JwtUtils               - userId:19
+25-07-24.18:23:12.473 [http-nio-8091-exec-5] INFO  JwtUtils               - userId:19
+25-07-24.18:23:14.397 [http-nio-8091-exec-7] INFO  JwtUtils               - userId:19
+25-07-24.18:23:14.732 [http-nio-8091-exec-6] INFO  JwtUtils               - userId:19
+25-07-24.18:23:16.615 [http-nio-8091-exec-3] INFO  JwtUtils               - userId:19
+25-07-24.18:23:18.294 [http-nio-8091-exec-4] INFO  JwtUtils               - userId:19
+25-07-24.18:23:18.936 [http-nio-8091-exec-5] INFO  JwtUtils               - userId:19
+25-07-24.18:23:42.446 [http-nio-8091-exec-7] INFO  JwtUtils               - userId:19
+25-07-24.18:23:43.409 [http-nio-8091-exec-6] INFO  JwtUtils               - userId:19
+25-07-24.18:23:57.102 [http-nio-8091-exec-1] INFO  JwtUtils               - userId:19
+25-07-24.18:24:02.525 [http-nio-8091-exec-4] INFO  JwtUtils               - userId:19
+25-07-24.18:24:03.793 [http-nio-8091-exec-8] INFO  JwtUtils               - userId:19
+25-07-24.18:24:04.246 [http-nio-8091-exec-9] INFO  JwtUtils               - userId:19
+25-07-24.18:24:05.799 [http-nio-8091-exec-2] INFO  JwtUtils               - userId:19
+25-07-24.18:24:06.388 [http-nio-8091-exec-4] INFO  JwtUtils               - userId:19
+25-07-24.18:24:07.986 [http-nio-8091-exec-8] INFO  JwtUtils               - userId:19
+25-07-24.18:24:09.276 [http-nio-8091-exec-7] INFO  JwtUtils               - userId:19
+25-07-24.18:24:09.687 [http-nio-8091-exec-9] INFO  JwtUtils               - userId:19
+25-07-24.18:52:22.766 [http-nio-8091-exec-2] INFO  JwtUtils               - userId:19
+25-07-24.18:52:23.996 [http-nio-8091-exec-3] INFO  JwtUtils               - userId:19
+25-07-24.20:04:32.160 [http-nio-8091-exec-4] INFO  JwtUtils               - userId:19
+25-07-24.20:04:50.342 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m26s4ms52µs400ns).
+25-07-24.20:05:10.000 [http-nio-8091-exec-3] INFO  JwtUtils               - userId:19
+25-07-24.20:05:11.051 [http-nio-8091-exec-4] INFO  JwtUtils               - userId:19
+25-07-24.20:05:22.276 [http-nio-8091-exec-5] INFO  JwtUtils               - userId:19
+25-07-24.20:05:24.982 [http-nio-8091-exec-7] INFO  JwtUtils               - userId:19
+25-07-24.20:05:30.908 [http-nio-8091-exec-2] INFO  JwtUtils               - userId:19
+25-07-24.20:05:39.237 [http-nio-8091-exec-8] INFO  JwtUtils               - userId:19
+25-07-25.17:15:47.119 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-25.17:15:47.134 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-25.17:15:51.499 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 19572 (D:\test\dream-shop\target\classes started by 280477 in D:\test\dream-shop)
+25-07-25.17:15:51.501 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-25.17:15:52.483 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-25.17:15:52.486 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-25.17:15:52.553 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 0 Redis repository interfaces.
+25-07-25.17:15:53.492 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-07-25.17:15:53.502 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-07-25.17:15:53.502 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-25.17:15:53.502 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-25.17:15:53.756 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-25.17:15:53.757 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2217 ms
+25-07-25.17:15:54.566 [main            ] INFO  Version                - Redisson 3.26.0
+25-07-25.17:15:55.013 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-25.17:15:55.034 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-25.17:15:55.769 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-25.17:15:55.793 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-07-25.17:15:55.807 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-07-25.17:15:55.822 [main            ] INFO  Application            - Started Application in 4.805 seconds (JVM running for 5.533)
+25-07-25.17:15:55.975 [RMI TCP Connection(5)-192.168.1.3] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-25.17:15:55.976 [RMI TCP Connection(5)-192.168.1.3] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-25.17:15:55.977 [RMI TCP Connection(5)-192.168.1.3] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-07-25.17:15:55.979 [RMI TCP Connection(4)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-25.17:15:56.322 [RMI TCP Connection(4)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-25.17:16:13.167 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-25.17:16:13.178 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-25.17:16:24.743 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 3916 (D:\test\dream-shop\target\classes started by 280477 in D:\test\dream-shop)
+25-07-25.17:16:24.746 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-25.17:16:25.601 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-25.17:16:25.604 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-25.17:16:25.660 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 0 Redis repository interfaces.
+25-07-25.17:16:26.373 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-07-25.17:16:26.381 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-07-25.17:16:26.381 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-25.17:16:26.381 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-25.17:16:26.546 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-25.17:16:26.547 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1760 ms
+25-07-25.17:16:27.078 [main            ] INFO  Version                - Redisson 3.26.0
+25-07-25.17:16:27.423 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-25.17:16:27.440 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-25.17:16:28.146 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-25.17:16:28.171 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-07-25.17:16:28.190 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-07-25.17:16:28.201 [main            ] INFO  Application            - Started Application in 3.925 seconds (JVM running for 4.625)
+25-07-25.17:16:28.298 [RMI TCP Connection(3)-192.168.1.3] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-25.17:16:28.299 [RMI TCP Connection(3)-192.168.1.3] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-25.17:16:28.300 [RMI TCP Connection(3)-192.168.1.3] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-07-25.17:16:28.301 [RMI TCP Connection(2)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-25.17:16:28.541 [RMI TCP Connection(2)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-25.17:16:41.151 [http-nio-8091-exec-6] INFO  JwtUtils               - userId:19
+25-07-25.17:16:43.408 [http-nio-8091-exec-5] INFO  JwtUtils               - userId:19
+25-07-25.17:16:45.851 [http-nio-8091-exec-9] INFO  JwtUtils               - userId:19
+25-07-25.17:16:46.283 [http-nio-8091-exec-10] INFO  JwtUtils               - userId:19
+25-07-25.17:16:55.887 [http-nio-8091-exec-3] INFO  JwtUtils               - userId:19
+25-07-25.17:16:56.984 [http-nio-8091-exec-4] INFO  JwtUtils               - userId:19
+25-07-25.17:16:58.118 [http-nio-8091-exec-6] INFO  JwtUtils               - userId:19
+25-07-25.17:16:59.795 [http-nio-8091-exec-5] INFO  JwtUtils               - userId:19
+25-07-25.17:17:06.873 [http-nio-8091-exec-7] INFO  JwtUtils               - userId:19
+25-07-25.17:17:09.329 [http-nio-8091-exec-10] INFO  JwtUtils               - userId:19
+25-07-25.17:17:11.062 [http-nio-8091-exec-1] INFO  JwtUtils               - userId:19
+25-07-25.17:17:11.484 [http-nio-8091-exec-2] INFO  JwtUtils               - userId:19
+25-07-25.17:17:12.618 [http-nio-8091-exec-3] INFO  JwtUtils               - userId:19
+25-07-25.17:17:12.870 [http-nio-8091-exec-4] INFO  JwtUtils               - userId:19
+25-07-25.17:17:13.550 [http-nio-8091-exec-6] INFO  JwtUtils               - userId:19
+25-07-25.17:17:14.228 [http-nio-8091-exec-5] INFO  JwtUtils               - userId:19
+25-07-25.17:17:16.236 [http-nio-8091-exec-9] INFO  JwtUtils               - userId:19
+25-07-25.17:17:39.285 [http-nio-8091-exec-8] INFO  JwtUtils               - userId:19
+25-07-25.17:17:41.671 [http-nio-8091-exec-1] INFO  JwtUtils               - userId:19
+25-07-25.17:17:44.922 [http-nio-8091-exec-4] INFO  JwtUtils               - userId:19
+25-07-25.17:17:49.145 [http-nio-8091-exec-6] INFO  JwtUtils               - userId:19
+25-07-25.17:17:50.050 [http-nio-8091-exec-8] INFO  JwtUtils               - userId:19
+25-07-25.17:18:28.247 [http-nio-8091-exec-9] INFO  JwtUtils               - userId:19
+25-07-25.17:18:29.335 [http-nio-8091-exec-2] INFO  JwtUtils               - userId:19
+25-07-25.17:18:30.220 [http-nio-8091-exec-4] INFO  JwtUtils               - userId:19
+25-07-25.17:18:31.359 [http-nio-8091-exec-6] INFO  JwtUtils               - userId:19
+25-07-25.17:18:33.772 [http-nio-8091-exec-2] INFO  JwtUtils               - userId:19
+25-07-25.17:30:19.179 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-25.17:30:19.194 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-25.17:30:28.459 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 24152 (D:\test\dream-shop\target\classes started by 280477 in D:\test\dream-shop)
+25-07-25.17:30:28.462 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-25.17:30:29.403 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-25.17:30:29.406 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-25.17:30:29.465 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 0 Redis repository interfaces.
+25-07-25.17:30:30.293 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-07-25.17:30:30.304 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-07-25.17:30:30.304 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-25.17:30:30.304 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-25.17:30:30.489 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-25.17:30:30.489 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1985 ms
+25-07-25.17:30:31.093 [main            ] INFO  Version                - Redisson 3.26.0
+25-07-25.17:30:31.474 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-25.17:30:31.496 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-25.17:30:32.246 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-25.17:30:32.269 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-07-25.17:30:32.282 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-07-25.17:30:32.296 [main            ] INFO  Application            - Started Application in 4.326 seconds (JVM running for 5.013)
+25-07-25.17:30:32.461 [RMI TCP Connection(3)-192.168.1.3] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-25.17:30:32.461 [RMI TCP Connection(3)-192.168.1.3] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-25.17:30:32.462 [RMI TCP Connection(3)-192.168.1.3] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-07-25.17:30:32.465 [RMI TCP Connection(2)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-25.17:30:32.787 [RMI TCP Connection(2)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-25.17:31:56.628 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-25.17:31:56.642 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-25.17:32:02.114 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 12040 (D:\test\dream-shop\target\classes started by 280477 in D:\test\dream-shop)
+25-07-25.17:32:02.116 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-25.17:32:03.027 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-25.17:32:03.030 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-25.17:32:03.097 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 0 Redis repository interfaces.
+25-07-25.17:32:03.914 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-07-25.17:32:03.926 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-07-25.17:32:03.926 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-25.17:32:03.926 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-25.17:32:04.263 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-25.17:32:04.263 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2100 ms
+25-07-25.17:32:04.964 [main            ] INFO  Version                - Redisson 3.26.0
+25-07-25.17:32:05.330 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-25.17:32:05.349 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-25.17:32:06.228 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-25.17:32:06.251 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-07-25.17:32:06.264 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-07-25.17:32:06.279 [main            ] INFO  Application            - Started Application in 4.634 seconds (JVM running for 5.369)
+25-07-25.17:32:06.566 [RMI TCP Connection(3)-192.168.1.3] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-25.17:32:06.566 [RMI TCP Connection(3)-192.168.1.3] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-25.17:32:06.567 [RMI TCP Connection(3)-192.168.1.3] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-07-25.17:32:06.570 [RMI TCP Connection(2)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-25.17:32:06.890 [RMI TCP Connection(2)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-25.17:32:10.002 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:32:10.049 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:32:15.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:32:15.005 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:32:20.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:32:20.004 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:32:25.000 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:32:25.004 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:32:30.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:32:30.004 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:32:35.000 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:32:35.019 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:32:40.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:32:40.007 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:32:45.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:32:45.004 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:32:50.002 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:32:50.004 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:32:55.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:32:55.006 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:33:00.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:33:00.006 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:33:05.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:33:05.010 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:33:10.000 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:33:10.004 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:33:15.003 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:33:15.006 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:33:19.680 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-25.17:33:19.692 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-25.17:33:23.495 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 30628 (D:\test\dream-shop\target\classes started by 280477 in D:\test\dream-shop)
+25-07-25.17:33:23.497 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-25.17:33:24.319 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-25.17:33:24.322 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-25.17:33:24.378 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 0 Redis repository interfaces.
+25-07-25.17:33:25.077 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-07-25.17:33:25.084 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-07-25.17:33:25.084 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-25.17:33:25.084 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-25.17:33:25.246 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-25.17:33:25.246 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1711 ms
+25-07-25.17:33:25.785 [main            ] INFO  Version                - Redisson 3.26.0
+25-07-25.17:33:26.118 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-25.17:33:26.137 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-25.17:33:26.828 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-25.17:33:26.850 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-07-25.17:33:26.861 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-07-25.17:33:26.873 [main            ] INFO  Application            - Started Application in 3.804 seconds (JVM running for 4.517)
+25-07-25.17:33:26.993 [RMI TCP Connection(2)-192.168.1.3] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-25.17:33:26.993 [RMI TCP Connection(2)-192.168.1.3] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-25.17:33:26.994 [RMI TCP Connection(2)-192.168.1.3] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-07-25.17:33:26.995 [RMI TCP Connection(1)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-25.17:33:27.213 [RMI TCP Connection(1)-192.168.1.3] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-25.17:33:30.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:33:30.099 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 已关闭的超时未支付的订单 orderId:1948328127831252992 status:true
+25-07-25.17:33:30.118 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 已关闭的超时未支付的订单 orderId:1948328232361697280 status:true
+25-07-25.17:33:30.133 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 已关闭的超时未支付的订单 orderId:1948328340864147456 status:true
+25-07-25.17:33:35.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:33:35.013 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:33:40.003 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:33:40.006 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:33:45.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:33:45.012 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:33:50.002 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:33:50.011 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:33:55.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:33:55.005 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:34:00.000 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:34:00.004 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:34:05.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:34:05.004 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:34:10.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:34:10.005 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:34:15.002 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:34:15.004 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:34:20.004 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:34:20.007 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:34:25.002 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:34:25.007 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:34:30.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:34:30.007 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:34:35.002 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:34:35.014 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:34:40.000 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:34:40.003 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:34:45.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:34:45.005 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:34:50.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:34:50.004 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:34:55.000 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:34:55.006 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:35:00.002 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:35:00.007 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:35:05.002 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:35:05.004 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:35:10.002 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:35:10.006 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:35:10.880 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-25.17:35:10.891 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-25.17:35:31.528 [main            ] INFO  Application            - Starting Application using Java 17.0.11 on Alice with PID 29788 (D:\test\dream-shop\target\classes started by 280477 in D:\test\dream-shop)
+25-07-25.17:35:31.531 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-25.17:35:32.444 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-25.17:35:32.448 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-25.17:35:32.516 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 0 Redis repository interfaces.
+25-07-25.17:35:33.218 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-07-25.17:35:33.226 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-07-25.17:35:33.226 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-25.17:35:33.226 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-25.17:35:33.398 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-25.17:35:33.399 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1828 ms
+25-07-25.17:35:33.919 [main            ] INFO  Version                - Redisson 3.26.0
+25-07-25.17:35:34.243 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-25.17:35:34.262 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-25.17:35:34.946 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-25.17:35:34.970 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-07-25.17:35:34.982 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-07-25.17:35:34.994 [main            ] INFO  Application            - Started Application in 3.89 seconds (JVM running for 4.487)
+25-07-25.17:35:35.003 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:35:35.018 [scheduling-1    ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-25.17:35:35.121 [RMI TCP Connection(1)-192.168.1.3] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-25.17:35:35.122 [RMI TCP Connection(1)-192.168.1.3] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-25.17:35:35.123 [RMI TCP Connection(1)-192.168.1.3] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-07-25.17:35:35.259 [scheduling-1    ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-25.17:35:35.349 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 已关闭的超时未支付的订单 orderId:1948328127831252992 status:true
+25-07-25.17:35:35.372 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 已关闭的超时未支付的订单 orderId:1948328232361697280 status:true
+25-07-25.17:35:35.406 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 已关闭的超时未支付的订单 orderId:1948328340864147456 status:true
+25-07-25.17:35:40.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:35:40.014 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:35:45.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：检测超时订单
+25-07-25.17:35:45.007 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 暂无超时未支付订单
+25-07-25.17:35:48.686 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-25.17:35:48.710 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

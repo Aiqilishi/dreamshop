@@ -13,6 +13,7 @@ import java.math.BigDecimal;
 @Builder
 public class ProductBaseVO {
     private Long productId;
+    private Long userId;
     private String productName;
     private BigDecimal productPrice;
     private String productImage;

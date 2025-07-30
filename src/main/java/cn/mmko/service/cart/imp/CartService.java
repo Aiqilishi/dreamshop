@@ -76,6 +76,7 @@ public class CartService implements ICartService {
             CartCreateDTO cartCreateDTO = JSON.parseObject(value, CartCreateDTO.class);
             CartListVO cartListVO = CartListVO.builder()
                     .productId(cartCreateDTO.getProductId())
+                    .sellerId(productBaseVOMap.get(cartCreateDTO.getProductId()).getUserId())
                     .productName(productBaseVOMap.get(cartCreateDTO.getProductId()).getProductName())
                     .productImage(productBaseVOMap.get(cartCreateDTO.getProductId()).getProductImage())
                     .productPrice(productBaseVOMap.get(cartCreateDTO.getProductId()).getProductPrice())

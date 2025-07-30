@@ -4,15 +4,25 @@
 
 
     <insert id="insertOrder">
-        insert into t_order(order_id,user_id,seller_id,product_id,order_status,total_amount,create_time)
-        values(#{orderId},#{userId},#{sellerId},#{productId},#{orderStatus},#{totalAmount},now())
+        insert into t_order(order_id,user_id,order_status,total_amount,create_time)
+        values(#{orderId},#{userId},#{orderStatus},#{totalAmount},now())
     </insert>
     <update id="updateOrderPaySuccess">
-        update t_order set order_status=1 where order_id=#{orderId}
+        update t_order set order_status=1,pay_time=now() where order_id=#{orderId}
+    </update>
+    <update id="updateOrderClose">
+        update t_order set order_status=5,finish_time=now() where order_id=#{orderId}
     </update>
     <select id="queryUnpaidOrder" resultType="cn.mmko.po.OrderPo">
         select order_id,user_id,seller_id,product_id,order_status,total_amount,create_time
         from t_order
-        where user_id=#{userId} and product_id=#{productId} and order_status=0
+        where  order_status=0 and now()>=create_time+ interval 15 minute order by order_id asc
+        limit 50
+    </select>
+    <select id="queryTimeoutOrderList" resultType="java.lang.String">
+        select order_id
+        from t_order
+        where order_status=0 and now()>=create_time+ interval 15 minute order by order_id asc
+            limit 50
     </select>
 </mapper>

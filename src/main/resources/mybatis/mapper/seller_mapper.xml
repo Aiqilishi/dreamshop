@@ -21,6 +21,11 @@
         from t_seller
         where contact_phone=#{contactPhone}
     </select>
+    <select id="checkSellerStatus" resultType="java.lang.Integer">
+        select status
+        from t_seller
+        where seller_id = #{sellerId}
+    </select>
     <insert id="insertSeller" parameterType="cn.mmko.po.SellerPo">
         insert into t_seller(user_id,seller_name,contact_phone)
         values(#{userId},#{sellerName},#{contactPhone})

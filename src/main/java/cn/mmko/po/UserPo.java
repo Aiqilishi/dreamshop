@@ -21,6 +21,4 @@ public class UserPo {
     private java.util.Date registerTime;    // 注册时间
     private java.util.Date lastLoginTime;   // 最后登录时间
     private String loginIp;        // 最后登录IP
-    private String address;
-    private String userUrl;
 }

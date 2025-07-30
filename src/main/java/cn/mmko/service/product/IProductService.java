@@ -1,5 +1,6 @@
 package cn.mmko.service.product;
 
+import cn.mmko.dto.OrderItemDTO;
 import cn.mmko.dto.product.*;
 import cn.mmko.po.ProductPo;
 import cn.mmko.vo.ProductImagesVO;
@@ -8,6 +9,7 @@ import cn.mmko.vo.ProductListVO;
 import com.github.pagehelper.PageInfo;
 
 import java.util.List;
+import java.util.ListResourceBundle;
 
 public interface IProductService {
     /**
@@ -43,4 +45,10 @@ public interface IProductService {
     PageInfo<ProductListVO> queryProductBySearch(Integer pageNum, Integer pageSize, String keyword);
 
     PageInfo<ProductListVO> queryProductByCategoryId(Integer pageNum, Integer pageSize, Long categoryId);
+
+    void checkProduct(List<OrderItemDTO>  items);
+
+    void lockProductStock(List<OrderItemDTO>  items);
+
+    void releaseProductStock(Long productId,Integer quantity);
 }

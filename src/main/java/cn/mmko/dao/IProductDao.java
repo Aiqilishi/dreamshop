@@ -48,4 +48,10 @@ public interface IProductDao{
     List<ProductListVO> queryProductByCategoryId(Long categoryId);
 
     List<ProductBaseVO> queryProductBase(List<Long> productIds);
+
+    List<ProductPo> queryCheckProductById(List<Long> productIds);
+
+    void lockProductStock(Long productId, Integer quantity);
+
+    void releaseProductStock(Long productId, Integer quantity);
 }

@@ -9,6 +9,7 @@
           <result column="user_id" property="userId"/>
           <result column="product_price" property="productPrice"/>
           <result column="product_stock" property="productStock"/>
+          <result column="frozen_stock" property="frozenStock"/>
           <result column="product_sales" property="productSales"/>
           <result column="product_status" property="productStatus"/>
           <result column="product_desc" property="productDesc"/>
@@ -107,7 +108,13 @@
     <update id="updateProduct" parameterType="cn.mmko.dto.product.ProductUpdateDTO">
         update t_product set product_name=#{productName},product_price=#{productPrice},product_stock=#{productStock},product_status=#{productStatus},product_desc=#{productDesc},product_image=#{productImage},is_recommend=#{isRecommend} where product_id=#{productId}
     </update>
-      <!-- 查询商品数量-->
+    <update id="lockProductStock">
+        update t_product set frozen_stock=frozen_stock+#{quantity} where product_id= #{productId} and product_stock-frozen_stock>=#{quantity}
+    </update>
+    <update id="releaseProductStock">
+        update t_product set product_stock=product_stock-#{quantity},frozen_stock=frozen_stock-#{quantity} where product_id= #{productId}
+    </update>
+    <!-- 查询商品数量-->
     <select id="queryProductNumbySellerId" resultType="java.lang.Long" parameterType="long">
         select count(*) from t_product where user_id=#{userId}
     </select>
@@ -160,7 +167,14 @@
         where p.category_id = #{categoryId}
     </select>
     <select id="queryProductBase" resultType="cn.mmko.vo.ProductBaseVO" parameterType="long">
-        select product_id,product_name,product_price,product_image from t_product where product_id in
+        select product_id,product_name,user_id,product_price,product_image from t_product where product_id in
+        <foreach item="productId" collection="productIds" separator="," open="(" close=")">
+            #{productId}
+        </foreach>
+    </select>
+    <select id="queryCheckProductById" resultType="cn.mmko.po.ProductPo">
+        select product_id, product_price,product_stock,frozen_stock,product_status from t_product
+        where product_id in
         <foreach item="productId" collection="productIds" separator="," open="(" close=")">
             #{productId}
         </foreach>

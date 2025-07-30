@@ -12,8 +12,6 @@
         <result column="register_time" property="registerTime"/>
         <result column="last_login_time" property="lastLoginTime"/>
         <result column="login_ip" property="loginIp"/>
-        <result column="address" property="address"/>
-        <result column="url" property="userUrl"/>
     </resultMap>
     <insert id="insertUser" parameterType="cn.mmko.po.UserPo" useGeneratedKeys="true" keyProperty="userId">
         insert into t_user(username,phone,password_hash,password_salt)
@@ -21,6 +19,9 @@
     </insert>
     <select id="queryUserByUserName" resultType="cn.mmko.po.UserPo" resultMap="DataMap">
         select user_id,username,password_hash,password_salt,phone,address,user_status,url from t_user where username=#{username}
+    </select>
+    <select id="checkUserStatus" resultType="integer">
+        select user_status from t_user where user_id=#{userId}
     </select>
 
 

@@ -11,4 +11,5 @@ public interface IUserService {
     UserLoginResponseVO checkLoginUser(String userName, String password);
 
 
+    void checkUserStatus(Long userId);
 }

@@ -70,6 +70,7 @@ public class OrderController {
         log.info("支付回调，买家付款金额: {}", params.get("buyer_pay_amount"));
         log.info("支付回调，支付回调，更新订单 {}", tradeNo);
         orderService.changeOrderPaySuccess(Long.valueOf(tradeNo));
+        orderService.releaseProductStock(Long.valueOf(tradeNo));
         return "success";
     }
 }

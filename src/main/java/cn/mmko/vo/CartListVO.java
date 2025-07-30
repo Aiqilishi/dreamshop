@@ -14,6 +14,7 @@ import java.math.BigDecimal;
 public class CartListVO {
     private Long productId;
     private Integer quantity;
+    private Long sellerId;
     private String productName;
     private String productImage;
     private BigDecimal productPrice;

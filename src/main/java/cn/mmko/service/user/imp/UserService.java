@@ -116,6 +116,16 @@ public class UserService implements IUserService {
                 .build();
     }
 
+    @Override
+    public void checkUserStatus(Long userId) {
+        Integer status = userDao.checkUserStatus(userId);
+        if(status == 0){
+            throw new AppException(ResponseCode.FORBIDDEN.getCode(), ResponseCode.FORBIDDEN.getInfo());
+        }
+        if(status == -1){
+            throw new AppException(ResponseCode.USER_NOT_EXIST.getCode(), ResponseCode.USER_NOT_EXIST.getInfo());
+        }
+    }
 
 
 }

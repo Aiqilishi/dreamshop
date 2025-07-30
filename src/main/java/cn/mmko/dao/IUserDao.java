@@ -11,4 +11,5 @@ public interface IUserDao {
     UserPo queryUserByUserName(String userName);
     void insertUser(UserPo userPo);
 
+    Integer checkUserStatus(Long userId);
 }
