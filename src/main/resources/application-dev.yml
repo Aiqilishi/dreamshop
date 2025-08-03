@@ -33,9 +33,19 @@ spring:
 mybatis:
   mapper-locations: classpath:/mybatis/mapper/*.xml
   config-location:  classpath:/mybatis/config/mybatis-config.xml
-
-
-
+file:
+  upload:
+    base-path: D:/images/
+    avatar-path: avatars/
+    product-path: products/
+    temp-path: temp/
+    max-file-size: 2097152
+    allowed-extensions: jpg,jpeg,png,gif,webp
+    thumbnail-width: 200
+    thumbnail-height: 200
+    avatar-thumbnail-width: 100
+    avatar-thumbnail-height: 100
+    image-url-prefix: http://localhost:8091/images/
 redis:
   sdk:
     config:

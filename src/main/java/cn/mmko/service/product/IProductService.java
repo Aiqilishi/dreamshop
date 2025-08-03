@@ -51,4 +51,6 @@ public interface IProductService {
     void lockProductStock(List<OrderItemDTO>  items);
 
     void releaseProductStock(Long productId,Integer quantity);
+
+    String queryProductMainImages(Long productId);
 }

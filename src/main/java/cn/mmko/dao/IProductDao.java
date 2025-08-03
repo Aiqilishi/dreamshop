@@ -54,4 +54,6 @@ public interface IProductDao{
     void lockProductStock(Long productId, Integer quantity);
 
     void releaseProductStock(Long productId, Integer quantity);
+
+    String queryProductMainImages(Long productId);
 }

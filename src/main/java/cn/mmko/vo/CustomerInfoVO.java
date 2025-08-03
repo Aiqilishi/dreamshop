@@ -19,4 +19,5 @@ public class CustomerInfoVO {
     private String address;       // 默认收货地址
     private String avatarUrl;     // 头像URL
 
+
 }

@@ -25,20 +25,23 @@ public class SellerService implements ISellerService {
     @Resource
     private IUserRoleDao userRoleDao;
     @Override
-    public void insertSeller(SellerCreateDTO sellerCreateDTO) {
+    public void insertSeller(SellerCreateDTO sellerCreateDTO,Long userId) {
         SellerPo sellerByName = sellerDao.querySellerByName(sellerCreateDTO.getSellerName());
         SellerPo sellerByPhone = sellerDao.querySellerContactPhone(sellerCreateDTO.getContactPhone());
         if(sellerByName!=null) throw new AppException(ResponseCode.SELLER_NAME_EXIST.getCode(), ResponseCode.SELLER_NAME_EXIST.getInfo());
         if(sellerByPhone!=null) throw new AppException(ResponseCode.SELLER_PHONE_EXIST.getCode(), ResponseCode.SELLER_PHONE_EXIST.getInfo());
         SellerPo sellerPo = SellerPo.builder()
-                .userId(sellerCreateDTO.getUserId())
+                .userId(userId)
                 .sellerName(sellerCreateDTO.getSellerName())
+                .contactPerson(sellerCreateDTO.getContactPerson())
+                .address(sellerCreateDTO.getAddress())
+                .logoUrl(sellerCreateDTO.getLogoUrl())
                 .contactPhone(sellerCreateDTO.getContactPhone())
                 .build();
         sellerDao.insertSeller(sellerPo);
         userRoleDao.insertUserRole(UserRolePo.builder()
                         .roleId(2L)
-                        .userId(sellerCreateDTO.getUserId())
+                        .userId(userId)
                         .build());
 
     }
@@ -60,5 +63,10 @@ public class SellerService implements ISellerService {
                         "商家已被禁用，商家ID: " + sellerId);
             }
         }
+    }
+
+    @Override
+    public SellerPo querySellerById(Long sellerId) {
+        return sellerDao.querySellerById(sellerId);
     }
 }

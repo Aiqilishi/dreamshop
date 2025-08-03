@@ -22,7 +22,6 @@ public class SellerPo {
     private String sellerName;     // 店铺名称
     private String contactPhone;   // 联系电话
     private String contactPerson;  // 联系人
-    private String businessLicense;// 营业执照号/图片
     private String address;        // 店铺地址
     private String logoUrl;        // 店铺Logo
     private Integer status;        // 状态(1:正常,0:禁用)

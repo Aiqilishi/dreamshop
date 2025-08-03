@@ -1,6 +1,7 @@
 package cn.mmko.dao;
 
 import cn.mmko.po.OrderPo;
+import cn.mmko.vo.OrderNumberVO;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -16,4 +17,8 @@ public interface IOrderDao {
     List<String> queryTimeoutOrderList();
 
     boolean updateOrderClose(String orderId);
+
+    OrderNumberVO queryOrderNumber(Long userId);
+
+    List<OrderPo> queryOrderList(Long userId,Integer  status);
 }

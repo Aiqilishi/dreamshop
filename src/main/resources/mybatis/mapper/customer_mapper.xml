@@ -4,6 +4,10 @@
     <insert id="insertCustomer" parameterType="long">
         insert into t_customer(user_id) values(#{userId})
     </insert>
+    <insert id="upsertAvatar">
+        insert into t_customer(user_id,avatar_url) values(#{userId},#{avatarUrl})
+        on duplicate key update avatar_url = #{avatarUrl}
+    </insert>
     <update id="updateCustomer" >
         update  t_customer
         set nickname = #{nickname},gender = #{gender},birthday = #{birthday},address = #{address},avatar_url = #{avatarUrl}

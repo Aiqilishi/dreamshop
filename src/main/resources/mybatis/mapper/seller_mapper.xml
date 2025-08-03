@@ -26,9 +26,14 @@
         from t_seller
         where seller_id = #{sellerId}
     </select>
+    <select id="querySellerById" resultType="cn.mmko.po.SellerPo">
+        select seller_name, contact_phone
+        from t_seller
+        where seller_id = #{sellerId}
+    </select>
     <insert id="insertSeller" parameterType="cn.mmko.po.SellerPo">
-        insert into t_seller(user_id,seller_name,contact_phone)
-        values(#{userId},#{sellerName},#{contactPhone})
+        insert into t_seller(user_id,seller_name,contact_phone,contact_person,address,logo_url)
+        values(#{userId},#{sellerName},#{contactPhone},#{contactPerson},#{address},#{logoUrl})
     </insert>
 
 

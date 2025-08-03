@@ -1,17 +1,18 @@
 package cn.mmko.controller;
 
+import cn.hutool.db.Page;
 import cn.mmko.dto.OrderCreateDTO;
 import cn.mmko.enums.ResponseCode;
 import cn.mmko.response.Response;
 import cn.mmko.service.order.IOrderService;
+import cn.mmko.vo.OrderListVO;
+import cn.mmko.vo.OrderNumberVO;
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.internal.util.AlipaySignature;
+import com.github.pagehelper.PageInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -34,6 +35,26 @@ public class OrderController {
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())
                 .data(form)
+                .build();
+    }
+    @RequestMapping(value = "/queryOrderNumber",method = RequestMethod.GET)
+    public Response<OrderNumberVO> queryOrderNumber(HttpServletRequest request) {
+        Long userId = (Long) request.getAttribute("userId");
+        OrderNumberVO orderNumberVO = orderService.queryOrderNumber(userId);
+        return Response.<OrderNumberVO>builder()
+                .code(ResponseCode.SUCCESS.getCode())
+                .info(ResponseCode.SUCCESS.getInfo())
+                .data(orderNumberVO)
+                .build();
+    }
+@RequestMapping(value = "/queryOrderList",method = RequestMethod.GET)
+    public Response<PageInfo<OrderListVO>> queryOrderList(@RequestParam(defaultValue = "1") Integer pageNum, @RequestParam(defaultValue = "5") Integer pageSize,@RequestParam Integer status, HttpServletRequest request) {
+        Long userId = (Long) request.getAttribute("userId");
+        PageInfo<OrderListVO> orderListVO = orderService.queryOrderList(pageNum, pageSize, userId, status);
+        return Response.<PageInfo<OrderListVO>>builder()
+                .code(ResponseCode.SUCCESS.getCode())
+                .info(ResponseCode.SUCCESS.getInfo())
+                .data(orderListVO)
                 .build();
     }
     @RequestMapping(value = "alipay_notify_url", method = RequestMethod.POST)

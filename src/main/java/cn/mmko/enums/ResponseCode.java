@@ -23,10 +23,14 @@ public enum ResponseCode {
     CATEGORY_EXIST( "0008", "分类已存在"),
     PRODUCT_EXIST("0009", "商品已存在"),
     IMAGES_NOT_EXIST("404", "没有图片"),
+    IMAGES_TOO_BIG("0011", "图片过大"),
+    IMAGES_NAME_ERROR("0012", "图片名称错误"),
+    IMAGES_TYPE_ERROR("0013", "图片格式错误"),
     FORBIDDEN("403", "禁止访问"),
     PRODUCT_NOT_ENOUGH("0010", "商品库存不足"),
     PRICE_ERROR("0011", "价格错误"),
     SELLER_NOT_EXIST("404", "商家不存在");
+
 
 
 

@@ -15,4 +15,6 @@ public interface ISellerDao {
     SellerPo querySellerContactPhone (String contactPhone);
 
    Integer checkSellerStatus(Long sellerId);
+
+    SellerPo querySellerById(Long sellerId);
 }

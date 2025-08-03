@@ -10,7 +10,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class SellerCreateDTO {
-    private Long userId;        // 关联用户ID
     private String sellerName;  // 商家名称
     private String contactPhone;// 联系电话
+    private String contactPerson;// 联系人
+    private String address;
+    private String logoUrl;
 }

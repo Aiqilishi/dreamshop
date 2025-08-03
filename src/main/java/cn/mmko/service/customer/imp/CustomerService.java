@@ -37,4 +37,9 @@ public class CustomerService implements ICustomerService {
                 .avatarUrl(customerPo.getAvatarUrl())
                 .build();
     }
+
+    @Override
+    public void updateCustomerAvatar(Long userId, String avatarUrl) {
+          customerDao.upsertAvatar(userId,avatarUrl);
+    }
 }

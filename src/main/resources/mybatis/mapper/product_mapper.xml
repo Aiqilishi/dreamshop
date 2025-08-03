@@ -179,4 +179,7 @@
             #{productId}
         </foreach>
     </select>
+    <select id="queryProductMainImages" resultType="java.lang.String">
+        select product_image from t_product where product_id=#{productId}
+    </select>
 </mapper>

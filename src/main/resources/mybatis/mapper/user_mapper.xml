@@ -18,7 +18,7 @@
         values(#{userName},#{phone},#{passwordHash},#{passwordSalt})
     </insert>
     <select id="queryUserByUserName" resultType="cn.mmko.po.UserPo" resultMap="DataMap">
-        select user_id,username,password_hash,password_salt,phone,address,user_status,url from t_user where username=#{username}
+        select user_id,username,password_hash,password_salt,phone,user_status from t_user where username=#{username}
     </select>
     <select id="checkUserStatus" resultType="integer">
         select user_status from t_user where user_id=#{userId}

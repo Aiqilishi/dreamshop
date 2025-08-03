@@ -12,4 +12,6 @@ public interface IUserService {
 
 
     void checkUserStatus(Long userId);
+
+    UserLoginResponseVO checkLoginBackgroundUser(String userName, String passWord);
 }

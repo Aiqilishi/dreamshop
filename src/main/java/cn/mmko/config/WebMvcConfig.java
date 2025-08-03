@@ -22,7 +22,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
                         "/user/check",
                         "/product/query",
                         "/product/query/*",
-                        "/seller/insert",
                         "/product/queryBySearch",
                         "/category/query/*",
                         "/images/**",

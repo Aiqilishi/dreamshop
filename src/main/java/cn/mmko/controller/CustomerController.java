@@ -1,16 +1,16 @@
 package cn.mmko.controller;
 
+import cn.mmko.config.FileUploadConfig;
 import cn.mmko.dto.CustomerUpdateDTO;
 import cn.mmko.dto.MenuResponseDTO;
 import cn.mmko.enums.ResponseCode;
 import cn.mmko.response.Response;
 import cn.mmko.service.customer.ICustomerService;
+import cn.mmko.service.upload.IFileUploadService;
 import cn.mmko.vo.CustomerInfoVO;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -22,6 +22,8 @@ import java.util.List;
 public class CustomerController {
     @Resource
     private ICustomerService customerService;
+    @Resource
+    private IFileUploadService fileUploadService;
     @RequestMapping(value = "/update",method = RequestMethod.POST)
     public Response<String> updateUserMessage(HttpServletRequest request, @RequestBody CustomerUpdateDTO customerUpdateDTO){
         Long userId = (Long) request.getAttribute("userId");
@@ -46,6 +48,17 @@ public class CustomerController {
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())
                 .data(customerInfoVO)
+                .build();
+    }
+@RequestMapping(value = "/updateAvatar",method = RequestMethod.POST)
+    public Response<String> updateCustomerAvatar(HttpServletRequest request, @RequestParam ("file") MultipartFile file) throws Exception {
+        Long userId =  (Long) request.getAttribute("userId");//从拦截器中获取
+       String avatarUrl = fileUploadService.uploadAvatar(file, userId);
+         customerService.updateCustomerAvatar(userId, avatarUrl);
+         return Response.<String>builder()
+                .code(ResponseCode.SUCCESS.getCode())
+                .info(ResponseCode.SUCCESS.getInfo())
+                .data(avatarUrl)
                 .build();
     }
 }

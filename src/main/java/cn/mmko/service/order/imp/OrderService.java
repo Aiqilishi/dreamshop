@@ -1,34 +1,37 @@
 package cn.mmko.service.order.imp;
 import cn.hutool.core.util.IdUtil;
 import cn.mmko.dao.IOrderDao;
-import cn.mmko.dao.IProductDao;
 import cn.mmko.dto.OrderCreateDTO;
 import cn.mmko.dto.OrderItemDTO;
-import cn.mmko.enums.ResponseCode;
-import cn.mmko.exception.AppException;
 import cn.mmko.po.OrderItemPo;
 import cn.mmko.po.OrderPo;
-import cn.mmko.po.ProductPo;
+import cn.mmko.po.SellerPo;
 import cn.mmko.service.order.IOrderService;
 import cn.mmko.service.orderitem.IOrderItemService;
 import cn.mmko.service.product.IProductService;
 import cn.mmko.service.seller.ISellerService;
 import cn.mmko.service.user.IUserService;
+import cn.mmko.vo.OrderItemVO;
+import cn.mmko.vo.OrderListBySellerVO;
+import cn.mmko.vo.OrderListVO;
+import cn.mmko.vo.OrderNumberVO;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
+import com.alipay.api.domain.OrderItem;
 import com.alipay.api.request.AlipayTradeMergeCreateRequest;
 import com.alipay.api.request.AlipayTradePagePayRequest;
-import com.alipay.api.response.AlipayTradeMergeCreateResponse;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -105,6 +108,71 @@ public class OrderService implements IOrderService {
     @Override
     public boolean changeOrderClose(String orderId) {
         return orderDao.updateOrderClose(orderId);
+    }
+
+    @Override
+    public OrderNumberVO queryOrderNumber(Long userId) {
+        return orderDao.queryOrderNumber(userId);
+    }
+
+    @Override
+    public PageInfo<OrderListVO> queryOrderList(Integer pageNum, Integer pageSize, Long userId,Integer  status) {
+        PageHelper.startPage(pageNum, pageSize);
+        List<OrderPo> orderPos = orderDao.queryOrderList(userId,status);
+        List<OrderListVO> orderListVOs = new ArrayList<>();
+        for (OrderPo orderPo : orderPos) {
+            List<OrderItemPo> orderItemPos = orderItemService.queryOrderItemByOrderId(orderPo.getOrderId());
+            Map<Long,List<OrderItemPo>> orderItemMap = orderItemPos.stream().collect(Collectors.groupingBy(OrderItemPo::getSellerId));
+            List<OrderListBySellerVO> orderListBySellerVOS = new ArrayList<>();
+            for (Map.Entry<Long, List<OrderItemPo>> entry : orderItemMap.entrySet()) {
+                Long sellerId = entry.getKey();
+                List<OrderItemPo> orderItemVos = entry.getValue();
+                OrderListBySellerVO orderListBySellerVO = buildSellerVO(sellerId, orderItemVos);
+                 orderListBySellerVOS.add(orderListBySellerVO);
+            }
+            orderListVOs.add(OrderListVO.builder()
+                    .orderId(orderPo.getOrderId())
+                    .totalPrice(orderPo.getTotalAmount())
+                    .createTime(orderPo.getCreateTime())
+                    .payTime(orderPo.getPayTime())
+                    .deliveryTime(orderPo.getDeliveryTime())
+                    .finishTime(orderPo.getFinishTime())
+                    .orderListBySellerVOList(orderListBySellerVOS)
+                    .build());
+        }
+        return new PageInfo<>(orderListVOs);
+    }
+    private OrderListBySellerVO buildSellerVO(Long sellerId, List<OrderItemPo> items) {
+        // 查询商家信息
+        SellerPo seller = sellerService.querySellerById(sellerId);
+
+        // 计算商家商品总金额
+        BigDecimal sellerAmount = items.stream()
+                .map(item -> item.getProductPrice().multiply(new BigDecimal(item.getQuantity())))
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+        // 构建商品VO列表
+        List<OrderItemVO> itemVOList = items.stream()
+                .map(this::buildItemVO)
+                .collect(Collectors.toList());
+
+        return OrderListBySellerVO.builder()
+                .sellerId(sellerId)
+                .sellerName(seller.getSellerName())
+                .totalPrice(sellerAmount)
+                .orderItemVOList(itemVOList)
+                .build();
+    }
+    private OrderItemVO buildItemVO(OrderItemPo item) {
+        return OrderItemVO.builder()
+                .itemId(item.getItemId())
+                .productId(item.getProductId())
+                .productName(item.getProductName())
+                .productImage(productService.queryProductMainImages(item.getProductId()))
+                .price(item.getProductPrice())
+                .quantity(item.getQuantity())
+                .totalPrice(item.getProductPrice().multiply(new BigDecimal(item.getQuantity())))
+                .status(item.getItemStatus())
+                .build();
     }
 
     private String doPrepayOrder( String productName, Long orderId, BigDecimal totalAmount) throws AlipayApiException {

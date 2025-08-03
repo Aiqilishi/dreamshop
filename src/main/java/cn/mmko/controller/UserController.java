@@ -41,8 +41,16 @@ public class UserController {
                     .data(userLoginResponseVO)
                     .build();
    }
-
-
+@RequestMapping(value = "/backgroundLogin",method = RequestMethod.POST)
+   public Response<UserLoginResponseVO> backgroundLogin(@RequestParam String userName, @RequestParam String passWord){
+       UserLoginResponseVO userLoginResponseVO = userService.checkLoginBackgroundUser(userName, passWord);
+       log.info("用户{}登录成功",userLoginResponseVO.getToken());
+       return Response.<UserLoginResponseVO>builder()
+               .code(ResponseCode.SUCCESS.getCode())
+               .info(ResponseCode.SUCCESS.getInfo())
+               .data(userLoginResponseVO)
+               .build();
+   }
     public Response<List<MenuResponseDTO>> queryUserMenu(HttpServletRequest request){
         List<String> permCodes = (List<String>) request.getAttribute("permission");
         List<MenuResponseDTO> menuResponseDTOS = permissionService.queryUserMenu(permCodes);

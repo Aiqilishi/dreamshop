@@ -219,5 +219,10 @@ public class ProductService implements IProductService {
            productDao.releaseProductStock(productId,quantity);
     }
 
+    @Override
+    public String queryProductMainImages(Long productId) {
+        return productDao.queryProductMainImages(productId);
+    }
+
 
 }
