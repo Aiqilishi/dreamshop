@@ -21,11 +21,11 @@ public class CategoryService implements ICategoryService {
     @Override
     public void insertCategory(CategoryCreateDTO categoryCreateDTO) {
         Integer maxCategorySort = categoryDao.getMaxCategorySort(CategoryDTO.builder()
-                .userId(categoryCreateDTO.getUserId())
+                .userId(categoryCreateDTO.getSellerId())
                 .build());
       categoryDao.insertCategory(CategoryPo.builder()
               .categoryName(categoryCreateDTO.getCategoryName())
-              .userId(categoryCreateDTO.getUserId())
+              .userId(categoryCreateDTO.getSellerId())
               .categorySort(maxCategorySort + 1)
               .build()
       );

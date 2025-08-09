@@ -20,10 +20,12 @@ public class WebMvcConfig implements WebMvcConfigurer {
                 .excludePathPatterns(
                         "/user/insert",
                         "/user/check",
+                        "/user/backgroundLogin",
                         "/product/query",
                         "/product/query/*",
                         "/product/queryBySearch",
-                        "/category/query/*",
+                        "/category/query/publicCategory",
+                        "/category/query/sellerCategory/*",
                         "/images/**",
                         "/product/queryByCategoryId",// 关键：放行静态资源
                         "/order/alipay_notify_url"

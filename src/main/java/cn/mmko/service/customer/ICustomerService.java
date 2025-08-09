@@ -9,4 +9,7 @@ public interface ICustomerService {
     CustomerInfoVO queryCustomerByUserId(Long userId);
 
     void updateCustomerAvatar(Long userId, String avatarUrl);
+
+
+    Long queryCustomerIdByUserId(Long userId);
 }

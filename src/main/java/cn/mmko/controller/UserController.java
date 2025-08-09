@@ -51,8 +51,10 @@ public class UserController {
                .data(userLoginResponseVO)
                .build();
    }
+   @RequestMapping(value = "/queryUserMenu",method = RequestMethod.GET)
     public Response<List<MenuResponseDTO>> queryUserMenu(HttpServletRequest request){
         List<String> permCodes = (List<String>) request.getAttribute("permission");
+        log.info("用户{}查询菜单成功",permCodes);
         List<MenuResponseDTO> menuResponseDTOS = permissionService.queryUserMenu(permCodes);
         return Response.<List<MenuResponseDTO>>builder()
                 .code(ResponseCode.SUCCESS.getCode())

@@ -9,7 +9,7 @@ import com.github.pagehelper.PageInfo;
 import java.util.List;
 
 public interface IOrderService {
-    String createOrder(OrderCreateDTO orderCreateDTO, Long userId) throws AlipayApiException;
+    String createOrder(OrderCreateDTO orderCreateDTO, Long userId, Long id) throws AlipayApiException;
 
     void changeOrderPaySuccess(Long tradeNo);
 

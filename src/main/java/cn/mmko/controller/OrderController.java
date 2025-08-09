@@ -29,8 +29,9 @@ public class OrderController {
     private String alipayPublicKey;
     @RequestMapping(value = "/create",method = RequestMethod.POST)
     public Response<String> createOrder(@RequestBody OrderCreateDTO orderCreateDTO, HttpServletRequest request) throws AlipayApiException {
+        Long customerId = (Long) request.getAttribute("customerId");
         Long userId = (Long) request.getAttribute("userId");
-        String form = orderService.createOrder(orderCreateDTO,userId);
+        String form = orderService.createOrder(orderCreateDTO,customerId,userId);
         return Response.<String>builder()
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())
@@ -39,24 +40,34 @@ public class OrderController {
     }
     @RequestMapping(value = "/queryOrderNumber",method = RequestMethod.GET)
     public Response<OrderNumberVO> queryOrderNumber(HttpServletRequest request) {
-        Long userId = (Long) request.getAttribute("userId");
-        OrderNumberVO orderNumberVO = orderService.queryOrderNumber(userId);
+        Long customerId = (Long) request.getAttribute("customerId");
+        OrderNumberVO orderNumberVO = orderService.queryOrderNumber(customerId);
         return Response.<OrderNumberVO>builder()
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())
                 .data(orderNumberVO)
                 .build();
     }
-@RequestMapping(value = "/queryOrderList",method = RequestMethod.GET)
+
+    /**
+     *  查询顾客订单列表
+     * @param pageNum
+     * @param pageSize
+     * @param status
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/queryOrderList",method = RequestMethod.GET)
     public Response<PageInfo<OrderListVO>> queryOrderList(@RequestParam(defaultValue = "1") Integer pageNum, @RequestParam(defaultValue = "5") Integer pageSize,@RequestParam Integer status, HttpServletRequest request) {
-        Long userId = (Long) request.getAttribute("userId");
-        PageInfo<OrderListVO> orderListVO = orderService.queryOrderList(pageNum, pageSize, userId, status);
+        Long customerId = (Long) request.getAttribute("customerId");
+        PageInfo<OrderListVO> orderListVO = orderService.queryOrderList(pageNum, pageSize, customerId, status);
         return Response.<PageInfo<OrderListVO>>builder()
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())
                 .data(orderListVO)
                 .build();
     }
+
     @RequestMapping(value = "alipay_notify_url", method = RequestMethod.POST)
     public String payNotify(HttpServletRequest request) throws AlipayApiException {
         log.info("支付回调，消息接收 {}", request.getParameter("trade_status"));

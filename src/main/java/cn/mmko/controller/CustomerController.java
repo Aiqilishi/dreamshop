@@ -4,8 +4,10 @@ import cn.mmko.config.FileUploadConfig;
 import cn.mmko.dto.CustomerUpdateDTO;
 import cn.mmko.dto.MenuResponseDTO;
 import cn.mmko.enums.ResponseCode;
+import cn.mmko.po.SellerPo;
 import cn.mmko.response.Response;
 import cn.mmko.service.customer.ICustomerService;
+import cn.mmko.service.seller.ISellerService;
 import cn.mmko.service.upload.IFileUploadService;
 import cn.mmko.vo.CustomerInfoVO;
 import lombok.extern.slf4j.Slf4j;
@@ -23,11 +25,13 @@ public class CustomerController {
     @Resource
     private ICustomerService customerService;
     @Resource
+    private ISellerService sellerService;
+    @Resource
     private IFileUploadService fileUploadService;
     @RequestMapping(value = "/update",method = RequestMethod.POST)
     public Response<String> updateUserMessage(HttpServletRequest request, @RequestBody CustomerUpdateDTO customerUpdateDTO){
-        Long userId = (Long) request.getAttribute("userId");
-       customerService.updateCustomerMessage(userId, customerUpdateDTO);
+        Long customerId = (Long) request.getAttribute("customerId");
+       customerService.updateCustomerMessage(customerId, customerUpdateDTO);
         return Response.<String>builder()
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())
@@ -42,8 +46,11 @@ public class CustomerController {
      */
     @RequestMapping(value = "/message",method = RequestMethod.GET)
     public Response<CustomerInfoVO> queryUserMessage(HttpServletRequest  request){
-        Long userId =  (Long) request.getAttribute("userId");//从拦截器中获取
-        CustomerInfoVO customerInfoVO = customerService.queryCustomerByUserId(userId);
+        Long customerId =  (Long) request.getAttribute("customerId");//从拦截器中获取
+        CustomerInfoVO customerInfoVO = customerService.queryCustomerByUserId(customerId);
+        Long userId = (Long) request.getAttribute("userId");
+        SellerPo sellerPo = sellerService.querySellerByUserId(userId);
+        customerInfoVO.setIsSeller(sellerPo == null ? 0 : 1);
         return Response.<CustomerInfoVO>builder()
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())
@@ -52,9 +59,9 @@ public class CustomerController {
     }
 @RequestMapping(value = "/updateAvatar",method = RequestMethod.POST)
     public Response<String> updateCustomerAvatar(HttpServletRequest request, @RequestParam ("file") MultipartFile file) throws Exception {
-        Long userId =  (Long) request.getAttribute("userId");//从拦截器中获取
-       String avatarUrl = fileUploadService.uploadAvatar(file, userId);
-         customerService.updateCustomerAvatar(userId, avatarUrl);
+        Long customerId =  (Long) request.getAttribute("customerId");//从拦截器中获取
+       String avatarUrl = fileUploadService.uploadAvatar(file, customerId);
+         customerService.updateCustomerAvatar(customerId, avatarUrl);
          return Response.<String>builder()
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())

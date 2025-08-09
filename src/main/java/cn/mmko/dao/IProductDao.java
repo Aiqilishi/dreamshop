@@ -1,11 +1,11 @@
 package cn.mmko.dao;
 
 import cn.mmko.dto.product.ProductCreateDTO;
-import cn.mmko.dto.product.ProductManageDTO;
 import cn.mmko.po.ProductPo;
 import cn.mmko.vo.ProductBaseVO;
 import cn.mmko.vo.ProductInfoVO;
 import cn.mmko.vo.ProductListVO;
+import cn.mmko.vo.ProductManageListVO;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -29,9 +29,9 @@ public interface IProductDao{
 
     void updateProduct(ProductPo build);
 
-    void deleteProduct(Long productId);
+    void deleteProduct(List<Long> productId);
 
-    List<ProductPo> queryProductBySellerId(Long userId);
+    List<ProductManageListVO> queryProductBySellerId(Long userId);
 
     /**
      *  搜索商品
@@ -56,4 +56,8 @@ public interface IProductDao{
     void releaseProductStock(Long productId, Integer quantity);
 
     String queryProductMainImages(Long productId);
+
+    void updateProductStatus(Long productId);
+
+    List<ProductManageListVO> queryBackgroundBySearch(Long sellerId, String keyword);
 }

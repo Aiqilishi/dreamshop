@@ -24,7 +24,7 @@ public class PermissionService implements IPermissionService {
          List<PermissionPo> permissionPos = permissionDao.queryPermissionBycode(permCodes);
          List<PermissionPo> menus = permissionPos.stream()
                  .filter(permissionPo -> permissionPo.getPermType()
-                         .equals("menu")).collect(Collectors.toList());
+                         .equals("菜单")).collect(Collectors.toList());
         return buildMenuTree(menus,0L);
     }
     private List<MenuResponseDTO> buildMenuTree(List<PermissionPo> menus, Long parentId){

@@ -17,4 +17,6 @@ public interface ISellerDao {
    Integer checkSellerStatus(Long sellerId);
 
     SellerPo querySellerById(Long sellerId);
+
+    SellerPo querySellerByUserId(Long userId);
 }

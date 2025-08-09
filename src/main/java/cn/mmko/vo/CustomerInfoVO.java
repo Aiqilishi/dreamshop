@@ -18,6 +18,7 @@ public class CustomerInfoVO {
     private Date birthday;        // 生日
     private String address;       // 默认收货地址
     private String avatarUrl;     // 头像URL
+    private Integer isSeller;    // 是否是卖家(0:否,1:是)
 
 
 }

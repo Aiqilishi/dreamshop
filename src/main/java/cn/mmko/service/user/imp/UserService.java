@@ -1,23 +1,22 @@
 package cn.mmko.service.user.imp;
 
 import cn.mmko.dao.ICustomerDao;
-import cn.mmko.dto.CustomerUpdateDTO;
 import cn.mmko.dto.UserCreateDTO;
-import cn.mmko.po.CustomerPo;
 import cn.mmko.po.UserPo;
 import cn.mmko.dao.IUserDao;
 import cn.mmko.enums.ResponseCode;
 import cn.mmko.exception.AppException;
 import cn.mmko.po.UserRolePo;
 import cn.mmko.redis.IRedisService;
+import cn.mmko.service.customer.ICustomerService;
 import cn.mmko.service.permission.IPermissionService;
 import cn.mmko.service.role.IRoleService;
 import cn.mmko.service.rolepermission.IRolePermissionService;
+import cn.mmko.service.seller.ISellerService;
 import cn.mmko.service.user.IUserService;
 import cn.mmko.service.userrole.IUserRoleService;
 import cn.mmko.service.utils.imp.PasswordEncryptionService;
 import cn.mmko.utils.JwtUtils;
-import cn.mmko.vo.CustomerInfoVO;
 import cn.mmko.vo.UserLoginResponseVO;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RMap;
@@ -49,6 +48,10 @@ public class UserService implements IUserService {
     private IRolePermissionService rolePermissionService;
     @Resource
     private PasswordEncryptionService passwordEncryptionService;
+    @Resource
+    private ISellerService sellerService;
+    @Resource
+    private ICustomerService customerService;
 
     /**
      *   注册
@@ -95,13 +98,14 @@ public class UserService implements IUserService {
         }
         Long userId = userPo.getUserId();
         log.info("用户{}",userPo.getUserId());
+        Long customerId = customerService.queryCustomerIdByUserId(userId);
         //获取用户角色id
         List<Long> userRoleIds = userRoleService.queryUserRoleByUserId(userPo.getUserId());
         log.info("角色{}",userRoleIds);
         List<String> roles = roleService.queryRoleByRoleIds(userRoleIds);
         List<Long> permissionsIds = rolePermissionService.queryPermissionByRoleIds(userRoleIds);
         List<String> permissions = permissionService.queryPermissionByPermissionIds(permissionsIds);
-        String token = JwtUtils.generateJwt(userName,roles,permissions,userId);
+        String token = JwtUtils.generateJwt(userName,roles,permissions,userId,customerId);
         //保存登录信息，角色权限保存到了redis中
         Map<String, String> loginInfo = new HashMap<>();
         loginInfo.put("token:"+userName, token);
@@ -125,6 +129,47 @@ public class UserService implements IUserService {
         if(status == -1){
             throw new AppException(ResponseCode.USER_NOT_EXIST.getCode(), ResponseCode.USER_NOT_EXIST.getInfo());
         }
+    }
+
+    @Override
+    public UserLoginResponseVO checkLoginBackgroundUser(String userName, String passWord) {
+        UserPo userPo = userDao.queryUserByUserName(userName);
+        if(null== userPo){
+            throw new AppException(ResponseCode.USER_NOT_EXIST.getCode(), ResponseCode.USER_NOT_EXIST.getInfo());
+        }
+        checkUserStatus(userPo.getUserId());
+        Long userId = userPo.getUserId();
+        List<Long> userRoleIds = userRoleService.queryUserRoleByUserId(userId);
+        if(userRoleIds.size()==1 && userRoleIds.get(0)==1L){
+            throw new AppException(ResponseCode.FORBIDDEN.getCode(), "无权限访问");
+        }
+        if(!passwordEncryptionService.verifyPassword(passWord, userPo.getPasswordSalt(), userPo.getPasswordHash())){
+            log.info("用户{}密码错误",passwordEncryptionService.hashPassword(passWord, userPo.getPasswordSalt()));
+            throw new AppException(ResponseCode.PASSWORD_ERROR.getCode(), ResponseCode.PASSWORD_ERROR.getInfo());
+        }
+        String token = "";
+        Map<String, String> loginInfo = new HashMap<>();
+        List<String> roles = roleService.queryRoleByRoleIds(userRoleIds);
+        List<Long> permissionsIds = rolePermissionService.queryPermissionByRoleIds(userRoleIds);
+        List<String> permissions = permissionService.queryPermissionByPermissionIds(permissionsIds);
+        if(userRoleIds.contains(2L)){
+            Long sellerId = sellerService.querySellerByUserId(userId).getSellerId();
+            loginInfo.put("sellerId:"+userName, sellerId.toString());
+            token = JwtUtils.generateSellerJwt(userName,roles,permissions,userId,sellerId);
+        }
+        if (userRoleIds.contains(3L)){
+
+        }
+        loginInfo.put("token:"+userName, token);
+        loginInfo.put("role:"+userName, roles.toString());
+        loginInfo.put("permission:"+userName, permissions.toString());
+        RMap<String, String> redisServiceMap = redisService.getMap("background_login:" + userName);
+        redisServiceMap.putAll(loginInfo);
+        redisServiceMap.expire(Duration.ofHours(24));
+        return UserLoginResponseVO.builder()
+                .token( token)
+                .roles(roles)
+                .build();
     }
 
 

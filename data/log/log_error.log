@@ -1,198 +1,730 @@
-25-08-03.17:41:19.278 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:41:19.279 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:41:47.182 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:41:47.184 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:41:47.187 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:41:47.188 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:41:47.693 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-08-03.17:41:47.770 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=Token 无效或已过期
-25-08-03.17:44:13.316 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:44:13.317 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:44:14.575 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:44:14.579 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:44:14.579 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:44:14.580 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:47:35.072 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:47:35.076 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:47:36.068 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:47:36.070 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:47:36.071 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:47:36.071 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:47:59.217 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:47:59.227 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:48:00.074 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:48:00.077 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:48:00.080 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:48:00.082 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:54:07.832 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:54:07.835 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:54:07.835 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:54:07.835 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:54:07.838 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.17:54:07.839 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.233 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.233 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.241 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.243 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.250 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.254 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.272 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.272 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.272 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.449 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.450 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.471 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.491 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.492 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.493 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.514 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.514 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:03.718 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:15.979 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:15.987 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:15.988 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:15.990 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:15.990 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:15.993 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:16.005 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:16.005 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:16.018 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:16.018 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:16.249 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:16.250 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:16.257 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:16.258 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:16.263 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:16.263 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:26.466 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.18:13:26.468 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:01:33.112 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:01:33.112 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:01:33.112 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:01:33.112 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:02:57.824 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:02:57.826 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:02:59.412 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:02:59.412 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:02:59.413 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:02:59.414 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:03:06.220 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:03:06.232 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:03:34.580 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:03:34.588 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:03:34.588 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:03:34.589 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:03:37.139 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:03:37.146 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:03:38.852 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:03:38.858 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:03:39.748 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:03:39.752 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:03:39.753 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:03:39.753 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:34.220 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:34.233 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:34.234 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:34.234 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:34.234 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:34.235 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:42.330 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:42.341 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:42.341 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:42.346 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:42.347 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:42.347 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:49.643 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:49.649 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:49.651 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:49.654 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:49.655 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:49.655 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:55.479 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:55.486 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:55.487 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:55.489 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:55.490 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:04:55.491 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:05:18.031 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:05:18.044 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:05:18.045 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:05:18.045 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:05:18.046 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:05:18.046 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:05:20.055 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:05:20.061 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:06:41.447 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:06:41.449 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:06:42.701 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:06:42.711 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:06:42.711 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:06:42.711 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:06:49.343 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:06:49.348 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:06:52.384 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:06:52.388 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:06:52.388 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:06:52.388 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:06:59.283 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:06:59.284 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:07:00.867 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:07:00.876 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:07:00.876 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:07:00.883 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:07:35.982 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:07:35.993 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:07:37.052 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:07:37.061 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:07:37.061 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:07:37.061 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:07:44.133 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:07:44.144 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:07:44.871 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:07:44.881 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:07:44.883 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:07:44.883 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:09:57.025 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:09:57.028 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:09:58.364 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:09:58.401 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:09:58.402 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:09:58.654 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:03.686 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:03.693 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:06.084 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:06.091 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:06.091 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:06.091 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:14.787 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:14.794 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:15.986 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:15.994 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:15.999 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:16.000 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:51.354 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:51.364 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:52.469 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:52.481 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:52.481 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:11:52.481 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:14:28.421 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:14:28.429 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:14:29.994 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:14:30.046 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:14:30.046 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:14:49.998 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:19:23.488 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:19:23.497 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:19:46.121 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:19:46.126 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:20:15.895 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:20:15.900 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:20:15.900 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:20:15.900 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:20:24.396 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:20:24.404 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:20:25.020 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:20:25.024 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:20:25.024 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
-25-08-03.20:20:25.025 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:47:46.522 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:47:46.523 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:47:50.982 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:47:50.990 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:47:50.993 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:48:09.266 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:48:09.267 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:48:09.760 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:48:11.650 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:48:11.653 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:48:13.754 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:48:13.757 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:48:19.839 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:48:19.843 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:48:24.263 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:48:24.271 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:48:26.094 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:57:52.131 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:57:57.456 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:59:27.137 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.15:59:27.144 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:00:13.317 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:00:13.324 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:01:31.377 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:01:31.380 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:01:31.380 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:01:31.382 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:06:04.699 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:06:04.706 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:06:04.706 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:06:04.706 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:06:36.988 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:06:36.992 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:06:36.992 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:06:36.993 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:06:49.373 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:06:49.373 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:06:49.373 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:06:49.373 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:06:58.288 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:06:58.291 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:06:58.291 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:06:58.292 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:07:13.343 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:07:13.348 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:07:13.348 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:07:13.348 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:07:21.174 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:07:21.174 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:07:21.174 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:07:21.174 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:07:31.202 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:07:31.202 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:07:31.202 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:07:31.202 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:07:41.280 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:07:41.282 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:07:41.282 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:07:41.282 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:09:49.487 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:09:49.487 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:09:49.487 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:09:49.488 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:10:44.215 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:10:44.216 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:10:44.216 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:10:44.216 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:10:50.874 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:10:50.879 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:10:50.879 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:10:50.879 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:10:57.298 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:10:57.298 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:10:57.298 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:10:57.300 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:07.343 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:07.350 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:07.350 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:07.350 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:14.863 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:14.863 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:14.864 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:14.864 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:21.728 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:21.728 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:21.730 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:21.730 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:29.053 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:29.054 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:29.055 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:29.055 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:38.313 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:38.313 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:38.313 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:11:38.313 [http-nio-8091-exec-4] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:12:01.350 [http-nio-8091-exec-3] ERROR GlobalExceptionHandler - 系统异常: 
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:260)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:442)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:383)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:125)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:67)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1266)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1048)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+25-08-09.16:12:35.665 [http-nio-8091-exec-1] ERROR GlobalExceptionHandler - 系统异常: 
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:260)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:442)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:383)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:125)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:67)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1266)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1048)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+25-08-09.16:12:40.676 [http-nio-8091-exec-2] ERROR GlobalExceptionHandler - 系统异常: 
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:260)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:442)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:383)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:125)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:67)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1266)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1048)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+25-08-09.16:12:59.160 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:12:59.160 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:12:59.160 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:12:59.160 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:05.594 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:05.594 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:05.594 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:05.594 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:15.142 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:15.142 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:15.142 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:15.147 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:22.009 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:22.010 [http-nio-8091-exec-5] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:22.010 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:22.010 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:31.436 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:31.437 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:31.437 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:31.437 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:40.523 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:40.523 [http-nio-8091-exec-3] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:40.523 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:40.524 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:13:43.602 [http-nio-8091-exec-5] ERROR GlobalExceptionHandler - 系统异常: 
+org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'productIds' for method parameter type List is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:218)
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:193)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:561)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+25-08-09.16:14:10.171 [http-nio-8091-exec-4] ERROR GlobalExceptionHandler - 系统异常: 
+org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'productIds' for method parameter type List is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:218)
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:193)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:561)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+25-08-09.16:14:21.307 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:14:21.309 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:14:21.309 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:14:21.309 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:14:27.822 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:14:27.822 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:14:27.823 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:14:27.824 [http-nio-8091-exec-1] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:14:36.103 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:14:36.103 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:14:36.812 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:14:36.812 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:18:03.264 [http-nio-8091-exec-1] ERROR GlobalExceptionHandler - 系统异常: 
+org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public cn.mmko.response.Response<java.lang.String> cn.mmko.controller.ProductController.deleteProduct(java.util.List<java.lang.Long>)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:163)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:561)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+25-08-09.16:18:09.857 [http-nio-8091-exec-3] ERROR GlobalExceptionHandler - 系统异常: 
+org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public cn.mmko.response.Response<java.lang.String> cn.mmko.controller.ProductController.deleteProduct(java.util.List<java.lang.Long>)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:163)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:561)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+25-08-09.16:18:13.286 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:18:13.286 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:18:13.286 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:18:13.286 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:05.923 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:05.923 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:05.923 [http-nio-8091-exec-7] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:05.924 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:12.695 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:12.696 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:12.696 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:12.696 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:19.546 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:19.546 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:19.548 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:19.550 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:26.708 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:26.708 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:26.708 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:26.710 [http-nio-8091-exec-2] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:34.383 [http-nio-8091-exec-6] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:34.384 [http-nio-8091-exec-10] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:34.384 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:19:34.384 [http-nio-8091-exec-9] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.16:21:30.868 [http-nio-8091-exec-4] ERROR GlobalExceptionHandler - 系统异常: 
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='productId', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class java.lang.Long (java.util.ArrayList and java.lang.Long are in module java.base of loader 'bootstrap')
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:96)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at jdk.proxy2/jdk.proxy2.$Proxy89.delete(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.delete(SqlSessionTemplate.java:304)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:72)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at jdk.proxy2/jdk.proxy2.$Proxy93.deleteProduct(Unknown Source)
+	at cn.mmko.service.product.imp.ProductService.deleteProduct(ProductService.java:150)
+	at cn.mmko.controller.ProductController.deleteProduct(ProductController.java:166)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:561)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='productId', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class java.lang.Long (java.util.ArrayList and java.lang.Long are in module java.base of loader 'bootstrap')
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:89)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at jdk.proxy2/jdk.proxy2.$Proxy128.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.delete(DefaultSqlSession.java:212)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 62 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class java.lang.Long (java.util.ArrayList and java.lang.Long are in module java.base of loader 'bootstrap')
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:75)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
+	... 81 common frames omitted
+Caused by: java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class java.lang.Long (java.util.ArrayList and java.lang.Long are in module java.base of loader 'bootstrap')
+	at org.apache.ibatis.type.LongTypeHandler.setNonNullParameter(LongTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	... 82 common frames omitted
+25-08-09.16:22:12.714 [http-nio-8091-exec-1] ERROR GlobalExceptionHandler - 系统异常: 
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='productId', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class java.lang.Long (java.util.ArrayList and java.lang.Long are in module java.base of loader 'bootstrap')
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:96)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at jdk.proxy2/jdk.proxy2.$Proxy89.delete(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.delete(SqlSessionTemplate.java:304)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:72)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at jdk.proxy2/jdk.proxy2.$Proxy93.deleteProduct(Unknown Source)
+	at cn.mmko.service.product.imp.ProductService.deleteProduct(ProductService.java:150)
+	at cn.mmko.controller.ProductController.deleteProduct(ProductController.java:166)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:561)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='productId', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class java.lang.Long (java.util.ArrayList and java.lang.Long are in module java.base of loader 'bootstrap')
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:89)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at jdk.proxy2/jdk.proxy2.$Proxy135.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.delete(DefaultSqlSession.java:212)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 62 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class java.lang.Long (java.util.ArrayList and java.lang.Long are in module java.base of loader 'bootstrap')
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:75)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
+	... 81 common frames omitted
+Caused by: java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class java.lang.Long (java.util.ArrayList and java.lang.Long are in module java.base of loader 'bootstrap')
+	at org.apache.ibatis.type.LongTypeHandler.setNonNullParameter(LongTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	... 82 common frames omitted
+25-08-09.16:25:04.376 [http-nio-8091-exec-8] WARN  GlobalExceptionHandler - 业务异常: code=401, info=缺少有效 Token
+25-08-09.19:36:15.689 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=42m53s695ms132µs200ns).

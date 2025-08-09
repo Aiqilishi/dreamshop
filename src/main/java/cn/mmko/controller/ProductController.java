@@ -4,8 +4,11 @@ import cn.mmko.dto.product.*;
 import cn.mmko.enums.ResponseCode;
 import cn.mmko.response.Response;
 import cn.mmko.service.product.IProductService;
+import cn.mmko.service.upload.imp.FileUploadService;
+import cn.mmko.vo.ProductImagesVO;
 import cn.mmko.vo.ProductInfoVO;
 import cn.mmko.vo.ProductListVO;
+import cn.mmko.vo.ProductManageListVO;
 import com.github.pagehelper.PageInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +27,8 @@ import java.util.UUID;
 public class ProductController {
     @Resource
     private IProductService productService;
+    @Resource
+    private FileUploadService fileUploadService;
 
     /**
      * 首页分页查询商品
@@ -50,16 +55,33 @@ public class ProductController {
      */
 
     @RequestMapping(value = "/queryBySeller",method = RequestMethod.GET)
-    public Response<PageInfo<ProductManageDTO>> queryProductBySellerId(@RequestParam(defaultValue = "1") Integer pageNum, @RequestParam(defaultValue = "5") Integer pageSize,HttpServletRequest  request){
-        Long sellerId = (Long) request.getAttribute("userId");
-        PageInfo<ProductManageDTO> productDTOPageInfo = productService.queryProductBySellerId(pageNum, pageSize, sellerId);
-        return Response. <PageInfo<ProductManageDTO>>builder()
+    public Response<PageInfo<ProductManageListVO>> queryProductBySellerId(@RequestParam(defaultValue = "1") Integer pageNum, @RequestParam(defaultValue = "5") Integer pageSize, HttpServletRequest  request){
+        Long sellerId = (Long) request.getAttribute("sellerId");
+        List<String> roles = (List<String>) request.getAttribute("role");
+        if (roles.contains("ROLE_ADMIN")){
+            sellerId = null;
+        }
+        PageInfo<ProductManageListVO> productManageListVOPageInfo = productService.queryProductBySellerId(pageNum, pageSize, sellerId);
+        return Response. <PageInfo<ProductManageListVO>>builder()
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())
-                .data(productDTOPageInfo)
+                .data(productManageListVOPageInfo)
                 .build();
     }
-
+    @RequestMapping(value = "/queryBackgroundBySearch",method = RequestMethod.GET)
+    public Response<PageInfo<ProductManageListVO>> queryProductBySearch( @RequestParam(defaultValue = "1") Integer pageNum, @RequestParam(defaultValue = "5") Integer pageSize, String  keyword,HttpServletRequest request) {
+        Long sellerId = (Long) request.getAttribute("sellerId");
+        List<String> roles = (List<String>) request.getAttribute("role");
+        if (roles.contains("ROLE_ADMIN")){
+            sellerId = null;
+        }
+        PageInfo<ProductManageListVO> productManageListVOPageInfo = productService.queryBackgroundBySearch(pageNum, pageSize, sellerId, keyword);
+        return Response. <PageInfo<ProductManageListVO>>builder()
+                .code(ResponseCode.SUCCESS.getCode())
+                .info(ResponseCode.SUCCESS.getInfo())
+                .data(productManageListVOPageInfo)
+                .build();
+    }
     /**
      * 按商品id查询商品
      * @param productId
@@ -109,8 +131,8 @@ public class ProductController {
     }
     @RequestMapping(value = "/insert",method = RequestMethod.POST)
     public Response<String> insertProduct(@RequestBody ProductCreateDTO productCreateDTO,HttpServletRequest request){
-        Long userId = (Long) request.getAttribute("userId");
-        productCreateDTO.setUserId(userId);
+        Long sellerId = (Long) request.getAttribute("sellerId");
+        productCreateDTO.setUserId(sellerId);
         productService.insertProduct(productCreateDTO);
         return Response.<String>builder()
                 .code(ResponseCode.SUCCESS.getCode())
@@ -134,14 +156,25 @@ public class ProductController {
                 .info(ResponseCode.SUCCESS.getInfo())
                 .build();
     }
-    @RequestMapping(value = "/delete/{productId}",method = RequestMethod.DELETE)
-    public Response<String> deleteProduct(@PathVariable Long productId){
-        productService.deleteProduct(productId);
+    /**
+     * 删除商品
+     * @param productIds
+     * @return
+     */
+    @RequestMapping(value = "/delete",method = RequestMethod.DELETE)
+    public Response<String> deleteProduct(@RequestBody List<Long> productIds){
+        productService.deleteProduct(productIds);
         return Response.<String>builder()
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())
                 .build();
     }
+
+    /**
+     * 修改商品
+     * @param productUpdateDTO
+     * @return
+     */
     @RequestMapping(value = "/update",method = RequestMethod.POST)
     public Response<String> updateProduct(@RequestBody ProductUpdateDTO productUpdateDTO){
         productService.updateProduct(productUpdateDTO);
@@ -150,13 +183,29 @@ public class ProductController {
                 .info(ResponseCode.SUCCESS.getInfo())
                 .build();
     }
-     @RequestMapping(value = "/queryImages/{productId}",method = RequestMethod.GET)
-     public Response<List<ProductImagesDTO>> queryProductImages(@PathVariable Long productId){
-        List<ProductImagesDTO> productImagesDTO =productService.queryProductImages(productId);
-        return Response.<List<ProductImagesDTO>>builder()
+
+    /**
+     * 修改商品状态
+     * @param productId
+     * @return
+     */
+    @RequestMapping(value = "/updateStatus/{productId}",method = RequestMethod.POST)
+    public Response<String> updateProductStatus(@PathVariable Long productId){
+        productService.updateProductStatus(productId);
+        return Response.<String>builder()
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())
-                .data(productImagesDTO)
+                .build();
+    }
+
+
+     @RequestMapping(value = "/queryImages/{productId}",method = RequestMethod.GET)
+     public Response<List<ProductImagesVO>> queryProductImages(@PathVariable Long productId){
+        List<ProductImagesVO> productImagesVOs =productService.queryProductImages(productId);
+        return Response.<List<ProductImagesVO>>builder()
+                .code(ResponseCode.SUCCESS.getCode())
+                .info(ResponseCode.SUCCESS.getInfo())
+                .data(productImagesVOs)
                 .build();
     }
     @RequestMapping(value = "/insertImages/{productId}")
@@ -183,22 +232,11 @@ public class ProductController {
                 .info(ResponseCode.SUCCESS.getInfo())
                 .build();
     }
-@RequestMapping(value = "/uplodeImages",method = RequestMethod.POST)
-    public Response<String> uplodeProductImages(@RequestParam("file") MultipartFile file, HttpServletRequest request) throws  IOException {
-        if(file.isEmpty()) return Response.<String>builder()
-                .code(ResponseCode.UN_ERROR.getCode())
-                .info(ResponseCode.UN_ERROR.getInfo())
-                .build();
-        String originalFilename = file.getOriginalFilename();
-        String shuffix = originalFilename.substring(originalFilename.lastIndexOf("."));
-        String fileName = UUID.randomUUID()+ shuffix;
-        String uploadDir = "D:/images/";
-        File fileDir = new File(uploadDir);
-        if(!fileDir.exists()) fileDir.mkdirs();
-        File dest = new File(fileDir,fileName);
-        file.transferTo(dest);
-        String imageUrl = "http://localhost:8091/images/" + fileName;
-        return Response.<String>builder()
+@RequestMapping(value = "/uploadImage",method = RequestMethod.POST)
+    public Response<String> uploadProductImages(@RequestParam ("file") MultipartFile file, HttpServletRequest  request) throws Exception {
+         Long sellerId = (Long) request.getAttribute("sellerId");
+         String imageUrl = fileUploadService.uploadProductMainImage(file,sellerId);
+         return Response.<String>builder()
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())
                 .data(imageUrl)

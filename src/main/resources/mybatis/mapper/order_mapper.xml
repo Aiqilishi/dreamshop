@@ -41,19 +41,19 @@
         select order_id,user_id,order_status,total_amount,create_time,pay_time,delivery_time,finish_time
         from t_order
         where user_id=#{userId}
-        <if test="status=='0'">
+        <if test="status==0">
             and order_status=0
         </if>
-        <if test="status=='1'">
-            and order_status=1 or order_status=2
+        <if test="status==1">
+            and (order_status=1 or order_status=2)
         </if>
-        <if test="status=='3'">
+        <if test="status==3">
             and order_status=3
         </if>
-        <if test="status=='4'">
+        <if test="status==4">
             and order_status=4
         </if>
-        <if test="status=='5'">
+        <if test="status==5">
             and order_status=5
         </if>
         order by create_time  desc

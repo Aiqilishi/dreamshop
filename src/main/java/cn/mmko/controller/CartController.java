@@ -32,8 +32,8 @@ public class CartController {
      */
     @RequestMapping(value = "/insert",method = RequestMethod.POST)
     public Response<String> insertCart(@RequestBody CartCreateDTO cartCreateDTO, HttpServletRequest  request){
-        Long userId = (Long) request.getAttribute("userId");
-          cartService.insertCart(cartCreateDTO, userId);
+        Long customerId = (Long) request.getAttribute("customerId");
+          cartService.insertCart(cartCreateDTO, customerId);
           return Response.<String>builder()
                   .code(ResponseCode.SUCCESS.getCode())
                   .info(ResponseCode.SUCCESS.getInfo())
@@ -42,8 +42,8 @@ public class CartController {
     }
     @RequestMapping(value = "/query",method = RequestMethod.GET)
     public Response<PageInfo<CartListVO>> queryCartListByUserId(@RequestParam Integer pageNum, @RequestParam Integer pageSize, HttpServletRequest request){
-           Long userId = (Long) request.getAttribute("userId");
-           PageInfo<CartListVO> cartListVOS = cartService.queryCartListByUserId(pageNum, pageSize, userId);
+           Long customerId = (Long) request.getAttribute("customerId");
+           PageInfo<CartListVO> cartListVOS = cartService.queryCartListByUserId(pageNum, pageSize, customerId);
            return Response. <PageInfo<CartListVO>>builder()
                    .code(ResponseCode.SUCCESS.getCode())
                    .info(ResponseCode.SUCCESS.getInfo())
@@ -62,8 +62,8 @@ public class CartController {
     }
 @RequestMapping(value = "/updateCart", method = RequestMethod.POST)
     public Response<String> updateCart(HttpServletRequest request, @RequestBody CartUpdateDTO cartUpdateDTO) {
-    Long userId = (Long) request.getAttribute("userId");
-        cartService.updateCart(userId, cartUpdateDTO);
+    Long customerId = (Long) request.getAttribute("customerId");
+        cartService.updateCart(customerId, cartUpdateDTO);
         return Response. <String>builder()
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())
@@ -72,8 +72,8 @@ public class CartController {
     }
     @RequestMapping(value = "/deleteAllCart", method = RequestMethod.POST)
     public Response<String> deleteAllCart(HttpServletRequest request) {
-        Long userId = (Long) request.getAttribute("userId");
-        cartService.deleteAllCart(userId);
+        Long customerId = (Long) request.getAttribute("customerId");
+        cartService.deleteAllCart(customerId);
         return Response.<String>builder()
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())

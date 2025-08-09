@@ -69,4 +69,9 @@ public class SellerService implements ISellerService {
     public SellerPo querySellerById(Long sellerId) {
         return sellerDao.querySellerById(sellerId);
     }
+
+    @Override
+    public SellerPo querySellerByUserId(Long userId) {
+        return sellerDao.querySellerByUserId(userId);
+    }
 }

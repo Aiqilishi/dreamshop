@@ -1,8 +1,6 @@
 package cn.mmko.service.product.imp;
 
-import cn.mmko.dao.ICategoryDao;
 import cn.mmko.dao.IProductDao;
-import cn.mmko.dao.IProductImageDao;
 import cn.mmko.dto.OrderItemDTO;
 import cn.mmko.dto.product.*;
 import cn.mmko.enums.ResponseCode;
@@ -10,9 +8,11 @@ import cn.mmko.exception.AppException;
 import cn.mmko.po.ProductImagePo;
 import cn.mmko.po.ProductPo;
 import cn.mmko.service.product.IProductService;
+import cn.mmko.service.productImage.IProductImageService;
 import cn.mmko.vo.ProductImagesVO;
 import cn.mmko.vo.ProductInfoVO;
 import cn.mmko.vo.ProductListVO;
+import cn.mmko.vo.ProductManageListVO;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -30,9 +29,7 @@ public class ProductService implements IProductService {
     @Resource
     private IProductDao productDao;
     @Resource
-    private IProductImageDao productImageDao;
-    @Resource
-    private ICategoryDao  categoryDao;
+    private IProductImageService productImageService;
     @Override
     public PageInfo<ProductListVO> queryProduct(Integer pageNum, Integer pageSize) {
         PageHelper.startPage(pageNum, pageSize);
@@ -42,7 +39,7 @@ public class ProductService implements IProductService {
 
     @Override
     public ProductInfoVO queryProductById(Long productId) {
-        List<ProductImagePo> productImagesPo = productImageDao.queryProductImage(productId);
+        List<ProductImagePo> productImagesPo = productImageService.queryProductImage(productId);
         List<ProductImagesVO> productImagesVOS= new ArrayList<>();
         for (ProductImagePo productImagePo: productImagesPo) {
             productImagesVOS.add(ProductImagesVO.builder()
@@ -61,6 +58,7 @@ public class ProductService implements IProductService {
     public void insertProduct(ProductCreateDTO productCreateDTO) {
         ProductPo productPo = productDao.queryExitProduct(productCreateDTO);
         if(null!=productPo) throw new AppException(ResponseCode.PRODUCT_EXIST.getCode(), ResponseCode.PRODUCT_EXIST.getInfo());
+
         productDao.insertProduct(ProductPo.builder()
                 .productName(productCreateDTO.getProductName())
                 .categoryId(productCreateDTO.getCategoryId())
@@ -95,8 +93,8 @@ public class ProductService implements IProductService {
                 .productId(productUpdateDTO.getProductId())
                 .productName(productUpdateDTO.getProductName())
                 .productPrice(productUpdateDTO.getProductPrice())
+                .categoryId(productUpdateDTO.getCategoryId())
                 .productStock(productUpdateDTO.getProductStock())
-                .productStatus(productUpdateDTO.getProductStatus())
                 .productDesc(productUpdateDTO.getProductDesc())
                 .productImage(productUpdateDTO.getProductImage())
                         .isRecommend(productUpdateDTO.getIsRecommend())
@@ -104,24 +102,29 @@ public class ProductService implements IProductService {
         );
     }
 
+    /**
+     * 查询商品子图
+     * @param productId
+     * @return
+     */
     @Override
-    public List<ProductImagesDTO> queryProductImages(Long productId) {
-       List<ProductImagePo> productImagesPo =  productImageDao.queryProductImage(productId);
+    public List<ProductImagesVO> queryProductImages(Long productId) {
+       List<ProductImagePo> productImagesPo =  productImageService.queryProductImage(productId);
        if(null==productImagesPo) throw new AppException(ResponseCode.IMAGES_NOT_EXIST.getCode(), ResponseCode.IMAGES_NOT_EXIST.getInfo());
-       List<ProductImagesDTO> productImagesDTO = new ArrayList<>();
+       List<ProductImagesVO> productImagesVOS = new ArrayList<>();
        for (ProductImagePo productImagePo: productImagesPo) {
-           productImagesDTO.add(ProductImagesDTO.builder()
-                   .productImageId(productImagePo.getImageId())
-                   .productImage(productImagePo.getImageUrl())
+           productImagesVOS.add(ProductImagesVO.builder()
+                   .imageId(productImagePo.getImageId())
+                   .imageUrl(productImagePo.getImageUrl())
                    .sortOrder(productImagePo.getSortOrder())
                    .build());
        }
-       return productImagesDTO;
+       return productImagesVOS;
     }
 
     @Override
     public void insertProductImages(ProductImagesDTO productImagesDTO, Long productId) {
-        productImageDao.insertProductImage(ProductImagePo.builder()
+        productImageService.insertProductImage(ProductImagePo.builder()
                 .productId(productId)
                 .imageUrl(productImagesDTO.getProductImage())
                 .sortOrder(productImagesDTO.getSortOrder())
@@ -130,12 +133,12 @@ public class ProductService implements IProductService {
 
     @Override
     public void deleteProductImages(Long productId, Long productImageId) {
-        productImageDao.deleteProductImage(productId,productImageId);
+        productImageService.deleteProductImage(productId,productImageId);
     }
 
     @Override
     public void updateProductImages(ProductImagesDTO productImagesDTO, Long productId) {
-        productImageDao.updateProductImage(ProductImagePo.builder()
+        productImageService.updateProductImage(ProductImagePo.builder()
                 .imageId(productImagesDTO.getProductImageId())
                 .productId(productId)
                 .imageUrl(productImagesDTO.getProductImage())
@@ -143,15 +146,14 @@ public class ProductService implements IProductService {
                 .build());
     }
     @Override
-    public void deleteProduct(Long productId) {
-        productDao.deleteProduct(productId);
+    public void deleteProduct(List<Long> productIds) {
+        productDao.deleteProduct(productIds);
     }
 
     @Override
-    public PageInfo<ProductManageDTO> queryProductBySellerId(Integer pageNum, Integer pageSize, Long sellerId) {
+    public PageInfo<ProductManageListVO> queryProductBySellerId(Integer pageNum, Integer pageSize, Long sellerId) {
         PageHelper.startPage(pageNum, pageSize);
-        List<ProductPo> products = productDao.queryProductBySellerId(sellerId);
-        List<ProductManageDTO> productManageDTOS = new ArrayList<>();
+        List<ProductManageListVO> productManageDTOS = productDao.queryProductBySellerId(sellerId);
         return new PageInfo<>(productManageDTOS);
     }
 
@@ -222,6 +224,26 @@ public class ProductService implements IProductService {
     @Override
     public String queryProductMainImages(Long productId) {
         return productDao.queryProductMainImages(productId);
+    }
+
+    @Override
+    public void updateProductStatus(Long productId) {
+        productDao.updateProductStatus(productId);
+    }
+
+    /**
+     * 后台搜索
+     * @param pageNum
+     * @param pageSize
+     * @param sellerId
+     * @param keyword
+     * @return
+     */
+    @Override
+    public PageInfo<ProductManageListVO> queryBackgroundBySearch(Integer pageNum, Integer pageSize, Long sellerId, String keyword) {
+         PageHelper.startPage(pageNum, pageSize);
+         List<ProductManageListVO> productManageDTOS = productDao.queryBackgroundBySearch(sellerId,keyword);
+         return new PageInfo<>(productManageDTOS);
     }
 
 

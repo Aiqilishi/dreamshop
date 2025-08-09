@@ -31,7 +31,7 @@ public class SellerController {
     }
     @RequestMapping(value = "/uploadLogo",method = RequestMethod.POST)
     public Response<String> uploadSellerLogo(@RequestParam ("file") MultipartFile file, HttpServletRequest request) throws Exception{
-        Long sellerId = (Long) request.getAttribute("userId");
+        Long sellerId = (Long) request.getAttribute("sellerId");
         String logoUrl = fileUploadService.uploadSellerLogo(file,sellerId);
         return Response.<String>builder()
                 .code(ResponseCode.SUCCESS.getCode())

@@ -36,8 +36,11 @@
         <result column="view_count" property="viewCount"/>
     </resultMap>
 <!--    // 删除商品-->
-    <delete id="deleteProduct" parameterType="long">
-        delete from t_product where product_id=#{productId}
+    <delete id="deleteProduct" parameterType="java.util.List">
+        delete from t_product where product_id in
+        <foreach collection="list" item="productId" open="(" separator="," close=")">
+            #{productId}
+        </foreach>
     </delete>
 <!--    // 查询商品-->
     <select id="queryProduct" resultMap="ListMap">
@@ -106,7 +109,7 @@
     </update>
     <!--    // 更新商品信息-->
     <update id="updateProduct" parameterType="cn.mmko.dto.product.ProductUpdateDTO">
-        update t_product set product_name=#{productName},product_price=#{productPrice},product_stock=#{productStock},product_status=#{productStatus},product_desc=#{productDesc},product_image=#{productImage},is_recommend=#{isRecommend} where product_id=#{productId}
+        update t_product set category_id=#{categoryId},product_name=#{productName},product_price=#{productPrice},product_stock=#{productStock},product_desc=#{productDesc},product_image=#{productImage},is_recommend=#{isRecommend} where product_id=#{productId}
     </update>
     <update id="lockProductStock">
         update t_product set frozen_stock=frozen_stock+#{quantity} where product_id= #{productId} and product_stock-frozen_stock>=#{quantity}
@@ -114,14 +117,40 @@
     <update id="releaseProductStock">
         update t_product set product_stock=product_stock-#{quantity},frozen_stock=frozen_stock-#{quantity} where product_id= #{productId}
     </update>
+    <update id="updateProductStatus">
+        update t_product set product_status = CASE 
+            WHEN product_status = 1 THEN 0 
+            WHEN product_status = 0 THEN 1 
+            ELSE product_status 
+        END where product_id=#{productId}
+    </update>
     <!-- 查询商品数量-->
     <select id="queryProductNumbySellerId" resultType="java.lang.Long" parameterType="long">
         select count(*) from t_product where user_id=#{userId}
     </select>
-    <select id="queryProductBySellerId" resultMap="DataMap" parameterType="long">
-        select product_id,category_id,product_name,product_price,product_stock,product_sales,product_status,product_desc,product_image,view_count,create_time,update_time
-        from t_product
-        where user_id= #{userId}
+    <select id="queryProductBySellerId" resultType="cn.mmko.vo.ProductManageListVO" parameterType="long">
+        select  p.product_id,
+            c.category_name,
+            s.seller_name,
+            p.product_name,
+            p.product_price,
+            p.product_stock,
+            p.product_sales,
+            p.product_status,
+            p.product_desc,
+            p.product_image,
+            p.is_recommend,
+            p.is_hot,
+            p.view_count,
+            p.create_time,
+            p.update_time
+        from t_product p
+        LEFT JOIN t_category c ON p.category_id = c.category_id
+        LEFT JOIN t_seller s ON p.user_id = s.seller_id
+        <if test="sellerId != null">
+            WHERE p.user_id = #{sellerId}
+        </if>
+
     </select>
     <select id="queryProductBySearch" resultMap="ListMap" parameterType="string">
         SELECT
@@ -181,5 +210,29 @@
     </select>
     <select id="queryProductMainImages" resultType="java.lang.String">
         select product_image from t_product where product_id=#{productId}
+    </select>
+    <select id="queryBackgroundBySearch" resultType="cn.mmko.vo.ProductManageListVO">
+        select  p.product_id,
+                c.category_name,
+                s.seller_name,
+                p.product_name,
+                p.product_price,
+                p.product_stock,
+                p.product_sales,
+                p.product_status,
+                p.product_desc,
+                p.product_image,
+                p.is_recommend,
+                p.is_hot,
+                p.view_count,
+                p.create_time,
+                p.update_time
+        from t_product p
+                 LEFT JOIN t_category c ON p.category_id = c.category_id
+                 LEFT JOIN t_seller s ON p.user_id = s.seller_id
+        where p.product_name like concat('%',#{keyword},'%')
+        <if test="sellerId != null">
+          and p.user_id = #{sellerId}
+          </if>
     </select>
 </mapper>

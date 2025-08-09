@@ -33,6 +33,10 @@ public class JwtInterceptor implements HandlerInterceptor {
         List<String> role = JwtUtils.getRoleFromToken(token);
         List<String> permission = JwtUtils.getPermissionFromToken(token);
         Long userId = JwtUtils.getUserIdFromToken(token);
+        Long customerId = JwtUtils.getCustomerIdFromToken(token);
+        Long sellerId = JwtUtils.getSellerIdFromToken(token);
+        if (customerId != null) request.setAttribute("customerId", customerId);
+        if (sellerId != null) request.setAttribute("sellerId", sellerId);
         request.setAttribute("username", username);
         request.setAttribute("role",role);
         request.setAttribute("permission",permission);

@@ -5,18 +5,23 @@
         insert into t_customer(user_id) values(#{userId})
     </insert>
     <insert id="upsertAvatar">
-        insert into t_customer(user_id,avatar_url) values(#{userId},#{avatarUrl})
+        insert into t_customer(customer_id,avatar_url) values(#{userId},#{avatarUrl})
         on duplicate key update avatar_url = #{avatarUrl}
     </insert>
     <update id="updateCustomer" >
         update  t_customer
         set nickname = #{nickname},gender = #{gender},birthday = #{birthday},address = #{address},avatar_url = #{avatarUrl}
-        where user_id = #{userId}
+        where customer_id = #{userId}
     </update>
 
 
     <select id="queryUserByUserId" resultType="cn.mmko.po.CustomerPo" parameterType="long">
         select nickname,gender,birthday,address,avatar_url
+        from t_customer
+        where customer_id = #{userId}
+    </select>
+    <select id="queryCustomerIdByUserId" resultType="java.lang.Long">
+        select customer_id
         from t_customer
         where user_id = #{userId}
     </select>

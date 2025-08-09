@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class CategoryCreateDTO {
-    private Long userId;       // 用户ID
+    private Long sellerId;       // 用户ID
     private String categoryName;  // 分类名称
 }

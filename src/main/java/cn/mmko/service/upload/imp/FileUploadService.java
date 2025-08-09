@@ -34,7 +34,6 @@ public class FileUploadService implements IFileUploadService {
         String filePath = uploadDir + fileName;
         File dest =new File(filePath);
         file.transferTo(dest);
-        generateThumbnail(filePath,uploadDir+"thumb"+fileName);
 
         return fileUploadConfig.getImageUrlPrefix()+fileUploadConfig.getAvatarPath()+fileName;
     }
@@ -50,14 +49,22 @@ public class FileUploadService implements IFileUploadService {
         String filePath = uploadDir + fileName;
         File dest =new File(filePath);
         file.transferTo(dest);
-        generateThumbnail(filePath,uploadDir+"thumb"+fileName);
 
         return fileUploadConfig.getImageUrlPrefix()+fileUploadConfig.getLogoPath()+fileName;
     }
 
     @Override
     public String uploadProductMainImage(MultipartFile file, Long productId) throws Exception {
-        return null;
+        validateFile( file);
+        String originalFilename = file.getOriginalFilename();
+        String extension = getFileExtension(originalFilename);
+        String fileName = "product_main_"+ productId+"_"+ UUID.randomUUID() + "." + extension;
+        String uploadDir = fileUploadConfig.getBasePath() + fileUploadConfig.getProductPath();
+        createDirectoryIfNotExists(uploadDir);
+        String filePath = uploadDir + fileName;
+        File dest =new File(filePath);
+        file.transferTo(dest);
+        return fileUploadConfig.getImageUrlPrefix()+fileUploadConfig.getProductPath()+fileName;
     }
 
     @Override

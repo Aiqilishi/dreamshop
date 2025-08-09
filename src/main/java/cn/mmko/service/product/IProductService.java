@@ -2,14 +2,13 @@ package cn.mmko.service.product;
 
 import cn.mmko.dto.OrderItemDTO;
 import cn.mmko.dto.product.*;
-import cn.mmko.po.ProductPo;
 import cn.mmko.vo.ProductImagesVO;
 import cn.mmko.vo.ProductInfoVO;
 import cn.mmko.vo.ProductListVO;
+import cn.mmko.vo.ProductManageListVO;
 import com.github.pagehelper.PageInfo;
 
 import java.util.List;
-import java.util.ListResourceBundle;
 
 public interface IProductService {
     /**
@@ -30,7 +29,7 @@ public interface IProductService {
 
     void updateProduct(ProductUpdateDTO productUpdateDTO);
 
-    List<ProductImagesDTO> queryProductImages(Long productId);
+    List<ProductImagesVO> queryProductImages(Long productId);
 
     void insertProductImages(ProductImagesDTO productImagesDTO, Long productId);
 
@@ -38,9 +37,9 @@ public interface IProductService {
 
     void updateProductImages(ProductImagesDTO productImagesDTO, Long productId);
 
-    void deleteProduct(Long productId);
+    void deleteProduct(List<Long> productId);
 
-   PageInfo<ProductManageDTO> queryProductBySellerId(Integer pageNum, Integer pageSize, Long sellerId);
+   PageInfo<ProductManageListVO> queryProductBySellerId(Integer pageNum, Integer pageSize, Long sellerId);
 
     PageInfo<ProductListVO> queryProductBySearch(Integer pageNum, Integer pageSize, String keyword);
 
@@ -53,4 +52,8 @@ public interface IProductService {
     void releaseProductStock(Long productId,Integer quantity);
 
     String queryProductMainImages(Long productId);
+
+    void updateProductStatus(Long productId);
+
+    PageInfo<ProductManageListVO> queryBackgroundBySearch(Integer pageNum, Integer pageSize, Long sellerId, String keyword);
 }

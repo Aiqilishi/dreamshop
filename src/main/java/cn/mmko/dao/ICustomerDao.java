@@ -13,4 +13,6 @@ public interface ICustomerDao {
     void updateCustomer(CustomerPo  customerPo);
 
     void upsertAvatar(Long userId, String avatarUrl);
+
+    Long queryCustomerIdByUserId(Long userId);
 }

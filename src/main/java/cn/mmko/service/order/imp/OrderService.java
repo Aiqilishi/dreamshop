@@ -19,7 +19,6 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
-import com.alipay.api.domain.OrderItem;
 import com.alipay.api.request.AlipayTradeMergeCreateRequest;
 import com.alipay.api.request.AlipayTradePagePayRequest;
 import com.github.pagehelper.PageHelper;
@@ -53,12 +52,14 @@ public class OrderService implements IOrderService {
     private IOrderItemService orderItemService;
     /**
      * 创建订单
+     *
      * @param orderCreateDTO
      * @param userId
+     * @param customerId
      * @return
      */
     @Override
-    public String createOrder(OrderCreateDTO orderCreateDTO, Long userId) throws AlipayApiException {
+    public String createOrder(OrderCreateDTO orderCreateDTO, Long customerId, Long userId) throws AlipayApiException {
         userService.checkUserStatus(userId);//检测用户状态
         productService.checkProduct(orderCreateDTO.getOrderItemDTOS());//检测商品状态
         sellerService.checkSellerStatus(orderCreateDTO.getOrderItemDTOS());//检测商家状态
@@ -69,7 +70,7 @@ public class OrderService implements IOrderService {
         Long orderId = IdUtil.getSnowflake().nextId();
         OrderPo orderPo = OrderPo.builder()
                 .orderId(orderId)
-                .userId(userId)
+                .userId(customerId)
                 .orderStatus(0)
                 .totalAmount(orderCreateDTO.getTotalAmount())
                 .build();

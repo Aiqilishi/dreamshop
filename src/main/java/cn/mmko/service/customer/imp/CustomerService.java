@@ -16,14 +16,13 @@ public class CustomerService implements ICustomerService {
     @Override
     public void updateCustomerMessage(Long userId, CustomerUpdateDTO customerUpdateDTO) {
         customerDao.updateCustomer(CustomerPo.builder()
-                .userId(userId)
+                .customerId(userId)
                 .nickname(customerUpdateDTO.getNickname())
                 .gender(customerUpdateDTO.getGender())
                 .birthday(customerUpdateDTO.getBirthday())
                 .address(customerUpdateDTO.getAddress())
                 .avatarUrl(customerUpdateDTO.getAvatarUrl())
                 .build());
-
     }
 
     @Override
@@ -41,5 +40,10 @@ public class CustomerService implements ICustomerService {
     @Override
     public void updateCustomerAvatar(Long userId, String avatarUrl) {
           customerDao.upsertAvatar(userId,avatarUrl);
+    }
+
+    @Override
+    public Long queryCustomerIdByUserId(Long userId) {
+        return customerDao.queryCustomerIdByUserId(userId);
     }
 }

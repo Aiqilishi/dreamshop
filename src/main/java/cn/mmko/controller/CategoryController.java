@@ -51,8 +51,8 @@ public class CategoryController {
 
 @RequestMapping(value = "/query/pusellerCategory",method = RequestMethod.GET)
     public Response<List<CategoryVO>> queryPuSellerCategory(HttpServletRequest  request){
-        Long userId = (Long) request.getAttribute("userId");
-        List<CategoryVO> categoryVOS = categoryService.queryPuSellerCategory(userId);
+        Long sellerId = (Long) request.getAttribute("sellerId");
+        List<CategoryVO> categoryVOS = categoryService.queryPuSellerCategory(sellerId);
         return Response.<List<CategoryVO>>builder()
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())
