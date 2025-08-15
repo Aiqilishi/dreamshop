@@ -13,7 +13,7 @@ public interface ICategoryDao {
 
     void insertCategory(CategoryPo categoryPo);
 
-    Integer getMaxCategorySort(CategoryDTO categoryDTO);
+    Integer getMaxCategorySort(Long userId);
 
     CategoryVO queryCategory(CategoryDTO categoryDTO);
 
@@ -22,4 +22,16 @@ public interface ICategoryDao {
     List<CategoryVO> queryPuCategory();
 
     List<CategoryVO> queryCategorySeCategory(Long userId);
+    
+    CategoryPo queryCategoryById(Long categoryId);
+    
+    CategoryPo queryCategoryByName(String categoryName);
+    
+    CategoryPo queryCategoryByNameAndUserId(String categoryName, Long userId);
+    
+    void updateCategory(CategoryPo categoryPo);
+    
+    void deleteCategory(Long categoryId);
+    
+    Integer getProductCountByCategoryId(Long categoryId);
 }

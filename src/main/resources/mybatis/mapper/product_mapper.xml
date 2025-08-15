@@ -62,6 +62,7 @@
         t_product p
         LEFT JOIN t_category c ON p.category_id = c.category_id
         LEFT JOIN t_seller s ON p.user_id = s.seller_id
+        where p.product_status=3
         <!-- 可加WHERE条件 -->
     </select>
     <!--    // 根据id查询商品-->
@@ -118,11 +119,11 @@
         update t_product set product_stock=product_stock-#{quantity},frozen_stock=frozen_stock-#{quantity} where product_id= #{productId}
     </update>
     <update id="updateProductStatus">
-        update t_product set product_status = CASE 
-            WHEN product_status = 1 THEN 0 
-            WHEN product_status = 0 THEN 1 
-            ELSE product_status 
-        END where product_id=#{productId}
+        update t_product set product_status =#{status}
+                         where product_id=#{productId}
+    </update>
+    <update id="backProductStock">
+        update t_product set frozen_stock=frozen_stock-#{quantity} where product_id= #{productId}
     </update>
     <!-- 查询商品数量-->
     <select id="queryProductNumbySellerId" resultType="java.lang.Long" parameterType="long">
@@ -172,6 +173,7 @@
                 LEFT JOIN t_category c ON p.category_id = c.category_id
                 LEFT JOIN t_seller s ON p.user_id = s.seller_id
         where product_name like concat('%',#{keyword},'%') or c.category_name like concat('%',#{keyword},'%') or s.seller_name like concat('%',#{keyword},'%')
+        and p.product_status=3
     </select>
     <select id="queryProductByCategoryId" resultMap="ListMap">
         SELECT
@@ -194,6 +196,7 @@
                 LEFT JOIN t_category c ON p.category_id = c.category_id
                 LEFT JOIN t_seller s ON p.user_id = s.seller_id
         where p.category_id = #{categoryId}
+        and p.product_status=3
     </select>
     <select id="queryProductBase" resultType="cn.mmko.vo.ProductBaseVO" parameterType="long">
         select product_id,product_name,user_id,product_price,product_image from t_product where product_id in

@@ -21,4 +21,8 @@ public interface IOrderDao {
     OrderNumberVO queryOrderNumber(Long userId);
 
     List<OrderPo> queryOrderList(Long userId,Integer  status);
+
+    OrderPo queryOrderById(Long orderId);
+
+    void updateOrderStatus(Long orderId, Integer orderStatus);
 }

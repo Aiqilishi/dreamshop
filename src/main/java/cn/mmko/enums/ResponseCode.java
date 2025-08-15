@@ -29,7 +29,9 @@ public enum ResponseCode {
     FORBIDDEN("403", "禁止访问"),
     PRODUCT_NOT_ENOUGH("0010", "商品库存不足"),
     PRICE_ERROR("0011", "价格错误"),
-    SELLER_NOT_EXIST("404", "商家不存在");
+    SELLER_NOT_EXIST("404", "商家不存在"),
+    CATEGORY_NOT_EXIST("0014", "分类不存在"),
+    CATEGORY_IN_USE("0015", "分类正在使用中");
 
 
 

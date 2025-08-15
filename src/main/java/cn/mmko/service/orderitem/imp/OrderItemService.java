@@ -21,4 +21,24 @@ public class OrderItemService implements IOrderItemService {
     public List<OrderItemPo> queryOrderItemByOrderId(Long orderId) {
         return orderItemDao.queryOrderItemByOrderId(orderId);
     }
+
+    @Override
+    public List<OrderItemPo> queryOrderItemBySellerId(Long sellerId) {
+        return  orderItemDao.queryOrderItemBySellerId(sellerId);
+    }
+
+    @Override
+    public void deliverOrder(Long orderItemId) {
+        orderItemDao.deliverOrder(orderItemId);
+    }
+
+    @Override
+    public List<Integer> queryOrderItemStatus(Long orderId) {
+        return orderItemDao.queryOrderItemStatus(orderId);
+    }
+    
+    @Override
+    public List<OrderItemPo> queryOrderItemBySellerIdWithFilter(Long sellerId, Integer status, Integer itemStatus, String keyword) {
+        return orderItemDao.queryOrderItemBySellerIdWithFilter(sellerId, status, itemStatus, keyword);
+    }
 }

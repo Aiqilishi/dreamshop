@@ -52,7 +52,23 @@ public class JwtUtils {
     }
     //TODO: 后期添加管理员token
     public static String generateAdminJwt(String userName, List<String> role, List<String> permission, Long userId, Long adminId) {
-        return null;
+        JwtBuilder jwtBuilder = Jwts.builder();
+        String jwtToken = jwtBuilder
+                //header部分
+                .setHeaderParam("typ", "JWT")
+                .setHeaderParam("alg", "HS256")
+                //payload部分
+                .claim("username", userName)
+                .claim("role", role)
+                .claim("permission", permission)
+                .claim("userId", userId)
+                .claim("adminId", adminId)
+                .setExpiration(new Date(System.currentTimeMillis() + expireTime))
+                .setId(UUID.randomUUID().toString())
+                //signature部分
+                .signWith(SignatureAlgorithm.HS256, signatureKey)
+                .compact();
+        return jwtToken;
     }
 
     public static boolean validateToken(String token) {

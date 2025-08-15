@@ -3,18 +3,17 @@ import cn.hutool.core.util.IdUtil;
 import cn.mmko.dao.IOrderDao;
 import cn.mmko.dto.OrderCreateDTO;
 import cn.mmko.dto.OrderItemDTO;
+import cn.mmko.po.CustomerPo;
 import cn.mmko.po.OrderItemPo;
 import cn.mmko.po.OrderPo;
 import cn.mmko.po.SellerPo;
+import cn.mmko.service.customer.ICustomerService;
 import cn.mmko.service.order.IOrderService;
 import cn.mmko.service.orderitem.IOrderItemService;
 import cn.mmko.service.product.IProductService;
 import cn.mmko.service.seller.ISellerService;
 import cn.mmko.service.user.IUserService;
-import cn.mmko.vo.OrderItemVO;
-import cn.mmko.vo.OrderListBySellerVO;
-import cn.mmko.vo.OrderListVO;
-import cn.mmko.vo.OrderNumberVO;
+import cn.mmko.vo.*;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alipay.api.AlipayApiException;
@@ -50,6 +49,8 @@ public class OrderService implements IOrderService {
     private IOrderDao orderDao;
     @Resource
     private IOrderItemService orderItemService;
+    @Resource
+    private ICustomerService customerService;
     /**
      * 创建订单
      *
@@ -143,6 +144,49 @@ public class OrderService implements IOrderService {
         }
         return new PageInfo<>(orderListVOs);
     }
+
+    @Override
+    public PageInfo<OrderBackgroundListVO> queryOrderBackgroundList(Integer pageNum, Integer pageSize, Long sellerId, Integer status, Integer itemStatus, String keyword) {
+        PageHelper.startPage(pageNum, pageSize);
+        List<OrderItemPo> orderItemPos = orderItemService.queryOrderItemBySellerIdWithFilter(sellerId, status, itemStatus, keyword);
+        List<OrderBackgroundListVO> orderBackgroundListVOS = new ArrayList<>();
+        for (OrderItemPo orderItemPo : orderItemPos) {
+            OrderPo orderPo = orderDao.queryOrderById(orderItemPo.getOrderId());
+            CustomerPo customerPo = customerService.queryCustomerById(orderPo.getUserId());
+            orderBackgroundListVOS.add(OrderBackgroundListVO.builder()
+                    .orderId(orderPo.getOrderId())
+                    .status(orderPo.getOrderStatus())
+                    .customerName(customerPo.getNickname())
+                    .address(customerPo.getAddress())
+                    .orderItemVO(buildItemVO(orderItemPo))
+                    .createTime(orderPo.getCreateTime())
+                    .payTime(orderPo.getPayTime())
+                    .deliveryTime(orderPo.getDeliveryTime())
+                    .finishTime(orderPo.getFinishTime())
+                    .build()
+            );
+        }
+        return new PageInfo<>(orderBackgroundListVOS);
+    }
+
+    @Override
+    public void deliverOrder(Long orderItemId, Long orderId) {
+        orderItemService.deliverOrder(orderItemId);
+        List<Integer> OrderItemStatus = orderItemService.queryOrderItemStatus(orderId);
+        if(OrderItemStatus.contains(0)){
+            orderDao.updateOrderStatus(orderId,2);
+        }
+        orderDao.updateOrderStatus(orderId,3);
+    }
+
+    @Override
+    public void backProductStock(Long orderId) {
+        List<OrderItemPo> orderItemPos = orderItemService.queryOrderItemByOrderId(orderId);
+        for(OrderItemPo orderItemPo:orderItemPos){
+            productService.backProductStock(orderItemPo.getProductId(),orderItemPo.getQuantity());
+        }
+    }
+
     private OrderListBySellerVO buildSellerVO(Long sellerId, List<OrderItemPo> items) {
         // 查询商家信息
         SellerPo seller = sellerService.querySellerById(sellerId);

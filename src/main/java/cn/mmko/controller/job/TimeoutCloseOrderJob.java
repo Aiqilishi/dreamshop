@@ -1,6 +1,7 @@
 package cn.mmko.controller.job;
 
 import cn.mmko.service.order.IOrderService;
+import cn.mmko.service.product.IProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -25,7 +26,7 @@ public class TimeoutCloseOrderJob {
             }
             for (String orderId: orderIds) {
                 boolean status = orderService.changeOrderClose(orderId);
-                orderService.releaseProductStock(Long.valueOf(orderId));
+                orderService.backProductStock(Long.valueOf(orderId));
                 log.info("已关闭的超时未支付的订单 orderId:{} status:{}",orderId,status);
 
             }

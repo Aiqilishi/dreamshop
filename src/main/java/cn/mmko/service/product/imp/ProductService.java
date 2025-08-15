@@ -227,8 +227,8 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public void updateProductStatus(Long productId) {
-        productDao.updateProductStatus(productId);
+    public void updateProductStatus(Long productId, Integer status) {
+        productDao.updateProductStatus(productId, status);
     }
 
     /**
@@ -244,6 +244,11 @@ public class ProductService implements IProductService {
          PageHelper.startPage(pageNum, pageSize);
          List<ProductManageListVO> productManageDTOS = productDao.queryBackgroundBySearch(sellerId,keyword);
          return new PageInfo<>(productManageDTOS);
+    }
+
+    @Override
+    public void backProductStock(Long productId, Integer quantity) {
+        productDao.backProductStock(productId,quantity);
     }
 
 

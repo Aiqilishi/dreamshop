@@ -1,6 +1,7 @@
 package cn.mmko.service.order;
 
 import cn.mmko.dto.OrderCreateDTO;
+import cn.mmko.vo.OrderBackgroundListVO;
 import cn.mmko.vo.OrderListVO;
 import cn.mmko.vo.OrderNumberVO;
 import com.alipay.api.AlipayApiException;
@@ -22,4 +23,10 @@ public interface IOrderService {
     OrderNumberVO queryOrderNumber(Long userId);
 
     PageInfo<OrderListVO> queryOrderList(Integer pageNum, Integer pageSize, Long userId, Integer status);
+
+    PageInfo<OrderBackgroundListVO> queryOrderBackgroundList(Integer pageNum, Integer pageSize, Long userId, Integer status, Integer itemStatus, String keyword);
+
+    void deliverOrder(Long orderItemId, Long orderId);
+
+    void backProductStock(Long aLong);
 }

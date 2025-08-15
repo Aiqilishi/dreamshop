@@ -19,7 +19,7 @@
                  user_id=0
             </if>
             <if test="userId != null">
-                and user_id = #{userId}
+                user_id = #{userId}
             </if>
             <if test="categoryId != null">
                 and category_id = #{categoryId}
@@ -29,12 +29,24 @@
 
     <insert id="insertCategory" parameterType="cn.mmko.po.CategoryPo">
         insert into  t_category(user_id, category_name, category_sort)
-        values(#{userId}, #{categoryName}, #{categorySort})
+        values(
+               <if test="userId == null">
+                   0,
+               </if>
+                       <if test="userId != null">
+                           #{userId},
+                       </if>
+               #{categoryName}, #{categorySort})
     </insert>
-    <select id="getMaxCategorySort" resultType="java.lang.Integer" parameterType="cn.mmko.dto.CategoryDTO">
+    <select id="getMaxCategorySort" resultType="java.lang.Integer" parameterType="long">
         select max(category_sort)
             from t_category
-        where user_id = #{userId}
+        <if test="userId == null">
+           where  user_id=0
+        </if>
+        <if test="userId != null">
+            where user_id = #{userId}
+        </if>
 
     </select>
     <select id="queryPuSellerCategory" resultType="cn.mmko.vo.CategoryVO" parameterType="long">
@@ -54,5 +66,49 @@
          from t_category
          where user_id = #{userId}
          order by category_sort asc
+    </select>
+    
+    <select id="queryCategoryById" resultType="cn.mmko.po.CategoryPo" parameterType="long">
+        select category_id, user_id, category_name, category_sort, parent_id, create_time
+        from t_category
+        where category_id = #{categoryId}
+    </select>
+    
+    <select id="queryCategoryByName" resultType="cn.mmko.po.CategoryPo" parameterType="string">
+        select category_id, user_id, category_name, category_sort, parent_id, create_time
+        from t_category
+        where category_name = #{categoryName}
+        limit 1
+    </select>
+    
+    <select id="queryCategoryByNameAndUserId" resultType="cn.mmko.po.CategoryPo">
+        select category_id, user_id, category_name, category_sort, parent_id, create_time
+        from t_category
+        where category_name = #{categoryName}
+            <if test="userId != null">
+                and user_id = #{userId}
+            </if>
+            <if test="userId == null">
+                and user_id = 0
+            </if>
+        limit 1
+    </select>
+    
+    <update id="updateCategory" parameterType="cn.mmko.po.CategoryPo">
+        update t_category
+        set category_name = #{categoryName},
+            category_sort = #{categorySort}
+        where category_id = #{categoryId}
+    </update>
+    
+    <delete id="deleteCategory" parameterType="long">
+        delete from t_category
+        where category_id = #{categoryId}
+    </delete>
+    
+    <select id="getProductCountByCategoryId" resultType="java.lang.Integer" parameterType="long">
+        select count(*)
+        from t_product
+        where category_id = #{categoryId}
     </select>
 </mapper>

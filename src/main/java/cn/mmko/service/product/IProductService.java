@@ -53,7 +53,9 @@ public interface IProductService {
 
     String queryProductMainImages(Long productId);
 
-    void updateProductStatus(Long productId);
+    void updateProductStatus(Long productId, Integer status);
 
     PageInfo<ProductManageListVO> queryBackgroundBySearch(Integer pageNum, Integer pageSize, Long sellerId, String keyword);
+
+ void backProductStock(Long productId, Integer quantity);
 }

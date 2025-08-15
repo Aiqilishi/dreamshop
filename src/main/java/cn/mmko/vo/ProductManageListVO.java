@@ -16,6 +16,7 @@ public class ProductManageListVO {
     private Long productId;        // 商品ID
     private String productName;    // 商品名称
     private String categoryName;        // 商品分类
+    private String sellerName;       // 卖家名称
     private BigDecimal productPrice; // 商品价格
     private Integer productStock;  // 库存数量
     private Integer productSales;  // 销量

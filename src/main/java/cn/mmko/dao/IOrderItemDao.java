@@ -10,4 +10,12 @@ public interface IOrderItemDao {
     void createOrderItem(OrderItemPo orderItemPo);
 
     List<OrderItemPo> queryOrderItemByOrderId(Long orderId);
+
+    List<OrderItemPo> queryOrderItemBySellerId(Long sellerId);
+
+    void deliverOrder(Long orderItemId);
+
+    List<Integer> queryOrderItemStatus(Long orderId);
+    
+    List<OrderItemPo> queryOrderItemBySellerIdWithFilter(Long sellerId, Integer status, Integer itemStatus, String keyword);
 }

@@ -13,6 +13,9 @@
     <update id="updateOrderClose">
         update t_order set order_status=5,finish_time=now() where order_id=#{orderId}
     </update>
+    <update id="updateOrderStatus">
+        update t_order set order_status=#{orderStatus} where order_id=#{orderId}
+    </update>
     <select id="queryUnpaidOrder" resultType="cn.mmko.po.OrderPo">
         select order_id,user_id,seller_id,product_id,order_status,total_amount,create_time
         from t_order
@@ -58,5 +61,8 @@
         </if>
         order by create_time  desc
 
+    </select>
+    <select id="queryOrderById" resultType="cn.mmko.po.OrderPo">
+        select * from t_order where order_id=#{orderId}
     </select>
 </mapper>

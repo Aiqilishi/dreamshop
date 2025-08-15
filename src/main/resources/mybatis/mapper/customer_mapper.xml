@@ -25,4 +25,23 @@
         from t_customer
         where user_id = #{userId}
     </select>
+    <select id="queryCustomerByFilter" resultType="cn.mmko.vo.CustomerManageListVO">
+        select
+            c.customer_id,
+            c.user_id,
+            u.username,
+            c.nickname,
+            c.gender,
+            c.birthday,
+            c.address,
+            c.avatar_url,
+            c.create_time,
+            c.update_time,
+            c.status,
+            u.last_login_time
+        from t_customer c
+        left join t_user u on c.user_id = u.user_id
+
+    </select>
+
 </mapper>

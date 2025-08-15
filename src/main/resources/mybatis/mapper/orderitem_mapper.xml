@@ -7,7 +7,44 @@
         insert into t_order_item(item_id,order_id,product_id,product_name,product_price,quantity,seller_id)
         values(#{itemId},#{orderId},#{productId},#{productName},#{productPrice},#{quantity},#{sellerId})
     </insert>
+    <update id="deliverOrder" parameterType="long">
+        update t_order_item set item_status=1 where item_id=#{orderItemId}
+    </update>
     <select id="queryOrderItemByOrderId" resultType="cn.mmko.po.OrderItemPo">
         select * from t_order_item where order_id=#{orderId}
+    </select>
+    <select id="queryOrderItemBySellerId" resultType="cn.mmko.po.OrderItemPo">
+        select * from t_order_item
+                 <if test="sellerId != null">
+                    where seller_id=#{sellerId}
+                </if>
+    </select>
+    <select id="queryOrderItemStatus" resultType="java.lang.Integer">
+        select item_status from t_order_item where order_id=#{orderId}
+    </select>
+    
+    <select id="queryOrderItemBySellerIdWithFilter" resultType="cn.mmko.po.OrderItemPo">
+        SELECT oi.* 
+        FROM t_order_item oi
+        LEFT JOIN t_order o ON oi.order_id = o.order_id
+        LEFT JOIN t_customer c ON o.user_id = c.customer_id
+        WHERE 1=1
+        <if test="sellerId != null">
+            AND oi.seller_id = #{sellerId}
+        </if>
+        <if test="status != null">
+            AND o.order_status = #{status}
+        </if>
+        <if test="itemStatus != null">
+            AND oi.item_status = #{itemStatus}
+        </if>
+        <if test="keyword != null and keyword != ''">
+            AND (
+                o.order_id LIKE CONCAT('%', #{keyword}, '%')
+                OR c.nickname LIKE CONCAT('%', #{keyword}, '%')
+                OR oi.product_name LIKE CONCAT('%', #{keyword}, '%')
+            )
+        </if>
+        ORDER BY oi.item_id DESC
     </select>
 </mapper>

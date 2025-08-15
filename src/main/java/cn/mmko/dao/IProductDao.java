@@ -57,7 +57,9 @@ public interface IProductDao{
 
     String queryProductMainImages(Long productId);
 
-    void updateProductStatus(Long productId);
+    void updateProductStatus(Long productId, Integer status);
 
     List<ProductManageListVO> queryBackgroundBySearch(Long sellerId, String keyword);
+
+    void backProductStock(Long productId, Integer quantity);
 }

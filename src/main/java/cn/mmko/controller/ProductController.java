@@ -56,10 +56,10 @@ public class ProductController {
 
     @RequestMapping(value = "/queryBySeller",method = RequestMethod.GET)
     public Response<PageInfo<ProductManageListVO>> queryProductBySellerId(@RequestParam(defaultValue = "1") Integer pageNum, @RequestParam(defaultValue = "5") Integer pageSize, HttpServletRequest  request){
-        Long sellerId = (Long) request.getAttribute("sellerId");
+        Long sellerId = null;
         List<String> roles = (List<String>) request.getAttribute("role");
-        if (roles.contains("ROLE_ADMIN")){
-            sellerId = null;
+        if (!roles.contains("ROLE_ADMIN")){
+            sellerId = (Long) request.getAttribute("sellerId");
         }
         PageInfo<ProductManageListVO> productManageListVOPageInfo = productService.queryProductBySellerId(pageNum, pageSize, sellerId);
         return Response. <PageInfo<ProductManageListVO>>builder()
@@ -72,7 +72,7 @@ public class ProductController {
     public Response<PageInfo<ProductManageListVO>> queryProductBySearch( @RequestParam(defaultValue = "1") Integer pageNum, @RequestParam(defaultValue = "5") Integer pageSize, String  keyword,HttpServletRequest request) {
         Long sellerId = (Long) request.getAttribute("sellerId");
         List<String> roles = (List<String>) request.getAttribute("role");
-        if (roles.contains("ROLE_ADMIN")){
+        if (roles.contains("ADMIN")){
             sellerId = null;
         }
         PageInfo<ProductManageListVO> productManageListVOPageInfo = productService.queryBackgroundBySearch(pageNum, pageSize, sellerId, keyword);
@@ -190,8 +190,8 @@ public class ProductController {
      * @return
      */
     @RequestMapping(value = "/updateStatus/{productId}",method = RequestMethod.POST)
-    public Response<String> updateProductStatus(@PathVariable Long productId){
-        productService.updateProductStatus(productId);
+    public Response<String> updateProductStatus(@PathVariable Long productId,@RequestParam Integer status){
+        productService.updateProductStatus(productId, status);
         return Response.<String>builder()
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())

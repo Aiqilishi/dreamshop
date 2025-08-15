@@ -8,6 +8,7 @@ import cn.mmko.enums.ResponseCode;
 import cn.mmko.exception.AppException;
 import cn.mmko.po.UserRolePo;
 import cn.mmko.redis.IRedisService;
+import cn.mmko.service.admin.IAdminService;
 import cn.mmko.service.customer.ICustomerService;
 import cn.mmko.service.permission.IPermissionService;
 import cn.mmko.service.role.IRoleService;
@@ -52,6 +53,8 @@ public class UserService implements IUserService {
     private ISellerService sellerService;
     @Resource
     private ICustomerService customerService;
+    @Resource
+    private IAdminService adminService;
 
     /**
      *   注册
@@ -158,7 +161,9 @@ public class UserService implements IUserService {
             token = JwtUtils.generateSellerJwt(userName,roles,permissions,userId,sellerId);
         }
         if (userRoleIds.contains(3L)){
-
+            Long adminId = adminService.queryAdminByUserId(userId);
+            loginInfo.put("adminId:"+userName, adminId.toString());
+            token = JwtUtils.generateAdminJwt(userName,roles,permissions,userId,adminId);
         }
         loginInfo.put("token:"+userName, token);
         loginInfo.put("role:"+userName, roles.toString());

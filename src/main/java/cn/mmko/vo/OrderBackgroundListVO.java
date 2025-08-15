@@ -7,21 +7,22 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
+import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class OrderItemVO {
+public class OrderBackgroundListVO {
     @JsonSerialize(using = ToStringSerializer.class)
-    private Long itemId;           // 订单项ID
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long productId;        // 商品ID
-    private String productName;
-    private String productImage;
-    private BigDecimal price;
-    private Integer quantity;
-    private BigDecimal totalPrice;
+    private Long orderId;
     private Integer status;
+    private String customerName;
+    private String address;
+    private OrderItemVO orderItemVO;
+    private Date createTime;
+    private Date payTime;
+    private Date deliveryTime;
+    private Date finishTime;
 }
