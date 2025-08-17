@@ -25,10 +25,11 @@ public class WebMvcConfig implements WebMvcConfigurer {
                         "/product/query/*",
                         "/product/queryBySearch",
                         "/category/query/publicCategory",
-                        "/category/query/sellerCategory/*",
+                        "/category/query/sellerCategory",
                         "/images/**",
                         "/product/queryByCategoryId",// 关键：放行静态资源
-                        "/order/alipay_notify_url"
+                        "/order/alipay_notify_url",
+                        "/seller/queryMessage"
                 );
     }
 }

@@ -13,7 +13,7 @@ import java.util.List;
 @Mapper
 public interface IProductDao{
 
-    List<ProductListVO> queryProduct();
+    List<ProductListVO> queryProduct(Long sellerId);
 
     ProductInfoVO queryProductById(Long productId);
 

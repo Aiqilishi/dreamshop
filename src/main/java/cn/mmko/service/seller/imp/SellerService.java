@@ -9,12 +9,14 @@ import cn.mmko.exception.AppException;
 import cn.mmko.po.SellerPo;
 import cn.mmko.po.UserRolePo;
 import cn.mmko.service.seller.ISellerService;
+import cn.mmko.vo.SellerManageListVO;
+import cn.mmko.vo.SellerMessageVO;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -47,11 +49,7 @@ public class SellerService implements ISellerService {
     }
 
     @Override
-    public void checkSellerStatus(List<OrderItemDTO>  items) {
-        Set<Long> sellerIds = items.stream()
-                .map(OrderItemDTO::getSellerId)
-                .collect(Collectors.toSet());
-
+    public void checkSellerStatus(Set<Long> sellerIds) {
         for (Long sellerId : sellerIds) {
             Integer status = sellerDao.checkSellerStatus(sellerId);
             if (status == null) {
@@ -73,5 +71,38 @@ public class SellerService implements ISellerService {
     @Override
     public SellerPo querySellerByUserId(Long userId) {
         return sellerDao.querySellerByUserId(userId);
+    }
+
+    @Override
+    public PageInfo<SellerManageListVO> querySellerByFilter(Integer pageNum, Integer pageSize, Integer status, String keyword) {
+        PageHelper.startPage(pageNum,pageSize);
+        List<SellerManageListVO> sellerManageListVOS = sellerDao.querySellerByFilter(pageNum,pageSize,status,keyword);
+        return new PageInfo<>(sellerManageListVOS);
+    }
+    
+    @Override
+    public void updateSellerStatus(Long sellerId, Integer status) {
+        sellerDao.updateSellerStatus(sellerId, status);
+    }
+
+    @Override
+    public void checkSellerStatusByUserId(Long userId) {
+        Integer status = sellerDao.checkSellerStatusByUserId(userId);
+        if(status== 0){
+            throw new AppException(ResponseCode.FORBIDDEN.getCode(),"商家已被禁用");
+        }
+    }
+
+    @Override
+    public SellerMessageVO querySellerMessage(Long sellerId) {
+        SellerPo sellerPo = sellerDao.querySellerById(sellerId);
+        if(sellerPo.getStatus()==0) throw new AppException(ResponseCode.FORBIDDEN.getCode(),"商家已被禁用");
+        return SellerMessageVO.builder()
+                .sellerId(sellerPo.getSellerId())
+                .sellerName(sellerPo.getSellerName())
+                .contactPhone(sellerPo.getContactPhone())
+                .address(sellerPo.getAddress())
+                .logoUrl(sellerPo.getLogoUrl())
+                .build();
     }
 }

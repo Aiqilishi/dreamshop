@@ -27,7 +27,7 @@
         where seller_id = #{sellerId}
     </select>
     <select id="querySellerById" resultType="cn.mmko.po.SellerPo">
-        select seller_name, contact_phone
+        select seller_id,seller_name, contact_phone,status,address,logo_url
         from t_seller
         where seller_id = #{sellerId}
     </select>
@@ -36,10 +36,41 @@
         from t_seller
         where user_id = #{userId}
     </select>
+    <select id="querySellerByFilter" resultType="cn.mmko.vo.SellerManageListVO">
+        select
+            s.seller_id,
+            s.user_id,
+            s.seller_name,
+            s.contact_phone,
+            s.contact_person,
+            s.address,
+            s.logo_url,
+            s.status,
+            s.create_time,
+            s.update_time,
+            u.last_login_time
+        from t_seller s
+        left join t_user u on s.user_id = u.user_id
+        where 1=1
+        <if test="keyword != null">
+            and (s.seller_name like concat('%',#{keyword},'%'))
+        </if>
+        <if test="status != null">
+            and s.status = #{status}
+        </if>
+    </select>
+    <select id="checkSellerStatusByUserId" resultType="java.lang.Integer">
+        select status
+        from t_seller
+        where user_id = #{userId}
+    </select>
     <insert id="insertSeller" parameterType="cn.mmko.po.SellerPo">
         insert into t_seller(user_id,seller_name,contact_phone,contact_person,address,logo_url)
         values(#{userId},#{sellerName},#{contactPhone},#{contactPerson},#{address},#{logoUrl})
     </insert>
-
+    
+    <update id="updateSellerStatus">
+        update t_seller set status = #{status} where seller_id = #{sellerId}
+    </update>
 
 </mapper>

@@ -1,6 +1,7 @@
 package cn.mmko.dao;
 
 import cn.mmko.po.SellerPo;
+import cn.mmko.vo.SellerManageListVO;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -19,4 +20,10 @@ public interface ISellerDao {
     SellerPo querySellerById(Long sellerId);
 
     SellerPo querySellerByUserId(Long userId);
+
+    List<SellerManageListVO> querySellerByFilter(Integer pageNum, Integer pageSize, Integer status, String keyword);
+    
+    void updateSellerStatus(Long sellerId, Integer status);
+
+    Integer checkSellerStatusByUserId(Long userId);
 }

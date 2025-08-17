@@ -2,9 +2,11 @@ package cn.mmko.controller;
 
 import cn.mmko.dto.SellerCreateDTO;
 import cn.mmko.enums.ResponseCode;
+import cn.mmko.po.SellerPo;
 import cn.mmko.response.Response;
 import cn.mmko.service.seller.imp.SellerService;
 import cn.mmko.service.upload.imp.FileUploadService;
+import cn.mmko.vo.SellerMessageVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -37,6 +39,15 @@ public class SellerController {
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())
                 .data(logoUrl)
+                .build();
+    }
+@RequestMapping(value = "/queryMessage",method = RequestMethod.GET)
+    public Response<SellerMessageVO> querySellerMessage(@RequestParam Long sellerId){
+        SellerMessageVO sellerMessageVO = sellerService.querySellerMessage(sellerId);
+        return Response.<SellerMessageVO>builder()
+                .code(ResponseCode.SUCCESS.getCode())
+                .info(ResponseCode.SUCCESS.getInfo())
+                .data(sellerMessageVO)
                 .build();
     }
 //    @RequestMapping(value = "/query",method = RequestMethod.GET)

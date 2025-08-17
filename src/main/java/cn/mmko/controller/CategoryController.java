@@ -46,9 +46,14 @@ public class CategoryController {
     }
 
     @RequestMapping(value = "/query/sellerCategory",method = RequestMethod.GET)
-    public Response<List<CategoryVO>> querySeCategory(HttpServletRequest request){
-        Long sellerId = (Long) request.getAttribute("sellerId");
-        List<CategoryVO> categoryVO = categoryService.queryCategorySeCategory(sellerId);
+    public Response<List<CategoryVO>> querySeCategory(HttpServletRequest request,@RequestParam(required = false) Long sellerId){
+        List<CategoryVO> categoryVO;
+        if(request.getAttribute("sellerId")!=null){
+            Long backgroundSellerId = (Long) request.getAttribute("sellerId");
+            categoryVO = categoryService.queryCategorySeCategory(backgroundSellerId);
+        }else{
+            categoryVO = categoryService.queryCategorySeCategory(sellerId);
+        }
         return Response.<List<CategoryVO>>builder()
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())

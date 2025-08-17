@@ -16,9 +16,11 @@ import java.util.List;
 public class ProductInfoVO {
     private Long productId;
     private String productName;    // 商品名称
-    private String category;       // 商品类目
+    private String categoryName;       // 商品类目
     private String sellerName;         // 商家名
     private Long sellerId;
+    private String address;
+    private String LogoUrl;
     private BigDecimal productPrice; // 商品价格
     private Integer productStock;  // 库存数量
     private Integer productSales;  // 销量

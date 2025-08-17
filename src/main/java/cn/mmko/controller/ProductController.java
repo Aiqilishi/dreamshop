@@ -37,8 +37,8 @@ public class ProductController {
      * @return
      */
     @RequestMapping(value = "/query",method = RequestMethod.GET)
-    public Response<PageInfo<ProductListVO>> queryProduct(@RequestParam(defaultValue = "1") Integer pageNum, @RequestParam(defaultValue = "5") Integer pageSize) {
-        PageInfo<ProductListVO> productListVOPageInfo = productService.queryProduct(pageNum, pageSize);
+    public Response<PageInfo<ProductListVO>> queryProduct(@RequestParam(defaultValue = "1") Integer pageNum, @RequestParam(defaultValue = "5") Integer pageSize,@RequestParam(required = false) Long sellerId) {
+        PageInfo<ProductListVO> productListVOPageInfo = productService.queryProduct(pageNum, pageSize,sellerId);
         return Response. <PageInfo<ProductListVO>>builder()
                 .code(ResponseCode.SUCCESS.getCode())
                 .info(ResponseCode.SUCCESS.getInfo())

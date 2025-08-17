@@ -19,4 +19,5 @@ public interface ICustomerService {
     CustomerPo queryCustomerById(Long userId);
 
     PageInfo<CustomerManageListVO> queryCustomerByFilter(Integer pageNum, Integer pageSize, Integer status, String keyword);
+
 }

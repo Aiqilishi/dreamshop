@@ -60,7 +60,7 @@ public class CustomerService implements ICustomerService {
     public PageInfo<CustomerManageListVO> queryCustomerByFilter(Integer pageNum, Integer pageSize, Integer status, String keyword) {
         PageHelper.startPage(pageNum,pageSize);
         List<CustomerManageListVO> customerManageListVOS = customerDao.queryCustomerByFilter(pageNum,pageSize,status,keyword);
-
-
+        return new PageInfo<>(customerManageListVOS);
     }
+
 }

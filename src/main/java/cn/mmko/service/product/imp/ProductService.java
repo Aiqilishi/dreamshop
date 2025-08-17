@@ -31,9 +31,9 @@ public class ProductService implements IProductService {
     @Resource
     private IProductImageService productImageService;
     @Override
-    public PageInfo<ProductListVO> queryProduct(Integer pageNum, Integer pageSize) {
+    public PageInfo<ProductListVO> queryProduct(Integer pageNum, Integer pageSize, Long sellerId) {
         PageHelper.startPage(pageNum, pageSize);
-        List<ProductListVO> products = productDao.queryProduct();
+        List<ProductListVO> products = productDao.queryProduct(sellerId);
         return new PageInfo<>(products);
     }
 

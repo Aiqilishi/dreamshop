@@ -20,4 +20,5 @@ public interface ICustomerDao {
     Long queryCustomerIdByUserId(Long userId);
 
     List<CustomerManageListVO> queryCustomerByFilter(Integer pageNum, Integer pageSize, Integer status, String keyword);
+
 }

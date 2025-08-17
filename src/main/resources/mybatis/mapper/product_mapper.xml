@@ -63,6 +63,9 @@
         LEFT JOIN t_category c ON p.category_id = c.category_id
         LEFT JOIN t_seller s ON p.user_id = s.seller_id
         where p.product_status=3
+        <if test="sellerId!=null" >
+            and p.user_id = #{sellerId}
+        </if>
         <!-- 可加WHERE条件 -->
     </select>
     <!--    // 根据id查询商品-->
@@ -72,6 +75,8 @@
             c.category_name,
             s.seller_name,
             s.seller_id,
+            s.address,
+            s.logo_url,
             p.product_name,
             p.product_price,
             p.product_stock,

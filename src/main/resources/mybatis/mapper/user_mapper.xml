@@ -17,6 +17,9 @@
         insert into t_user(username,phone,password_hash,password_salt)
         values(#{userName},#{phone},#{passwordHash},#{passwordSalt})
     </insert>
+    <update id="updateCustomerStatus">
+        update t_user set user_status=#{status} where user_id=#{userId}
+    </update>
     <select id="queryUserByUserName" resultType="cn.mmko.po.UserPo" resultMap="DataMap">
         select user_id,username,password_hash,password_salt,phone,user_status from t_user where username=#{username}
     </select>

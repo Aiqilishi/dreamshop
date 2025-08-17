@@ -30,6 +30,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -63,7 +64,8 @@ public class OrderService implements IOrderService {
     public String createOrder(OrderCreateDTO orderCreateDTO, Long customerId, Long userId) throws AlipayApiException {
         userService.checkUserStatus(userId);//检测用户状态
         productService.checkProduct(orderCreateDTO.getOrderItemDTOS());//检测商品状态
-        sellerService.checkSellerStatus(orderCreateDTO.getOrderItemDTOS());//检测商家状态
+        Set<Long> sellerIds = orderCreateDTO.getOrderItemDTOS().stream().map(OrderItemDTO::getSellerId).collect(Collectors.toSet());
+        sellerService.checkSellerStatus(sellerIds);//检测商家状态
         productService.lockProductStock(orderCreateDTO.getOrderItemDTOS());//锁定商品库存
         String productName = orderCreateDTO.getOrderItemDTOS().size() == 1
                 ? orderCreateDTO.getOrderItemDTOS().get(0).getProductName()

@@ -13,11 +13,13 @@ import java.util.List;
 public interface IProductService {
     /**
      * 进入商城查询商品列表
+     *
      * @param pageNum
      * @param pageSize
+     * @param sellerId
      * @return
      */
-   PageInfo<ProductListVO> queryProduct(Integer pageNum, Integer pageSize);
+   PageInfo<ProductListVO> queryProduct(Integer pageNum, Integer pageSize, Long sellerId);
 
    ProductInfoVO queryProductById(Long productId);
 

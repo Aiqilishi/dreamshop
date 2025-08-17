@@ -37,11 +37,20 @@
             c.avatar_url,
             c.create_time,
             c.update_time,
-            c.status,
+            u.user_status as status,
             u.last_login_time
         from t_customer c
         left join t_user u on c.user_id = u.user_id
-
+        <where>
+         1=1
+        <if test="status!=null">
+            and u.user_status = #{ status}
+        </if>
+        <if test="keyword!=null">
+            and (c.nickname like concat('%',#{keyword},'%') or u.username like concat('%',#{keyword},'%'))
+        </if>
+       </where>
     </select>
+
 
 </mapper>

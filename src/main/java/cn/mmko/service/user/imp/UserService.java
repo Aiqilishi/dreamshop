@@ -95,6 +95,7 @@ public class UserService implements IUserService {
         if(null== userPo){
             throw new AppException(ResponseCode.USER_NOT_EXIST.getCode(), ResponseCode.USER_NOT_EXIST.getInfo());
         }
+        checkUserStatus(userPo.getUserId());
         if(!passwordEncryptionService.verifyPassword(password, userPo.getPasswordSalt(), userPo.getPasswordHash())){
             log.info("用户{}密码错误",passwordEncryptionService.hashPassword(password, userPo.getPasswordSalt()));
             throw new AppException(ResponseCode.PASSWORD_ERROR.getCode(), ResponseCode.PASSWORD_ERROR.getInfo());
@@ -146,6 +147,9 @@ public class UserService implements IUserService {
         if(userRoleIds.size()==1 && userRoleIds.get(0)==1L){
             throw new AppException(ResponseCode.FORBIDDEN.getCode(), "无权限访问");
         }
+        if(userRoleIds.contains(2L)){
+            sellerService.checkSellerStatusByUserId(userId);
+        }
         if(!passwordEncryptionService.verifyPassword(passWord, userPo.getPasswordSalt(), userPo.getPasswordHash())){
             log.info("用户{}密码错误",passwordEncryptionService.hashPassword(passWord, userPo.getPasswordSalt()));
             throw new AppException(ResponseCode.PASSWORD_ERROR.getCode(), ResponseCode.PASSWORD_ERROR.getInfo());
@@ -175,6 +179,11 @@ public class UserService implements IUserService {
                 .token( token)
                 .roles(roles)
                 .build();
+    }
+
+    @Override
+    public void updateCustomerStatus(Long customerId, Integer status) {
+        userDao.updateCustomerStatus(customerId, status);
     }
 
 

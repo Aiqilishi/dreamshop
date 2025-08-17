@@ -12,4 +12,6 @@ public interface IUserDao {
     void insertUser(UserPo userPo);
 
     Integer checkUserStatus(Long userId);
+
+    void updateCustomerStatus(Long userId, Integer status);
 }
