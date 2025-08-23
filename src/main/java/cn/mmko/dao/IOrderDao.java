@@ -14,9 +14,9 @@ public interface IOrderDao {
 
     void updateOrderPaySuccess(Long tradeNo);
 
-    List<String> queryTimeoutOrderList();
+    List<Long> queryTimeoutOrderList();
 
-    boolean updateOrderClose(String orderId);
+    boolean updateOrderClose(Long orderId);
 
     OrderNumberVO queryOrderNumber(Long userId);
 

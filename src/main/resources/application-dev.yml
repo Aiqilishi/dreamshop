@@ -67,6 +67,16 @@ alipay:
   notify_url: http://mmko.natapp1.cc/order/alipay_notify_url
   gatewayUrl: https://openapi-sandbox.dl.alipaydev.com/gateway.do
 # 日志
+# RocketMQ 配置
+rocketmq:
+  name-server: localhost:9876  # 使用 Docker 中映射的端口，如果是在同一 Docker 网络中可以使用 rmqnamesrv:9876
+  producer:
+    group: my-producer-group
+    send-message-timeout: 3000  # 发送消息超时时间，单位毫秒
+    compress-message-body-threshold: 4096  # 消息体压缩阈值，默认4K
+    max-message-size: 4194304  # 消息最大长度，默认4M
+    retry-times-when-send-failed: 2  # 同步发送消息失败重试次数
+    retry-times-when-send-async-failed: 2  # 异步发送消息失败重试次数
 logging:
   level:
     root: info

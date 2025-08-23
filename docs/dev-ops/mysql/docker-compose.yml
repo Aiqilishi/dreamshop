@@ -90,6 +90,57 @@ services:
      volumes:
        - /app/portainer/data:/data
        - /var/run/docker.sock:/var/run/docker.sock
+   # RocketMQ
+   rmqnamesrv:
+     image: apache/rocketmq:4.9.4
+     container_name: rmqnamesrv
+     ports:
+       - 9876:9876
+     volumes:
+       - ./rocketmq/namesrv/logs:/home/rocketmq/logs
+       - ./rocketmq/namesrv/store:/home/rocketmq/store
+     command: sh mqnamesrv
+     networks:
+       - app-network
+     healthcheck:
+       test: ["CMD", "nc", "-z", "localhost", "9876"]
+       interval: 5s
+       timeout: 10s
+       retries: 3
+       start_period: 30s
+
+   rmqbroker:
+     image: apache/rocketmq:4.9.4
+     container_name: rmqbroker
+     ports:
+       - 10909:10909
+       - 10911:10911
+       - 10912:10912
+     volumes:
+       - ./rocketmq/broker/logs:/home/rocketmq/logs
+       - ./rocketmq/broker/store:/home/rocketmq/store
+       - ./rocketmq/broker/conf/broker.conf:/opt/rocketmq-4.9.4/conf/broker.conf
+     command: sh mqbroker -n rmqnamesrv:9876 -c /opt/rocketmq-4.9.4/conf/broker.conf
+     depends_on:
+       rmqnamesrv:
+         condition: service_healthy
+     networks:
+       - app-network
+
+   # RocketMQ Dashboard
+   rmqdashboard:
+     image: styletang/rocketmq-console-ng:latest
+     container_name: rmqdashboard
+     ports:
+       - 8080:8080
+     environment:
+       - JAVA_OPTS=-Drocketmq.namesrv.addr=rmqnamesrv:9876 -Dserver.port=8080
+     depends_on:
+       rmqnamesrv:
+         condition: service_healthy
+     networks:
+       - app-network
+
 # 数据卷定义
 volumes:
   mysql-data:

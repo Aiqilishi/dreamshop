@@ -16,9 +16,9 @@ public interface IOrderService {
 
     void releaseProductStock(Long aLong);
 
-    List<String> queryTimeoutOrderList();
+    List<Long> queryTimeoutOrderList();
 
-    boolean changeOrderClose(String orderId);
+    boolean changeOrderClose(Long orderId);
 
     OrderNumberVO queryOrderNumber(Long userId);
 

@@ -1,6 +1,5 @@
 package cn.mmko.controller;
-
-import cn.hutool.db.Page;
+import cn.mmko.controller.mq.producer.IOrderMessageProducer;
 import cn.mmko.dto.OrderCreateDTO;
 import cn.mmko.enums.ResponseCode;
 import cn.mmko.response.Response;
@@ -12,6 +11,7 @@ import com.alipay.api.AlipayApiException;
 import com.alipay.api.internal.util.AlipaySignature;
 import com.github.pagehelper.PageInfo;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 

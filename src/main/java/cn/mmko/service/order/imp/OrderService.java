@@ -1,5 +1,7 @@
 package cn.mmko.service.order.imp;
 import cn.hutool.core.util.IdUtil;
+import cn.mmko.controller.mq.producer.IOrderMessageProducer;
+import cn.mmko.controller.mq.producer.IStockMessageProducer;
 import cn.mmko.dao.IOrderDao;
 import cn.mmko.dto.OrderCreateDTO;
 import cn.mmko.dto.OrderItemDTO;
@@ -52,6 +54,10 @@ public class OrderService implements IOrderService {
     private IOrderItemService orderItemService;
     @Resource
     private ICustomerService customerService;
+    @Resource
+    private IOrderMessageProducer orderMessageProducer;
+    @Resource
+    private IStockMessageProducer stockMessageProducer;
     /**
      * 创建订单
      *
@@ -62,7 +68,9 @@ public class OrderService implements IOrderService {
      */
     @Override
     public String createOrder(OrderCreateDTO orderCreateDTO, Long customerId, Long userId) throws AlipayApiException {
-        userService.checkUserStatus(userId);//检测用户状态
+        // 检测用户状态
+        userService.checkUserStatus(userId);
+
         productService.checkProduct(orderCreateDTO.getOrderItemDTOS());//检测商品状态
         Set<Long> sellerIds = orderCreateDTO.getOrderItemDTOS().stream().map(OrderItemDTO::getSellerId).collect(Collectors.toSet());
         sellerService.checkSellerStatus(sellerIds);//检测商家状态
@@ -74,7 +82,7 @@ public class OrderService implements IOrderService {
         OrderPo orderPo = OrderPo.builder()
                 .orderId(orderId)
                 .userId(customerId)
-                .orderStatus(0)
+                .orderStatus(0)//待付款
                 .totalAmount(orderCreateDTO.getTotalAmount())
                 .build();
         orderDao.insertOrder(orderPo);
@@ -88,30 +96,39 @@ public class OrderService implements IOrderService {
                     .quantity(orderItemDTO.getQuantity())
                     .build());
         }
+        orderMessageProducer.sendOrderCreateMessage(orderId);
+        stockMessageProducer.sendStockLockMessage(orderId);
+        orderMessageProducer.sendOrderTimeoutCloseMessage(orderId,30);
         return doPrepayOrder(productName,orderId,orderCreateDTO.getTotalAmount());
     }
 
     @Override
     public void changeOrderPaySuccess(Long orderId) {
         orderDao.updateOrderPaySuccess(orderId);
+        orderMessageProducer.sendOrderPaySuccessMessage(orderId);
     }
 
     @Override
     public void releaseProductStock(Long orderId) {
-        List<OrderItemPo> orderItemPos = orderItemService.queryOrderItemByOrderId(orderId);
-        for(OrderItemPo orderItemPo:orderItemPos){
-            productService.releaseProductStock(orderItemPo.getProductId(),orderItemPo.getQuantity());
-        }
+//        List<OrderItemPo> orderItemPos = orderItemService.queryOrderItemByOrderId(orderId);
+//        for(OrderItemPo orderItemPo:orderItemPos){
+//            productService.releaseProductStock(orderItemPo.getProductId(),orderItemPo.getQuantity());
+//        }
+        stockMessageProducer.sendStockReleaseMessage(orderId);
     }
 
     @Override
-    public List<String> queryTimeoutOrderList() {
+    public List<Long> queryTimeoutOrderList() {
         return orderDao.queryTimeoutOrderList();
     }
 
     @Override
-    public boolean changeOrderClose(String orderId) {
-        return orderDao.updateOrderClose(orderId);
+    public boolean changeOrderClose(Long orderId) {
+        boolean result = orderDao.updateOrderClose(orderId);
+        if ( result) {
+            orderMessageProducer.sendOrderCloseMessage(orderId);
+        }
+        return result;
     }
 
     @Override
@@ -179,14 +196,16 @@ public class OrderService implements IOrderService {
             orderDao.updateOrderStatus(orderId,2);
         }
         orderDao.updateOrderStatus(orderId,3);
+        orderMessageProducer.sendOrderDeliverMessage(orderId);
     }
 
     @Override
     public void backProductStock(Long orderId) {
-        List<OrderItemPo> orderItemPos = orderItemService.queryOrderItemByOrderId(orderId);
-        for(OrderItemPo orderItemPo:orderItemPos){
-            productService.backProductStock(orderItemPo.getProductId(),orderItemPo.getQuantity());
-        }
+//        List<OrderItemPo> orderItemPos = orderItemService.queryOrderItemByOrderId(orderId);
+//        for(OrderItemPo orderItemPo:orderItemPos){
+//            productService.backProductStock(orderItemPo.getProductId(),orderItemPo.getQuantity());
+//        }
+        stockMessageProducer.sendStockBackMessage(orderId);
     }
 
     private OrderListBySellerVO buildSellerVO(Long sellerId, List<OrderItemPo> items) {

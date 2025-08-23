@@ -22,7 +22,7 @@
         where  order_status=0 and now()>=create_time+ interval 15 minute order by order_id asc
         limit 50
     </select>
-    <select id="queryTimeoutOrderList" resultType="java.lang.String">
+    <select id="queryTimeoutOrderList" resultType="java.lang.Long">
         select order_id
         from t_order
         where order_status=0 and now()>=create_time+ interval 15 minute order by order_id asc
