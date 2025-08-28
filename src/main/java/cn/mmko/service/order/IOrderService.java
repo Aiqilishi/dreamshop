@@ -1,6 +1,7 @@
 package cn.mmko.service.order;
 
 import cn.mmko.dto.OrderCreateDTO;
+import cn.mmko.po.OrderPo;
 import cn.mmko.vo.OrderBackgroundListVO;
 import cn.mmko.vo.OrderListVO;
 import cn.mmko.vo.OrderNumberVO;
@@ -29,4 +30,8 @@ public interface IOrderService {
     void deliverOrder(Long orderItemId, Long orderId);
 
     void backProductStock(Long aLong);
+
+    OrderPo queryOrderById(Long orderId);
+
+    OrderListVO queryOrderMessage(Long orderId);
 }

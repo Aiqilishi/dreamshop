@@ -65,4 +65,7 @@
     <select id="queryOrderById" resultType="cn.mmko.po.OrderPo">
         select * from t_order where order_id=#{orderId}
     </select>
+    <select id="queryOrderMessage" resultType="cn.mmko.vo.OrderListVO">
+
+    </select>
 </mapper>

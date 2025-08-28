@@ -36,3 +36,8 @@ build/
 
 ### Mac OS ###
 .DS_Store
+/docs/dev-ops/mysql/rocketmq/broker/store/consumequeue/
+/docs/dev-ops/mysql/rocketmq/broker/logs/
+/docs/dev-ops/mysql/rocketmq/namesrv/logs/
+/docs/dev-ops/mysql/rocketmq/broker/logs/
+/docs/dev-ops/mysql/rocketmq/

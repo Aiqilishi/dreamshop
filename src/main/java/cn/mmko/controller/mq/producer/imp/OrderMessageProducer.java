@@ -4,6 +4,7 @@ import cn.mmko.common.RocketMQConstants;
 import cn.mmko.controller.mq.producer.IOrderMessageProducer;
 import cn.mmko.message.OrderMessage;
 import cn.mmko.message.OrderTimeoutMessage;
+import com.alibaba.fastjson2.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.client.producer.TransactionSendResult;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
@@ -31,12 +32,13 @@ public class OrderMessageProducer implements IOrderMessageProducer {
     }
 
     @Override
-    public void sendDelayMessage(String topic, Object message, int delayLevel) {
+    public void sendDelayMessage(String topic,String tag, Object message, int delayLevel) {
         Message< Object> msg= MessageBuilder
                 .withPayload(message)
                 .setHeader(RocketMQHeaders.KEYS,generateMessageKeys(message))
                 .build();
-        rocketMQTemplate.syncSend(topic, msg, 3000, delayLevel);
+        String destination = topic + ":" + tag;
+        rocketMQTemplate.syncSend(destination,msg, 3000, delayLevel);
     }
 
 
@@ -60,7 +62,9 @@ public class OrderMessageProducer implements IOrderMessageProducer {
                 .action("CREATE")
                 .timestamp(System.currentTimeMillis())
                 .build();
-        sendMessage(RocketMQConstants.ORDER_TOPIC,RocketMQConstants.ORDER_CREATE_TAG, orderMessage);
+
+        String messageJson = JSON.toJSONString(orderMessage);
+        sendMessage(RocketMQConstants.ORDER_TOPIC,RocketMQConstants.ORDER_CREATE_TAG, messageJson);
         log.info("发送订单创建消息成功，orderId:{}", orderId);
     }
 
@@ -71,7 +75,9 @@ public class OrderMessageProducer implements IOrderMessageProducer {
                 .action("PAY_SUCCESS")
                 .timestamp(System.currentTimeMillis())
                 .build();
-          sendMessage(RocketMQConstants.ORDER_TOPIC,RocketMQConstants.ORDER_PAY_SUCCESS_TAG , orderMessage);
+          
+          String messageJson = JSON.toJSONString(orderMessage);
+          sendMessage(RocketMQConstants.ORDER_TOPIC,RocketMQConstants.ORDER_PAY_SUCCESS_TAG , messageJson);
           log.info("发送订单支付成功消息成功，orderId:{}", orderId);
     }
 
@@ -82,8 +88,10 @@ public class OrderMessageProducer implements IOrderMessageProducer {
                 .action("CLOSE")
                 .timestamp(System.currentTimeMillis())
                 .build();
-                sendMessage(RocketMQConstants.ORDER_TOPIC,RocketMQConstants.ORDER_CLOSE_TAG, orderMessage);
-                log.info("发送订单关闭消息成功，orderId:{}", orderId);
+           
+           String messageJson = JSON.toJSONString(orderMessage);
+           sendMessage(RocketMQConstants.ORDER_TOPIC,RocketMQConstants.ORDER_CLOSE_TAG, messageJson);
+           log.info("发送订单关闭消息成功，orderId:{}", orderId);
     }
 
     @Override
@@ -93,8 +101,10 @@ public class OrderMessageProducer implements IOrderMessageProducer {
                 .action("DELIVER")
                 .timestamp(System.currentTimeMillis())
                 .build();
-                sendMessage(RocketMQConstants.ORDER_TOPIC,RocketMQConstants.ORDER_DELIVER_TAG, orderMessage);
-                log.info("发送订单发货消息成功，orderId:{}", orderId);
+        
+        String messageJson = JSON.toJSONString(orderMessage);
+        sendMessage(RocketMQConstants.ORDER_TOPIC,RocketMQConstants.ORDER_DELIVER_TAG, messageJson);
+        log.info("发送订单发货消息成功，orderId:{}", orderId);
 
     }
 
@@ -106,10 +116,9 @@ public class OrderMessageProducer implements IOrderMessageProducer {
                 .timeoutMinutes(delayMinutes)
                 .build();
         int delayLevel = convertMinutesToDelayLevel(delayMinutes);
-        sendDelayMessage(RocketMQConstants.ORDER_TIMEOUT_TOPIC, orderMessage, delayLevel);
+        String messageJson = JSON.toJSONString(orderMessage);
+        sendDelayMessage(RocketMQConstants.ORDER_TIMEOUT_TOPIC,RocketMQConstants.ORDER_TIMEOUT_CLOSE_TAG , messageJson, delayLevel);
         log.info("发送订单超时关闭消息成功，orderId:{},延迟：{}", orderId, delayMinutes);
-
-
     }
     private Object generateMessageKeys(Object message) {
         if (message instanceof OrderMessage) {
