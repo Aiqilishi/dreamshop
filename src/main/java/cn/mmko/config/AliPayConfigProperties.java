@@ -10,6 +10,7 @@ public class AliPayConfigProperties {
     private String merchant_private_key;
     private String alipay_public_key;
     private String notify_url;
+    private String return_url;
     private String gatewayUrl;
     private String sign_type="RSA2";
     private String charset="UTF-8";

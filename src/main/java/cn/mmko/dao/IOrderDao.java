@@ -1,6 +1,7 @@
 package cn.mmko.dao;
 
 import cn.mmko.po.OrderPo;
+import cn.mmko.vo.OrderListVO;
 import cn.mmko.vo.OrderNumberVO;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -25,4 +26,6 @@ public interface IOrderDao {
     OrderPo queryOrderById(Long orderId);
 
     void updateOrderStatus(Long orderId, Integer orderStatus);
+
+    OrderListVO queryOrderMessage(Long orderId);
 }

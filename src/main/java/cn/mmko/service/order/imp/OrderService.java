@@ -1,7 +1,7 @@
 package cn.mmko.service.order.imp;
 import cn.hutool.core.util.IdUtil;
+import cn.hutool.db.sql.Order;
 import cn.mmko.controller.mq.producer.IOrderMessageProducer;
-import cn.mmko.controller.mq.producer.IStockMessageProducer;
 import cn.mmko.dao.IOrderDao;
 import cn.mmko.dto.OrderCreateDTO;
 import cn.mmko.dto.OrderItemDTO;
@@ -40,6 +40,8 @@ import java.util.stream.Collectors;
 public class OrderService implements IOrderService {
     @Value("${alipay.notify_url}")
     private String notifyUrl;
+    @Value("${alipay.return_url}")
+    private String returnUrl;
     @Resource
     private AlipayClient alipayClient;
     @Resource
@@ -56,8 +58,6 @@ public class OrderService implements IOrderService {
     private ICustomerService customerService;
     @Resource
     private IOrderMessageProducer orderMessageProducer;
-    @Resource
-    private IStockMessageProducer stockMessageProducer;
     /**
      * 创建订单
      *
@@ -97,7 +97,6 @@ public class OrderService implements IOrderService {
                     .build());
         }
         orderMessageProducer.sendOrderCreateMessage(orderId);
-        stockMessageProducer.sendStockLockMessage(orderId);
         orderMessageProducer.sendOrderTimeoutCloseMessage(orderId,30);
         return doPrepayOrder(productName,orderId,orderCreateDTO.getTotalAmount());
     }
@@ -110,11 +109,10 @@ public class OrderService implements IOrderService {
 
     @Override
     public void releaseProductStock(Long orderId) {
-//        List<OrderItemPo> orderItemPos = orderItemService.queryOrderItemByOrderId(orderId);
-//        for(OrderItemPo orderItemPo:orderItemPos){
-//            productService.releaseProductStock(orderItemPo.getProductId(),orderItemPo.getQuantity());
-//        }
-        stockMessageProducer.sendStockReleaseMessage(orderId);
+        List<OrderItemPo> orderItemPos = orderItemService.queryOrderItemByOrderId(orderId);
+        for(OrderItemPo orderItemPo:orderItemPos){
+            productService.releaseProductStock(orderItemPo.getProductId(),orderItemPo.getQuantity());
+        }
     }
 
     @Override
@@ -124,11 +122,7 @@ public class OrderService implements IOrderService {
 
     @Override
     public boolean changeOrderClose(Long orderId) {
-        boolean result = orderDao.updateOrderClose(orderId);
-        if ( result) {
-            orderMessageProducer.sendOrderCloseMessage(orderId);
-        }
-        return result;
+        return orderDao.updateOrderClose(orderId);
     }
 
     @Override
@@ -201,11 +195,38 @@ public class OrderService implements IOrderService {
 
     @Override
     public void backProductStock(Long orderId) {
-//        List<OrderItemPo> orderItemPos = orderItemService.queryOrderItemByOrderId(orderId);
-//        for(OrderItemPo orderItemPo:orderItemPos){
-//            productService.backProductStock(orderItemPo.getProductId(),orderItemPo.getQuantity());
-//        }
-        stockMessageProducer.sendStockBackMessage(orderId);
+        List<OrderItemPo> orderItemPos = orderItemService.queryOrderItemByOrderId(orderId);
+        for(OrderItemPo orderItemPo:orderItemPos){
+            productService.backProductStock(orderItemPo.getProductId(),orderItemPo.getQuantity());
+        }
+    }
+
+    @Override
+    public OrderPo queryOrderById(Long orderId) {
+        return orderDao.queryOrderById(orderId);
+    }
+
+    @Override
+    public OrderListVO queryOrderMessage(Long orderId) {
+        OrderPo orderPo = orderDao.queryOrderById(orderId);
+        List<OrderItemPo> items = orderItemService.queryOrderItemByOrderId(orderId);
+        Map<Long, List<OrderItemPo>> sellerMap = items.stream().collect(Collectors.groupingBy(OrderItemPo::getSellerId));
+        List<OrderListBySellerVO> orderListBySellerVOS = new ArrayList<>();
+        for (Map.Entry<Long, List<OrderItemPo>> entry : sellerMap.entrySet()) {
+            Long sellerId = entry.getKey();
+            List<OrderItemPo> orderItemVos = entry.getValue();
+            OrderListBySellerVO orderListBySellerVO = buildSellerVO(sellerId, orderItemVos);
+            orderListBySellerVOS.add(orderListBySellerVO);
+        }
+        return OrderListVO.builder()
+                .orderId(orderPo.getOrderId())
+                .totalPrice(orderPo.getTotalAmount())
+                .createTime(orderPo.getCreateTime())
+                .payTime(orderPo.getPayTime())
+                .deliveryTime(orderPo.getDeliveryTime())
+                .finishTime(orderPo.getFinishTime())
+                .orderListBySellerVOList(orderListBySellerVOS)
+                .build();
     }
 
     private OrderListBySellerVO buildSellerVO(Long sellerId, List<OrderItemPo> items) {
@@ -244,6 +265,7 @@ public class OrderService implements IOrderService {
     private String doPrepayOrder( String productName, Long orderId, BigDecimal totalAmount) throws AlipayApiException {
         AlipayTradePagePayRequest request = new AlipayTradePagePayRequest();
         request.setNotifyUrl(notifyUrl);
+        request.setReturnUrl(returnUrl);
         JSONObject bizContent = new JSONObject();
         bizContent.put("out_trade_no", orderId);
         bizContent.put("total_amount", totalAmount.toString());
@@ -256,6 +278,7 @@ public class OrderService implements IOrderService {
     private String doMutiPrepayOrder( String productName, OrderCreateDTO orderCreateDTO, Long orderId) throws AlipayApiException {
         AlipayTradeMergeCreateRequest request = new AlipayTradeMergeCreateRequest();
         request.setNotifyUrl(notifyUrl);
+        request.setReturnUrl(returnUrl);
         String buyer_id="2088722062932922";
         JSONObject bizContent = new JSONObject();
         bizContent.put("out_merge_no", orderId); // 合并订单号
